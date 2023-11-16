@@ -47,25 +47,25 @@ export const feedback = [
   {
     id: "feedback-1",
     content:
-      "Money is only a tool. It will take you wherever you wish, but it will not replace you as the driver.",
-    name: "Herman Jensen",
-    title: "Founder & Leader",
+      "Social Fitness isn't just an app; it's my daily dose of focus and energy that seamlessly integrates into my role as the founder of Vector Shoppe, ensuring I stay physically and mentally sharp to tackle the demands of my business.",
+    name: "Sina Banki",
+    title: "Founder, Vector Shoppe",
     img: people01,
   },
   {
     id: "feedback-2",
     content:
-      "Money makes your life easier. If you're lucky to have it, you're lucky.",
-    name: "Steve Mark",
-    title: "Founder & Leader",
+      "As a VFX artist who juggles creativity and precision, Social Fitness has become my go-to, seamlessly blending gym workouts into my routine, ensuring I stay energized and focused in the visually demanding world of visual effects",
+    name: "Marco Zanotto",
+    title: "VFX Artist & Weightlifter",
     img: people02,
   },
   {
     id: "feedback-3",
     content:
-      "It is usually people in the money business, finance, and international trade that are really rich.",
-    name: "Kenn Gallagher",
-    title: "Founder & Leader",
+      "Social Fitness stands out as an invaluable tool for my clients and me as a kinesiologist, offering a comprehensive platform that aligns seamlessly with my professional expertise, providing tailored workouts, and promoting holistic well-being for those I guide on their fitness journey",
+    name: "Scott Hanlon",
+    title: "Kinesiologist & Bodybuilder",
     img: people03,
   },
 ];
