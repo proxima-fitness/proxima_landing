@@ -23,23 +23,23 @@ export const features = [
   {
     id: "feature-1",
     icon: star,
-    title: "Rewards",
+    title: "Follow Community Workouts",
     content:
-      "The best credit cards offer some tantalizing combinations of promotions and prizes",
+      "Your fellow Gym-goers can share their workouts for free, allowing you to follow along. Learn from the expertise of your peers!",
   },
   {
     id: "feature-2",
     icon: shield,
-    title: "100% Secured",
+    title: "Relieve the painful process of creating and tracking workouts yourself. ",
     content:
-      "We take proactive steps make sure your information and transactions are secure.",
+      "We use fine-tuned LLM's like ChatGPT, to generate, modify and upload your workouts so you don't have to.",
   },
   {
     id: "feature-3",
     icon: send,
-    title: "Balance Transfer",
+    title: "Store and analyse all your personal records",
     content:
-      "A balance transfer credit card can save you a lot of money in interest charges.",
+      "We have a different spin on our profile page. You can see all of your personal records, and go into deep analysis on how to make progress.",
   },
 ];
 
