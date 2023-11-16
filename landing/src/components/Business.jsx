@@ -25,9 +25,16 @@ const Business = () =>  (
         The world's best, <br className="sm:block hidden" /> Fitness Companion.
       </h2>
       <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
-        With the right credit card, you can improve your financial life by
-        building credit, earning rewards and saving money. But with hundreds
-        of credit cards on the market.
+      Integrate social connectivity with personalized workout tracking.
+       Upload screenshots of workouts, converted into saved workouts by AI.
+        Create workouts, history, and do real-time tracking with timers.
+         Social Fitness serves as a visual fitness portfolio. This app not only enhances workouts but also fosters a supportive community.
+
+
+
+
+
+
       </p>
 
       <Button styles={`mt-10`} />
