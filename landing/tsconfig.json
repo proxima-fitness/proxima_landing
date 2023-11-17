@@ -19,7 +19,9 @@
   },
   "include": ["src",
   "**/*.ts",
-  "**/*.tsx"
+  "**/*.tsx",
+  "src/components", 
+  "src/custom.d.ts"
  ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

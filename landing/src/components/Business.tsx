@@ -3,7 +3,7 @@ import styles, { layout } from "../style";
 import Button from "./Button";
 import { motion } from "framer-motion";
 
-const FeatureCard = ({ icon, title, content, index }) => (
+const FeatureCard = ({ icon, title, content, index }: any) => (
   <motion.div
     whileHover={{ scale: 1.05 }}
     onHoverStart={e => {}}

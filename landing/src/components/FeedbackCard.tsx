@@ -1,7 +1,7 @@
 import { quotes } from "../assets";
 import { motion } from "framer-motion";
 
-const FeedbackCard = ({ content, name, title, img }) => (
+const FeedbackCard = ({ content, name, title, img }: any) => (
   <motion.div 
     whileHover={{ scale: 1.08 }}
     onHoverStart={e => {}}

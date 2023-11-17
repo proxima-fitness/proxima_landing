@@ -1,5 +1,5 @@
 import styles from "./style";
-import { Billing, Business, CardDeal, Clients, CTA, Footer, Navbar, Stats, Testimonials, Hero } from "./components";
+import { Business, CTA, Footer, Navbar, Testimonials, Hero } from "./components";
 
 const App = () => (
   <div className="bg-primary w-full overflow-hidden">
