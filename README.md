@@ -4,7 +4,4 @@ Will be pointed at the main domain name while the app itself will be pointed at 
 Tools:
 - Framer Motion
 - React
-- Tailwind CSS
-- Potentially either Material UI or Material Design 3 components
-- Webflow?
-  
+- Tailwind CSS  
