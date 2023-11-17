@@ -25,10 +25,10 @@ const Business = () =>  (
         The world's best, <br className="sm:block hidden" /> Fitness Companion.
       </h2>
       <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
-      Integrate social connectivity with personalized workout tracking.
-       Upload screenshots of workouts, converted into saved workouts by AI.
-        Create workouts, history, and do real-time tracking with timers.
-         Social Fitness serves as a visual fitness portfolio. This app not only enhances workouts but also fosters a supportive community.
+      Integrate social <span className="text-white">connectivity</span> with personalized <span className="text-white">workout tracking</span>.
+       Upload <span className="text-white">screenshots</span> of workouts, converted into <span className="text-white">saved workouts</span> by <span className="text-white">AI</span>.
+        Create workouts, history, and do <span className="text-white">real-time tracking with timers</span>.
+         Social Fitness serves as a visual fitness <span className="text-white">portfolio</span>. This app not only <span className="text-white">enhances</span> workouts but also fosters a supportive <span className="text-white">community</span>.
 
 
 
