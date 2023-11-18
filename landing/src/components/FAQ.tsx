@@ -11,27 +11,32 @@ const FAQItem = ({ question, answer }: any) => {
   };
 
   return (
-    <div className={`${styles.marginY} sm:flex-row flex-col`}>
+    <motion.div
+    whileHover={{ scale: 1.05 }}
+    onHoverStart={e => {}}
+    onHoverEnd={e => {}}
+    className={`flex flex-col p-6 rounded-[20px] mb-0 feature-card`}
+    onClick={toggleAccordion}
+    style={{ cursor: 'pointer' }}
+  >
+
       <div
-        className={`${styles.flexCenter} ${styles.padding} bg-black-gradient-2 rounded-[20px] box-shadow cursor-pointer`}
-        onClick={toggleAccordion}
+        className="flex-1 flex flex-col ml-3"
       >
-        <h3 className={styles.heading2}>{question}</h3>
+        <h4 className="font-poppins font-semibold text-white text-[18px] leading-[23.4px] mb-1">{question}</h4>
       </div>
       {isOpen && (
-        <div className={`${styles.padding} mt-2 max-w-[470px]`}>
           <p className={styles.paragraph}>{answer}</p>
-        </div>
       )}
-    </div>
+    </motion.div>
   );
 };
 
+
 const FAQAccordion = () => (
-  <section className={`${styles.flexCenter} ${styles.marginY}`}>
-    <div className="flex-1 flex flex-col">
+  <section>
       <h2 className={styles.heading2}>Frequently Asked Questions</h2>
-      {/* <div className="mt-5"> */}
+      <div className="m-20">
         <FAQItem
           question="I don't have much time. How can this app fit into my busy schedule?"
           answer="Our app is designed for flexibility. You can choose from various workout durations and intensity levels to match your available time and energy."
@@ -41,7 +46,7 @@ const FAQAccordion = () => (
           answer="We are a legitimate fitness platform with a growing community of satisfied users. Check out our reviews, testimonials, and partnerships to see the positive impact we've made."
         />
         <FAQItem
-            question="I don't trust electronics. How can I be sure this app is reliable?"
+            question="How can I be sure this app is reliable?"
             answer="While we embrace technology, we understand concerns. Our app undergoes rigorous testing to ensure reliability, and our support team is available to address any issues you may encounter."
           />
         <FAQItem
@@ -64,8 +69,7 @@ const FAQAccordion = () => (
             question="Can I use the app without revealing personal information?"
             answer="Absolutely! While some information is helpful for personalized recommendations, you can control the amount of personal data you share. We prioritize user comfort and consent."
           />
-      </div>
-    {/* </div> */}
+          </div>
   </section>
 );
 
