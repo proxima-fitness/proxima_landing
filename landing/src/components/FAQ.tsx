@@ -34,7 +34,7 @@ const FAQItem = ({ question, answer }: any) => {
 
 
 const FAQAccordion = () => (
-  <section id="faqs">
+  <section id="faqs" data-aos="fade-right" data-aos-anchor-placement="top-center" data-aos-once="true">
       <h2 className={styles.heading2}>Frequently Asked Questions</h2>
       <div className="mt-10">
         <FAQItem

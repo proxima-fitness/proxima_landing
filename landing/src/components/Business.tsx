@@ -25,8 +25,10 @@ const FeatureCard = ({ icon, title, content, index }: any) => (
 );
 
 const Business = () =>  (
-  <section id="features" className={layout.section}>
-    <div className={layout.sectionInfo}>
+  <section id="features" className={layout.section} data-aos="fade-up"
+  data-aos-anchor-placement="top-center" data-aos-once="true">
+
+      <div className={layout.sectionInfo}>
       <h2 className={styles.heading2}>
         The world's best, <br className="sm:block hidden" /> Fitness Companion.
       </h2>
