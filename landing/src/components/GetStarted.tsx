@@ -3,7 +3,7 @@ import { arrowUp } from "../assets";
 import { motion } from "framer-motion";
 
 const GetStarted = () => (
-  <a href="https://socialfitness-29753.web.app/" className={`${styles.flexCenter} w-[200px] h-[80px] bg-blue-gradient p-[2px] cursor-pointer`} style={{ borderRadius: "19px" }}>
+  <a href="https://proximafitness.com/" className={`${styles.flexCenter} w-[200px] h-[80px] bg-blue-gradient p-[2px] cursor-pointer`} style={{ borderRadius: "19px" }}>
     <div 
       className={`${styles.flexCenter} flex-col bg-primary w-[100%] h-[100%] `} style={{ borderRadius: "19px" }}>
       <div className={`${styles.flexStart} flex-row`}>

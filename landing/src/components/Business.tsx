@@ -45,7 +45,7 @@ const Business = () =>  (
 
       </p>
 
-      <a href="https://socialfitness-29753.web.app/"><Button  styles={`mt-10`} /></a>
+      <a href="https://proximafitness.com/"><Button  styles={`mt-10`} /></a>
     </div>
 
     <div className={`${layout.sectionImg} flex-col`}>

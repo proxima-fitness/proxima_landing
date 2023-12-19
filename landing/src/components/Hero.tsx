@@ -8,7 +8,7 @@ const Hero = () => {
     <section id="home" className={`flex md:flex-row flex-col ${styles.paddingY}`}>
       <div className={`flex-1 ${styles.flexStart} flex-col xl:px-0 sm:px-16 px-6`} data-aos="fade-up"
      data-aos-duration="2500" data-aos-once="true">
-        <a href="https://socialfitness-29753.web.app/">
+        <a href="https://proximafitness.com/">
         <motion.div
           whileHover={{ scale: 1.2 }}
           whileTap={{ scale: 0.9 }}
