@@ -1,24 +1,31 @@
 
-import styles from "../style";
-import { arrowUp } from "../assets";
+import { apple, google } from "../assets";
 import { motion } from "framer-motion";
 
 const GetStarted = () => (
-  <a href="https://app.proximafitness.com/" className={`${styles.flexCenter} w-[200px] h-[80px] bg-blue-gradient p-[2px] cursor-pointer`} style={{ borderRadius: "19px" }}>
-    <div 
-      className={`${styles.flexCenter} flex-col bg-primary w-[100%] h-[100%] `} style={{ borderRadius: "19px" }}>
-      <div className={`${styles.flexStart} flex-row`}>
-        <p className="font-poppins font-medium text-[18px] leading-[23.4px]">
-          <span className="text-gradient">Join our Beta</span>
-        </p>
-        <img src={arrowUp} alt="arrow-up" className="w-[23px] h-[23px] object-contain" />
-      </div>
-      
-      <p className="font-poppins font-medium text-[18px] leading-[23.4px]">
-        <span className="text-gradient"></span>
-      </p>
-    </div>
-  </a>
+  <div style={ { display: "flex", flexDirection: "row", paddingTop: "20px", gap: "10px" } }>
+    <motion.div 
+      whileHover={{ scale: 1.2 }}
+      whileTap={{ scale: 0.9 }}
+      onHoverStart={e => {}}
+      onHoverEnd={e => {}}
+    >
+    <a href="https://app.proximafitness.com/">
+      <img src={apple} alt="apple" style={ { width: "250px", height: "80px" }} />
+    </a>
+    </motion.div>
+
+    <motion.div 
+      whileHover={{ scale: 1.2 }}
+      whileTap={{ scale: 0.9 }}
+      onHoverStart={e => {}}
+      onHoverEnd={e => {}}
+    >
+    <a href="https://app.proximafitness.com/">
+        <img src={google} alt="google" style={ { width: "250px", height: "80px" }} />
+    </a>
+  </motion.div>
+</div>
 );
 
 export default GetStarted;
