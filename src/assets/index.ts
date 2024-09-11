@@ -15,7 +15,7 @@ import twitter from "./twitter.svg";
 import people01 from "./people01.png";
 import people02 from "./people02.png";
 import people03 from "./people03.png";
-import Logo from "./LogoFinal_White.png";
+import Logo from "../assets/LogoFinal_White.png";
 
 export {
   quotes,
