@@ -2,7 +2,6 @@
 import styles from "./style";
 import { Business, CTA, Footer, Navbar, Testimonials, Hero, Stats, CardDeal, Clients, Billing } from "./components";
 import FAQAccordion from "./components/FAQ";
-import FeedbackCard from "./components/FeedbackCard";
 
 const App = () => (
   <div className="bg-primary w-full overflow-hidden">

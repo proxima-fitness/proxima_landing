@@ -1,9 +1,8 @@
 
 import styles, { layout } from "../style";
-import { Button } from "./Button";
 
 const CardDeal = () => (
-  <section className={layout.section}>
+  <section id="about_us" className={layout.section}>
     <div className={layout.sectionInfo}>
       <h2 className={styles.heading2}>
         About Us <br className="sm:block hidden" />
