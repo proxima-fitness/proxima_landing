@@ -15,6 +15,9 @@ import twitter from "./twitter.svg";
 import people01 from "./people01.png";
 import people02 from "./people02.png";
 import people03 from "./people03.png";
+import people04 from "./people04.png";
+import people05 from "./people05.png";
+import people06 from "./people06.png";
 import Logo from "./logo_white.png";
 import starGold from "./StarGold.svg"
 
@@ -36,6 +39,9 @@ export {
   people01,
   people02,
   people03,
+  people04,
+  people05,
+  people06,
   Logo,
   starGold
 };

@@ -7,16 +7,43 @@ import FeedbackCard from "../testimonials/FeedbackCard";
 
 export default function SimpleSlider() {
   let settings = {
-	dots: true,
-	infinite: false,
 	speed: 500,
-	slidesToShow: 3,
     draggable: true,
     easing: "linear",
-	slidesToScroll: 6,
+    slidesToShow: 3,
+    slidesToScroll: 6,
+    dots: true,
+    infinite: false,
+    initialSlide: 0,
+
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 6,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
   };
   return (
-	<div style={{ maxWidth: "100%", padding: "20px", height: "100%", color: "white" }}>
+	<div className="max-w-full px-6 h-full text-white">
 	<Slider {...settings}>
 		{feedback.map((card) => <FeedbackCard key={card.id} {...card} />)}
 	</Slider>
