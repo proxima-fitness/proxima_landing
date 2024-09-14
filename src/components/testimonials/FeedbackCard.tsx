@@ -1,6 +1,7 @@
 
 import { quotes } from "../../assets";
 import { motion } from "framer-motion";
+import { starGold } from "../../assets";
 
 const FeedbackCard = ({ content, name, title, img }: any) => (
   <motion.div
@@ -12,6 +13,23 @@ const FeedbackCard = ({ content, name, title, img }: any) => (
     <img src={quotes} alt="double_quotes" className="w-[42.6px] h-[27.6px] object-contain" />
     <p className="font-poppins font-normal text-[16px] leading-[32.4px] text-white py-4">
       {content}
+      <div className="flex flex-row py-4">
+        <div>
+            <img src={starGold} alt="star_gold" className="w-[42.6px] h-[27.6px] object-contain" />
+        </div>
+        <div>
+            <img src={starGold} alt="star_gold" className="w-[42.6px] h-[27.6px] object-contain" />
+        </div>
+        <div>
+            <img src={starGold} alt="star_gold" className="w-[42.6px] h-[27.6px] object-contain" />
+        </div>
+        <div>
+            <img src={starGold} alt="star_gold" className="w-[42.6px] h-[27.6px] object-contain" />
+        </div>
+        <div>
+            <img src={starGold} alt="star_gold" className="w-[42.6px] h-[27.6px] object-contain" />
+        </div>
+      </div>
     </p>
 
     <div className="flex flex-row">

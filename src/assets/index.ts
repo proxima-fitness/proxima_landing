@@ -16,6 +16,7 @@ import people01 from "./people01.png";
 import people02 from "./people02.png";
 import people03 from "./people03.png";
 import Logo from "./logo_white.png";
+import starGold from "./StarGold.svg"
 
 export {
   quotes,
@@ -35,5 +36,6 @@ export {
   people01,
   people02,
   people03,
-  Logo
+  Logo,
+  starGold
 };
