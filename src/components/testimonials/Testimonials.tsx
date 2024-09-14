@@ -4,7 +4,7 @@ import styles from "../../style";
 import SimpleSlider from "../generic/SimpleSlider";
 import FeedbackCard from "./FeedbackCard";
 import { motion } from "framer-motion";
-
+import { starGold } from "../../assets";
 const Testimonials = () => (
     <section
         id="clients"
@@ -20,13 +20,17 @@ const Testimonials = () => (
                 viewport={{ once: true }}
                 className="w-full flex justify-between items-center md:flex-row flex-col sm:mb-16 mb-6 relative z-[1]">
                 <h2 className={styles.heading2}>
-                    What People are <br className="sm:block hidden" /> saying about us
+                    <div className="flex md:flex-row flex-col justify-center items-center">
+                        <div className="flex flex-row justify-center items-center">
+                            4.5
+                            <img src={starGold} alt="star_gold" className="ml-2 mr-4 w-[50px] h-[40px] object-contain" />
+                        </div>
+                        <div>
+                            on the App Store
+                        </div>
+
+                    </div>
                 </h2>
-                <div className="w-full md:mt-0">
-                    <p className={`${styles.paragraph} text-left max-w-[450px]`}>
-                        Discover what our users have to say about their transformative fitness journeys
-                    </p>
-                </div>
             </motion.div>
             <SimpleSlider />
     </section>

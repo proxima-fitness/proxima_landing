@@ -30,7 +30,7 @@ const Business = () =>  (
   data-aos-anchor-placement="top-center" data-aos-once="true">
 
       <div className={layout.sectionInfo}>
-      <h2 className={styles.heading2}>
+      {/* <h2 className={styles.heading2}>
         The world's best, <br className="sm:block hidden" /> Fitness Companion.
       </h2>
       <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
@@ -45,7 +45,7 @@ const Business = () =>  (
 
       </p>
 
-      <a href="https://app.proximafitness.com/"><Button  text={ "Sign up" } styles={`mt-10`} /></a>
+      <a href="https://app.proximafitness.com/"><Button  text={ "Sign up" } styles={`mt-10`} /></a> */}
     </div>
 
     <div className={`${layout.sectionImg} flex-col`}>
