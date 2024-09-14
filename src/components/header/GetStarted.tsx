@@ -3,7 +3,7 @@ import { apple, google } from "../../assets";
 import { motion } from "framer-motion";
 
 const GetStarted = () => (
-  <div style={ { display: "flex", flexDirection: "row", paddingTop: "20px", gap: "10px" } }>
+  <div style={ { display: "flex", flexDirection: "row", paddingTop: "20px", gap: "25px" } }>
     <motion.div
       whileHover={{ scale: 1.2 }}
       whileTap={{ scale: 0.9 }}
