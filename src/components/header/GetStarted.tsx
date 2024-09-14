@@ -1,10 +1,10 @@
 
-import { apple, google } from "../assets";
+import { apple, google } from "../../assets";
 import { motion } from "framer-motion";
 
 const GetStarted = () => (
   <div style={ { display: "flex", flexDirection: "row", paddingTop: "20px", gap: "10px" } }>
-    <motion.div 
+    <motion.div
       whileHover={{ scale: 1.2 }}
       whileTap={{ scale: 0.9 }}
       onHoverStart={e => {}}
@@ -15,7 +15,7 @@ const GetStarted = () => (
     </a>
     </motion.div>
 
-    <motion.div 
+    <motion.div
       whileHover={{ scale: 1.2 }}
       whileTap={{ scale: 0.9 }}
       onHoverStart={e => {}}

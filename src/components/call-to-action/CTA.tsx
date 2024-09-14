@@ -1,6 +1,6 @@
 
-import styles from "../style";
-import { Button } from "./Button";
+import styles from "../../style";
+import { Button } from "../generic/Button";
 import { motion } from "framer-motion";
 
 

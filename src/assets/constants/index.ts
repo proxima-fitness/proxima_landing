@@ -1,5 +1,5 @@
 
-import { people01, people02, people03, facebook, instagram, linkedin, twitter, send, shield, star  } from "../assets";
+import { people01, people02, people03, instagram, linkedin, twitter, send, shield, star  } from "..";
 
 export const navLinks = [
   {

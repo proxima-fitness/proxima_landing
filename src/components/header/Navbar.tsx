@@ -1,8 +1,8 @@
 
 import { useState } from "react";
-import { close, menu } from "../assets";
-import { navLinks } from "../constants";
-import { Button } from "./Button";
+import { close, menu } from "../../assets";
+import { navLinks } from "../../assets/constants/index";
+import { Button } from "../generic/Button";
 
 const Navbar = () => {
   const [active, setActive] = useState("Home");
@@ -16,7 +16,7 @@ const Navbar = () => {
         { navLinks.map((nav, index) => {
           return (
             <>
-            { nav.id === "sign-in" ? 
+            { nav.id === "sign-in" ?
               <a href="https://app.proximafitness.com/"><Button text={ "Sign in" } styles={ `py-2` } /></a>
               :
               <li
@@ -59,7 +59,7 @@ const Navbar = () => {
                     onClick={() => setActive(nav.title)}
                   >
 
-                { nav.id === "sign-in" ? 
+                { nav.id === "sign-in" ?
                   <a href="https://app.proximafitness.com/">{nav.title}</a>
                 :
                   <a href={`#${nav.id}`}>{nav.title}</a>

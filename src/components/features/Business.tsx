@@ -1,7 +1,7 @@
 
-import { features } from "../constants";
-import styles, { layout } from "../style";
-import { Button } from "./Button";
+import { features } from "../../assets/constants/index";
+import styles, { layout } from "../../style";
+import { Button } from "../generic/Button";
 import { motion } from "framer-motion";
 
 const FeatureCard = ({ icon, title, content, index }: any) => (
