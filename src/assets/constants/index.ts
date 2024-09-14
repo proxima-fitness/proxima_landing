@@ -14,10 +14,10 @@ export const navLinks = [
     id: "clients",
     title: "Testimonials",
   },
-  {
-    id: "about_us",
-    title: "About Us"
-  },
+//   {
+//     id: "about_us",
+//     title: "About Us"
+//   },
   {
     id: "faqs",
     title: "FAQs",
@@ -151,40 +151,20 @@ export const footerLinks = [
     ],
   },
   {
-    title: "Community",
+    title: "Contact Us",
     links: [
       {
-        name: "Help",
-        link: "",
+        name: "Email",
+        link: "mailto:jack@proximafitness.com",
       },
-      // {
-      //   name: "Partners",
-      //   link: "",
-      // },
-      // {
-      //   name: "Suggestions",
-      //   link: "",
-      // },
-      // {
-      //   name: "Blog",
-      //   link: "",
-      // },
-      // {
-      //   name: "Newsletters",
-      //   link: "",
-      // },
     ],
   },
   {
     title: "Coaches",
     links: [
-      // {
-      //   name: "Our Partner",
-      //   link: "",
-      // },
       {
         name: "Become a Coach",
-        link: "",
+        link: "https://app.proximafitness.com/becoming-a-coach",
       },
     ],
   },
