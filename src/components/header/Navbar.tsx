@@ -15,7 +15,7 @@ const Navbar = () => {
       <ul className="list-none sm:flex hidden justify-end items-center flex-1">
         { navLinks.map((nav, index) => {
           return (
-            <>
+            <div key={ index }>
             { nav.id === "sign-in" ?
               <a href="https://app.proximafitness.com/"><Button text={ "Sign in" } styles={ `py-2` } /></a>
               :
@@ -29,7 +29,7 @@ const Navbar = () => {
               <a href={`#${nav.id}`}>{nav.title}</a>
               </li>
             }
-          </>
+          </div>
           )
       } ) }
       </ul>
@@ -50,7 +50,7 @@ const Navbar = () => {
           <ul className="list-none flex justify-end items-start flex-1 flex-col">
             {navLinks.map((nav, index) => {
               return (
-                <>
+                <div key={ index }>
                   <li
                     key={nav.id}
                     className={`font-poppins font-medium cursor-pointer text-[16px] ${
@@ -65,7 +65,7 @@ const Navbar = () => {
                   <a href={`#${nav.id}`}>{nav.title}</a>
                 }
                 </li>
-              </>
+              </div>
             ) })}
           </ul>
         </div>

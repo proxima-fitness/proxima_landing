@@ -119,6 +119,7 @@
 
 .feedback-card {
   background: transparent;
+  height: 500px;
 }
 
 .feedback-card:hover {

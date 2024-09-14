@@ -71,11 +71,91 @@ export const feedback = [
   {
     id: "feedback-3",
     content:
-      "Proxima Fitness is a total game-changer for me as a kinesiologist and for my clients. It's like my right-hand tool that perfectly aligns with my expertise. The workouts are personalized, fitting each person seamlessly, and the platform promotes a well-rounded approach to well-being. It's more than just a fitness platform; it's an essential part of guiding my clients through their fitness journey.",
+      "Proxima Fitness is a total game-changer for me as a kinesiologist and for my clients.",
     name: "Scott Hanlon",
     title: "Kinesiologist & Bodybuilder",
     img: people03,
   },
+  {
+    id: "feedback-3",
+    content:
+      "Proxima Fitness is a total game-changer for me as a kinesiologist and for my clients.",
+    name: "Jordan Van De Sande",
+    title: "Kinesiologist & Bodybuilder",
+    img: people03,
+  },
+  {
+    id: "feedback-3",
+    content:
+      "Proxima Fitness is a total game-changer for me as a kinesiologist and for my clients. It's like my right-hand tool that perfectly aligns with my expertise.",
+    name: "Rob Roy Mackenzie",
+    title: "Kinesiologist & Bodybuilder",
+    img: people03,
+  },
+  {
+    id: "feedback-3",
+    content:
+      "Proxima Fitness is a total game-changer for me as a kinesiologist and for my clients. It's like my right-hand tool that perfectly aligns with my expertise.",
+    name: "Milton Quintana",
+    title: "Kinesiologist & Bodybuilder",
+    img: people03,
+  },
+//   {
+//     id: "feedback-3",
+//     content:
+//       "Proxima Fitness is a total game-changer for me as a kinesiologist and for my clients. It's like my right-hand tool that perfectly aligns with my expertise. The workouts are personalized, fitting each person seamlessly, and the platform promotes a well-rounded approach to well-being. It's more than just a fitness platform; it's an essential part of guiding my clients through their fitness journey.",
+//     name: "Scott Hanlon",
+//     title: "Kinesiologist & Bodybuilder",
+//     img: people03,
+//   },
+//   {
+//     id: "feedback-3",
+//     content:
+//       "Proxima Fitness is a total game-changer for me as a kinesiologist and for my clients. It's like my right-hand tool that perfectly aligns with my expertise. The workouts are personalized, fitting each person seamlessly, and the platform promotes a well-rounded approach to well-being. It's more than just a fitness platform; it's an essential part of guiding my clients through their fitness journey.",
+//     name: "Scott Hanlon",
+//     title: "Kinesiologist & Bodybuilder",
+//     img: people03,
+//   },
+//   {
+//     id: "feedback-3",
+//     content:
+//       "Proxima Fitness is a total game-changer for me as a kinesiologist and for my clients. It's like my right-hand tool that perfectly aligns with my expertise. The workouts are personalized, fitting each person seamlessly, and the platform promotes a well-rounded approach to well-being. It's more than just a fitness platform; it's an essential part of guiding my clients through their fitness journey.",
+//     name: "Scott Hanlon",
+//     title: "Kinesiologist & Bodybuilder",
+//     img: people03,
+//   },
+//   {
+//     id: "feedback-3",
+//     content:
+//       "Proxima Fitness is a total game-changer for me as a kinesiologist and for my clients. It's like my right-hand tool that perfectly aligns with my expertise. The workouts are personalized, fitting each person seamlessly, and the platform promotes a well-rounded approach to well-being. It's more than just a fitness platform; it's an essential part of guiding my clients through their fitness journey.",
+//     name: "Scott Hanlon",
+//     title: "Kinesiologist & Bodybuilder",
+//     img: people03,
+//   },
+//   {
+//     id: "feedback-3",
+//     content:
+//       "Proxima Fitness is a total game-changer for me as a kinesiologist and for my clients. It's like my right-hand tool that perfectly aligns with my expertise. The workouts are personalized, fitting each person seamlessly, and the platform promotes a well-rounded approach to well-being. It's more than just a fitness platform; it's an essential part of guiding my clients through their fitness journey.",
+//     name: "Scott Hanlon",
+//     title: "Kinesiologist & Bodybuilder",
+//     img: people03,
+//   },
+//   {
+//     id: "feedback-3",
+//     content:
+//       "Proxima Fitness is a total game-changer for me as a kinesiologist and for my clients. It's like my right-hand tool that perfectly aligns with my expertise. The workouts are personalized, fitting each person seamlessly, and the platform promotes a well-rounded approach to well-being. It's more than just a fitness platform; it's an essential part of guiding my clients through their fitness journey.",
+//     name: "Scott Hanlon",
+//     title: "Kinesiologist & Bodybuilder",
+//     img: people03,
+//   },
+//   {
+//     id: "feedback-3",
+//     content:
+//       "Proxima Fitness is a total game-changer for me as a kinesiologist and for my clients. It's like my right-hand tool that perfectly aligns with my expertise. The workouts are personalized, fitting each person seamlessly, and the platform promotes a well-rounded approach to well-being. It's more than just a fitness platform; it's an essential part of guiding my clients through their fitness journey.",
+//     name: "Scott Hanlon",
+//     title: "Kinesiologist & Bodybuilder",
+//     img: people03,
+//   },
 ];
 
 export const stats = [
@@ -117,8 +197,12 @@ export const footerLinks = [
       //   link: "",
       // },
       {
-        name: "Terms & Services",
-        link: "",
+        name: "Terms of Use",
+        link: "https://app.proximafitness.com/terms-of-use",
+      },
+      {
+        name: "Privacy Policy",
+        link: "https://app.proximafitness.com/privacy",
       },
     ],
   },

@@ -7,10 +7,10 @@ const FeedbackCard = ({ content, name, title, img }: any) => (
     whileHover={{ scale: 1.08 }}
     onHoverStart={e => {}}
     onHoverEnd={e => {}}
-    className="flex justify-around flex-col px-6 rounded-[20px] max-w-[370px] md:mr-10 sm:mr-5 mr-0 my-5 feedback-card"
+    className="flex justify-around flex-col px-6 rounded-[20px] max-w-[370px] feedback-card"
   >
     <img src={quotes} alt="double_quotes" className="w-[42.6px] h-[27.6px] object-contain" />
-    <p className="font-poppins font-normal text-[18px] leading-[32.4px] text-white my-10">
+    <p className="font-poppins font-normal text-[16px] leading-[32.4px] text-white py-4">
       {content}
     </p>
 

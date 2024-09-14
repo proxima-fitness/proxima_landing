@@ -1,17 +1,18 @@
 
-	import { feedback } from "../../assets/constants";
-	import styles from "../../style";
-	import FeedbackCard from "./FeedbackCard";
-	import { motion } from "framer-motion";
+import { feedback } from "../../assets/constants";
+import styles from "../../style";
+import SimpleSlider from "../generic/SimpleSlider";
+import FeedbackCard from "./FeedbackCard";
+import { motion } from "framer-motion";
 
-	const Testimonials = () => (
-	<section
-		id="clients"
-		className={`${styles.paddingY} ${styles.flexCenter} flex-col relative `}
-		data-aos="fade-up"
-		data-aos-anchor-placement="top-center"
-		data-aos-once="true"
-	>
+const Testimonials = () => (
+    <section
+        id="clients"
+        className={`${styles.paddingY} ${styles.flexCenter} flex-col relative `}
+        data-aos="fade-up"
+        data-aos-anchor-placement="top-center"
+        data-aos-once="true"
+    >
         <div className="absolute z-[0] w-[60%] h-[60%] -right-[50%] rounded-full blue__gradient bottom-40" />
             <motion.div
                 initial={{ opacity: 0 }}
@@ -27,11 +28,9 @@
                     </p>
                 </div>
             </motion.div>
-	<div className="flex flex-wrap sm:justify-start justify-center w-full feedback-container relative z-[1]">
-		{feedback.map((card) => <FeedbackCard key={card.id} {...card} />)}
-	</div>
-	</section>
-	);
+            <SimpleSlider />
+    </section>
+);
 
-	export default Testimonials;
+export default Testimonials;
 

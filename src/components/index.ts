@@ -8,6 +8,7 @@ import Stats from "./header/Stats";
 import Footer from "./footer/Footer";
 import Testimonials from "./testimonials/Testimonials";
 import Hero from "./header/Hero";
+import SimpleSlider from "./generic/SimpleSlider";
 
 export {
   Navbar,
@@ -19,5 +20,6 @@ export {
   Footer,
   Testimonials,
   Hero,
+  SimpleSlider
 };
 
