@@ -15,9 +15,9 @@ const FAQItem = ({ question, answer }: any) => {
       whileHover={{ scale: 1.05 }}
       onHoverStart={e => {}}
       onHoverEnd={e => {}}
-      className={`flex flex-col p-6 rounded-[20px] mb-0 feature-card `}
+      className={`flex flex-col p-6 rounded-[20px] mb-0 feature-card justify-center items-center `}
       onClick={toggleAccordion}
-      style={{ cursor: 'pointer' }}
+      style={{ cursor: 'pointer', width: "100%" }}
     >
 
       <div
@@ -26,7 +26,7 @@ const FAQItem = ({ question, answer }: any) => {
         <h4 className={`font-poppins font-semibold text-white text-[18px] leading-[23.4px] mb-1`}>{question}</h4>
       </div>
       {isOpen && (
-          <p className={styles.paragraph}>{answer}</p>
+          <p className={styles.paragraph} style={ { maxWidth: "90%" } }>{answer}</p>
       )}
     </motion.div>
   );
@@ -35,8 +35,8 @@ const FAQItem = ({ question, answer }: any) => {
 
 const FAQAccordion = () => (
   <section id="faqs" data-aos="fade-right" data-aos-anchor-placement="top-center" data-aos-once="true">
-      <h2 className={styles.heading2}>Frequently Asked Questions</h2>
-      <div className="mt-10">
+      <h2 className={styles.heading2 } style={ { textAlign: "center" } }>Frequently Asked Questions</h2>
+      <div className="mt-10 flex flex-col justify-center items-center w-full md:px-72">
         <FAQItem
           question="I don't have much time. How can this app fit into my busy schedule?"
           answer="Our app is designed for flexibility. You can choose from various workout durations and intensity levels to match your available time and energy."
