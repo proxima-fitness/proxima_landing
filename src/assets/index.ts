@@ -28,6 +28,9 @@ import program_creator_mobile_white from "./program-creator-mobile-white.png";
 import program_creator_white from "./program-creator-white.png";
 import profile_mobile_device_white from "./profile-mobile-device-white.png";
 import programs_mobile_white_device from "./programs-mobile-white-device.png";
+import programs_dark_device from "./programs-dark-device.png";
+import programs_classic_device from "./programs-classic-device.png";
+import programs_pastel_device from "./programs-pastel-device.png";
 
 export {
   quotes,
@@ -60,4 +63,7 @@ export {
   program_creator_white,
   profile_mobile_device_white,
   programs_mobile_white_device,
+  programs_dark_device,
+  programs_classic_device,
+  programs_pastel_device
 };

@@ -38,18 +38,32 @@ export const features = [
   },
   {
     id: "feature-2",
-    icon: shield,
-    title: "Sick of tracking workouts on your Notes App?",
+    icon: star,
+    title: "Want to run a program to beat your current plateau ?",
     content:
-      "We use our own fine-tuned LLM like ChatGPT, to generate, modify and upload your workouts so you don't have to.",
+      "Follow proven programs that are open sourced on reddit and other locations.",
   },
-  {
-    id: "feature-3",
-    icon: send,
-    title: "Store and analyse all your personal records",
+//   {
+//     id: "feature-2",
+//     icon: shield,
+//     title: "Sick of tracking workouts on your Notes App?",
+//     content:
+//       "We use our own fine-tuned LLM like ChatGPT, to generate, modify and upload your workouts so you don't have to.",
+//   },
+{
+    id: "feature-2",
+    icon: star,
+    title: "You're a coach and you want to grow your following ?",
     content:
-      "We have a different spin on our profile page. You can see all of your personal records, and go into deep analysis on how to make progress.",
+      "You can post your own programs to Proxima, and help other lifters with your expertise",
   },
+//   {
+//     id: "feature-3",
+//     icon: send,
+//     title: "Store and analyse all your personal records",
+//     content:
+//       "We have a different spin on our profile page. You can see all of your personal records, and go into deep analysis on how to make progress.",
+//   },
 ];
 
 export const feedback = [

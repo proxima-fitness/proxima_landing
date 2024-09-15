@@ -1,6 +1,6 @@
 
 import styles from "./style";
-import { Business, CTA, Footer, Navbar, Testimonials, Hero, Stats, CardDeal, Billing } from "./components";
+import { Business, CTA, Footer, Themes, Navbar, Testimonials, Hero, Stats, Premium, CustomPrograms, PersonalRecords } from "./components";
 import FAQAccordion from "./components/faqs/FAQ";
 
 const App = () => (
@@ -22,8 +22,10 @@ const App = () => (
         <Stats />
         <Business />
         <Testimonials />
-        <Billing />
-        {/* <CardDeal /> */}
+        <CustomPrograms />
+        <PersonalRecords />
+        <Themes />
+        <Premium />
         <FAQAccordion/>
         <CTA />
         <Footer />

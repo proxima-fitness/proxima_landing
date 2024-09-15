@@ -22,6 +22,7 @@ export const layout = {
 
   sectionImgReverse: `flex-1 flex ${styles.flexCenter} md:mr-10 mr-0 md:mt-0 mt-10 relative`,
   sectionImg: `flex-1 flex ${styles.flexCenter} md:ml-10 ml-0 md:mt-0 mt-10 relative`,
+  sectionCarousel: `flex-1 flex ${styles.flexCenter} w-1/2 pr-10 ml-0 md:mt-0 mt-10 relative`,
 
   sectionInfo: `flex-1 ${styles.flexStart} flex-col`,
   sectionInfoCentered: `flex-1 ${styles.flexCenter} flex-col`,

@@ -1,6 +1,7 @@
 
 import Navbar from "./header/Navbar";
-import Billing from "./premium/Billing";
+import Premium from "./premium/Premium";
+import Themes from "./features/Themes";
 import CardDeal from "./about-us/CardDeal";
 import Business from "./features/Business";
 import CTA from "./call-to-action/CTA";
@@ -9,17 +10,22 @@ import Footer from "./footer/Footer";
 import Testimonials from "./testimonials/Testimonials";
 import Hero from "./header/Hero";
 import SimpleSlider from "./generic/SimpleSlider";
+import CustomPrograms from "./features/CustomPrograms";
+import PersonalRecords from "./features/PersonalRecords";
 
 export {
-  Navbar,
-  Billing,
-  CardDeal,
-  Business,
-  CTA,
-  Stats,
-  Footer,
-  Testimonials,
-  Hero,
-  SimpleSlider
+    PersonalRecords,
+    CustomPrograms,
+    Navbar,
+    Premium,
+    Themes,
+    CardDeal,
+    Business,
+    CTA,
+    Stats,
+    Footer,
+    Testimonials,
+    Hero,
+    SimpleSlider
 };
 

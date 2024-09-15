@@ -1,7 +1,6 @@
-import { apple, google } from "../../assets";
 import styles, { layout } from "../../style";
 
-const Billing = () => (
+const Premium = () => (
   <section id="product" className={layout.sectionReverse}>
     <div className={layout.sectionImgReverse}>
 
@@ -22,4 +21,4 @@ const Billing = () => (
   </section>
 );
 
-export default Billing;
+export default Premium;
