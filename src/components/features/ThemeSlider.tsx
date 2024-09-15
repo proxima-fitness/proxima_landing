@@ -44,7 +44,7 @@ export default function ThemeSlider() {
     // ]
   };
   return (
-	<div className="max-w-full px-6 h-full text-white">
+	<div className="w-full px-6 h-full text-white">
 	<Slider {...settings}>
         <img src={ programs_classic_device } alt="Program Creator Image" className="relative max-w-[180px] h-auto z-[6]"/>
         <img src={ programs_pastel_device } alt="Program Creator Image" className="relative max-w-[180px] h-auto z-[6]"/>

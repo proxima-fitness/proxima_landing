@@ -25,7 +25,7 @@ const App = () => (
         <CustomPrograms />
         <PersonalRecords />
         <Themes />
-        <Premium />
+        {/* <Premium /> */}
         <FAQAccordion/>
         <CTA />
         <Footer />
