@@ -11,7 +11,7 @@ const GetStarted = () => (
       onHoverEnd={e => {}}
     >
     <a href="https://app.proximafitness.com/">
-      <img src={apple} alt="apple" style={ { width: "250px", height: "80px" }} />
+      <img src={apple} alt="apple" style={ { width: "150px", height: "80px" }} />
     </a>
     </motion.div>
 
@@ -22,7 +22,7 @@ const GetStarted = () => (
       onHoverEnd={e => {}}
     >
     <a href="https://app.proximafitness.com/">
-        <img src={google} alt="google" style={ { width: "250px", height: "80px" }} />
+        <img src={google} alt="google" style={ { width: "150px", height: "80px" }} />
     </a>
   </motion.div>
 </div>

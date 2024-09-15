@@ -1,4 +1,5 @@
 
+import { programs_mobile_white_device } from "../../assets";
 import { features } from "../../assets/constants/index";
 import styles, { layout } from "../../style";
 import { Button } from "../generic/Button";
@@ -29,30 +30,25 @@ const Business = () =>  (
   <section id="features" className={layout.section} data-aos="fade-up"
   data-aos-anchor-placement="top-center" data-aos-once="true">
 
-      <div className={layout.sectionInfo}>
-      {/* <h2 className={styles.heading2}>
-        The world's best, <br className="sm:block hidden" /> Fitness Companion.
+      <div className={layout.sectionInfoCentered}>
+
+      <h2 className={styles.heading2}>
+        Train Popular Free Programs
       </h2>
-      <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
-      Ever wanted to <span className="text-white">flex</span> your <span className="text-white">PR's</span>,
+      <img src={ programs_mobile_white_device } alt="Program Creator Image" className="relative z-[6] max-w-[300px] pt-20 h-auto"/>
+      {/* Ever wanted to <span className="text-white">flex</span> your <span className="text-white">PR's</span>,
       have a place where you can share <span className="text-white">workouts</span> and track
-      your <span className="text-white">gains</span> effortlessly.
+      your <span className="text-white">gains</span> effortlessly. */}
 
-
-
-
-
-
-      </p>
-
-      <a href="https://app.proximafitness.com/"><Button  text={ "Sign up" } styles={`mt-10`} /></a> */}
     </div>
 
-    <div className={`${layout.sectionImg} flex-col`}>
+    <div className={`${layout.sectionImg} flex-col pt-32 `}>
       {features.map((feature, index) => (
         <FeatureCard key={feature.id} {...feature} index={index} />
       ))}
+        <a href="https://app.proximafitness.com/"><Button  text={ "View Programs" } styles={`mt-10`} /></a>
     </div>
+
   </section>
 );
 

@@ -1,6 +1,6 @@
 
 import styles from "../../style";
-import { Logo } from "../../assets";
+import { Logo, profile_dark, profile_mobile_device_white, profile_white, program_creator_mobile_white, program_creator_mobile_white_device, program_creator_white } from "../../assets";
 import GetStarted from "./GetStarted";
 
 const Hero = () => {
@@ -24,7 +24,7 @@ const Hero = () => {
         </a>*/}
 
         <div className="flex flex-row justify-between items-center w-full">
-          <h1 className="flex-1 font-poppins font-semibold ss:text-[72px] text-[52px] text-white ss:leading-[100.8px] leading-[75px]">
+          <h1 className="flex-1 font-poppins font-semibold ss:text-[55px] text-[52px] text-white ">
             Built by the Strong<br className="sm:block hidden" />{" "}
             <span className="text-gradient">for the Strongest</span>{" "}
           </h1>
@@ -36,14 +36,14 @@ const Hero = () => {
         <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
         A <span className="text-white">Dashboard</span> for your Personal Records.<br/>Create, share and track Programs on our<span className="text-white"> Platform</span>.
         </p>
-        <div>
           <GetStarted />
-        </div>
       </div>
 
       <div className={`flex-1 flex ${styles.flexCenter} md:my-0 my-10 relative`}>
-        {/* <img src={robot} alt="gym" className="w-[100%] h-[100%] relative z-[5]" /> */}
-        <img src={ Logo } alt="Social Fitness Logo" className="w-[90%] h-[100%] relative z-[5]"/>
+        <img src={ program_creator_white } alt="Program Creator Image" className="relative z-[5]"/>
+        <div className="hidden md:block">
+            <img src={ profile_mobile_device_white } alt="Profile Page Image" className="absolute z-[6] max-w-[160px] h-auto -inset-10 top-16"/>
+        </div>
         {/* gradient start */}
         <div className="absolute z-[0] w-[40%] h-[35%] top-0 pink__gradient" />
         <div className="absolute z-[1] w-[80%] h-[80%] rounded-full white__gradient bottom-40" />

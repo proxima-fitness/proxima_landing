@@ -105,18 +105,18 @@ export const feedback = [
 export const stats = [
   {
     id: "stats-1",
-    title: "Daily Active Users",
+    title: "Proxima Pro Members",
     value: "100+",
   },
   {
     id: "stats-2",
-    title: "Lifts Tracked",
+    title: "Workouts Tracked",
     value: "2000+",
   },
   {
     id: "stats-3",
-    title: "Workouts Generated",
-    value: "500+",
+    title: "Programs Created",
+    value: "100+",
   },
 ];
 
