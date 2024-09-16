@@ -1,6 +1,6 @@
 
 import styles from "../../style";
-import { Logo, profile_dark, profile_mobile_device_white, profile_white, program_creator_mobile_white, program_creator_mobile_white_device, program_creator_white } from "../../assets";
+import { profile_mobile_device_white, program_creator_white } from "../../assets";
 import GetStarted from "./GetStarted";
 
 const Hero = () => {
@@ -39,7 +39,7 @@ const Hero = () => {
           <GetStarted />
       </div>
 
-      <div className={`flex-1 flex ${styles.flexCenter} md:my-0 my-10 relative`}>
+      <div className={`flex-1 flex ${styles.flexCenter} md:my-0 my-10 relative`} >
         <img src={ program_creator_white } alt="Program Creator Image" className="relative z-[5]"/>
         <div className="hidden md:block">
             <img src={ profile_mobile_device_white } alt="Profile Page Image" className="absolute z-[6] max-w-[160px] h-auto -inset-10 top-16"/>

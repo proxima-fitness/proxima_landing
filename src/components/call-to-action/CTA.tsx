@@ -6,7 +6,7 @@ import GetStarted from "../header/GetStarted";
 
 
 const CTA = () => (
-  <section className={`${styles.flexCenter} ${styles.marginY} ${styles.padding} sm:flex-row flex-col bg-black-gradient-2 rounded-[20px] box-shadow`}
+  <section id="cta" className={`${styles.flexCenter} ${styles.marginY} ${styles.padding} sm:flex-row flex-col bg-black-gradient-2 rounded-[20px] box-shadow`}
   data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-once="true">
     <div className="flex-1 flex flex-col">
       <h2 className={styles.heading2}>Download the App now</h2>

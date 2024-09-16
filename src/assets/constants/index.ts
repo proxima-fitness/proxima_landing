@@ -7,17 +7,13 @@ export const navLinks = [
     title: "Home",
   },
   {
-    id: "features",
-    title: "Features",
+    id: "programs",
+    title: "Programs",
   },
   {
-    id: "clients",
-    title: "Testimonials",
+    id: "create-programs",
+    title: "Features"
   },
-//   {
-//     id: "about_us",
-//     title: "About Us"
-//   },
   {
     id: "faqs",
     title: "FAQs",
@@ -25,7 +21,11 @@ export const navLinks = [
   {
     id: "sign-in",
     title: "Sign in",
-  }
+  },
+  {
+    id: "cta",
+    title: "Download App",
+  },
 ];
 
 export const features = [
