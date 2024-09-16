@@ -34,7 +34,7 @@ const FAQItem = ({ question, answer }: any) => {
 
 
 const FAQAccordion = () => (
-  <section id="faqs" data-aos="fade-up" data-aos-anchor-placement="top-top" data-aos-once="true" className={ styles.paddingY }>
+  <section id="faqs" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-once="true" className={ styles.paddingY }>
       <h2 className={styles.heading2 } style={ { textAlign: "center" } }>Frequently Asked Questions</h2>
       <div className="mt-10 flex flex-col justify-center items-center w-full md:px-72">
         <FAQItem

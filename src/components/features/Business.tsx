@@ -28,7 +28,7 @@ const FeatureCard = ({ icon, title, content, index }: any) => (
 
 const Business = () =>  (
   <section id="programs" className={layout.section} data-aos="fade-up"
-  data-aos-anchor-placement="top-top" data-aos-once="true">
+  data-aos-anchor-placement="top-bottom" data-aos-once="true">
 
       <div className={layout.sectionInfoCentered}>
 

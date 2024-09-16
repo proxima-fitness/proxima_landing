@@ -1,8 +1,6 @@
 
-import { feedback } from "../../assets/constants";
 import styles from "../../style";
 import SimpleSlider from "../generic/SimpleSlider";
-import FeedbackCard from "./FeedbackCard";
 import { motion } from "framer-motion";
 import { starGold } from "../../assets";
 const Testimonials = () => (
@@ -10,7 +8,7 @@ const Testimonials = () => (
         id="clients"
         className={`${styles.paddingY} ${styles.flexCenter} flex-col relative `}
         data-aos="fade-up"
-        data-aos-anchor-placement="top-top"
+        data-aos-anchor-placement="top-bottom"
         data-aos-once="true"
     >
         <div className="absolute z-[0] w-[60%] h-[60%] -right-[50%] rounded-full blue__gradient bottom-40" />
