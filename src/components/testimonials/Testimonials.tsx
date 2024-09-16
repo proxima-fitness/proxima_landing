@@ -10,7 +10,7 @@ const Testimonials = () => (
         id="clients"
         className={`${styles.paddingY} ${styles.flexCenter} flex-col relative `}
         data-aos="fade-up"
-        data-aos-anchor-placement="top-center"
+        data-aos-anchor-placement="top-top"
         data-aos-once="true"
     >
         <div className="absolute z-[0] w-[60%] h-[60%] -right-[50%] rounded-full blue__gradient bottom-40" />

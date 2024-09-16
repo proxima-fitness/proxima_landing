@@ -2,7 +2,7 @@ import { profile_mobile_device_white } from "../../assets";
 import styles, { layout } from "../../style";
 
 const PersonalRecords = () => (
-  <section id="personalRecords" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-once="true" className={layout.sectionReverse}>
+  <section id="personalRecords" data-aos="fade-up" data-aos-anchor-placement="top-top" data-aos-once="true" className={layout.sectionReverse}>
     <div className={layout.sectionInfoCentered}>
       <h2 className={styles.heading2PersonalRecords}>
         Social Media for <br className="sm:block hidden" /> Personal Records.

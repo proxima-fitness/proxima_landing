@@ -2,7 +2,7 @@ import styles, { layout } from "../../style";
 import ThemeSlider from "./ThemeSlider";
 
 const Themes = () => (
-  <section id="themes" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-once="true" className={layout.section}>
+  <section id="themes" data-aos="fade-up" data-aos-anchor-placement="top-top" data-aos-once="true" className={layout.section}>
     <div className={layout.sectionCarousel}>
         <ThemeSlider />
     </div>

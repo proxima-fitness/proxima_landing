@@ -34,16 +34,12 @@ const FAQItem = ({ question, answer }: any) => {
 
 
 const FAQAccordion = () => (
-  <section id="faqs" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-once="true" className={ styles.paddingY }>
+  <section id="faqs" data-aos="fade-up" data-aos-anchor-placement="top-top" data-aos-once="true" className={ styles.paddingY }>
       <h2 className={styles.heading2 } style={ { textAlign: "center" } }>Frequently Asked Questions</h2>
       <div className="mt-10 flex flex-col justify-center items-center w-full md:px-72">
         <FAQItem
           question="I don't have much time. How can this app fit into my busy schedule?"
           answer="Our app is designed for flexibility. You can choose from various workout durations and intensity levels to match your available time and energy."
-        />
-        <FAQItem
-          question="Is this app legit? How can I trust it?"
-          answer="We are a legitimate fitness platform with a growing community of satisfied users. Check out our reviews, testimonials, and partnerships to see the positive impact we've made."
         />
         <FAQItem
             question="How can I be sure this app is reliable?"

@@ -3,7 +3,7 @@ import styles, { layout } from "../../style";
 import { Button } from "../generic/Button";
 
 const CustomPrograms = () => (
-  <section id="create-programs" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-once="true" className={layout.sectionReverse}>
+  <section id="create-programs" data-aos="fade-up" data-aos-anchor-placement="top-top" data-aos-once="true" className={layout.sectionReverse}>
     <div className={layout.sectionImgReverse}>
     <img src={ program_creator_white } alt="Program Creator Image" className="relative z-[5]"/>
     </div>
