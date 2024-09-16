@@ -1,5 +1,5 @@
 
-import { people01, people02, people03, people04, people05, people06, instagram, linkedin, twitter, send, shield, star  } from "..";
+import { people01, people02, people03, people04, people05, people06, instagram, linkedin, twitter, send, shield, star, reddit  } from "..";
 
 export const navLinks = [
   {
@@ -199,6 +199,11 @@ export const socialMedia = [
     id: "social-media-3",
     icon: linkedin,
     link: "https://www.linkedin.com/company/proxima-fitness/",
+  },
+  {
+    id: "social-media-4",
+    icon: reddit,
+    link: "https://www.reddit.com/r/ProximaFitness/",
   },
 ];
 

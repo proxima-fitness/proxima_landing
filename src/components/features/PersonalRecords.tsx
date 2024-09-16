@@ -3,8 +3,8 @@ import styles, { layout } from "../../style";
 
 const PersonalRecords = () => (
   <section id="personalRecords" className={layout.sectionReverse}>
-    <div className={layout.sectionInfo}>
-      <h2 className={styles.heading2}>
+    <div className={layout.sectionInfoCentered}>
+      <h2 className={styles.heading2PersonalRecords}>
         Social Media for <br className="sm:block hidden" /> Personal Records.
       </h2>
       <p className={`${styles.paragraph} max-w-[470px] mt-5`}>

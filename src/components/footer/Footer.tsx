@@ -5,7 +5,7 @@ const Footer = () => (
   <section className={`${styles.flexCenter} ${styles.paddingY} flex-col`}>
     <div className={`${styles.flexStart} md:flex-row flex-col mb-8 w-full`}>
       <div className="flex-[1] flex flex-col justify-start mr-10">
-      <span className="text-white text-xl font-bold">Proxima Fitness</span>
+      <span className="text-white text-xl font-bold">Proxima Fitness Inc.</span>
         <p className={`${styles.paragraph} mt-4 max-w-[312px]`}>
           Built by the Strong, for the Strongest
         </p>

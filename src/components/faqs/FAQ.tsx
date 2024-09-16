@@ -1,7 +1,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import styles from "../../style";
+import styles, { layout } from "../../style";
 
 const FAQItem = ({ question, answer }: any) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -34,7 +34,7 @@ const FAQItem = ({ question, answer }: any) => {
 
 
 const FAQAccordion = () => (
-  <section id="faqs" data-aos="fade-right" data-aos-anchor-placement="top-center" data-aos-once="true">
+  <section id="faqs" data-aos="fade-right" data-aos-anchor-placement="top-center" data-aos-once="true" className={ styles.paddingY }>
       <h2 className={styles.heading2 } style={ { textAlign: "center" } }>Frequently Asked Questions</h2>
       <div className="mt-10 flex flex-col justify-center items-center w-full md:px-72">
         <FAQItem

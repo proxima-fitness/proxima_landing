@@ -32,7 +32,7 @@ const Business = () =>  (
 
       <div className={layout.sectionInfoCentered}>
 
-      <h2 className={styles.heading2}>
+      <h2 className={styles.heading2PersonalRecords}>
         Train Popular Free Programs
       </h2>
       <img src={ programs_mobile_white_device } alt="Program Creator Image" className="relative z-[6] max-w-[300px] pt-20 h-auto"/>

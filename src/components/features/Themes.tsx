@@ -7,8 +7,8 @@ const Themes = () => (
         <ThemeSlider />
     </div>
 
-    <div className={layout.sectionInfo}>
-      <h2 className={styles.heading2}>
+    <div className={layout.sectionInfoCentered}>
+      <h2 className={styles.heading2Themes}>
         More than just <br className="sm:block hidden" />Light Mode
       </h2>
       <p className={`${styles.paragraph} max-w-[470px] mt-5`}>

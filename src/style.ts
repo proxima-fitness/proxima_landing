@@ -1,19 +1,25 @@
 
 const styles = {
-  boxWidth: "xl:max-w-[1280px] w-full",
+    boxWidth: "xl:max-w-[1280px] w-full",
 
-  heading2: "font-poppins font-semibold xs:text-[48px] text-[40px] text-white xs:leading-[76.8px] leading-[66.8px] w-full",
-  paragraph: "font-poppins font-normal text-dimWhite text-[18px] leading-[30.8px]",
+    heading2Centered: `font-poppins font-semibold xs:text-[48px] text-[40px] flex justify-center items-center text-white xs:leading-[76.8px] leading-[66.8px] w-full`,
+    heading2End: `font-poppins font-semibold xs:text-[48px] text-[40px] flex justify-center items-end text-white xs:leading-[76.8px] leading-[66.8px] w-full`,
+    heading2: "font-poppins font-semibold xs:text-[48px] text-[40px] text-white xs:leading-[76.8px] leading-[66.8px] w-full",
+    heading2Themes: "font-poppins font-semibold xs:text-[48px] text-[40px] text-white xs:leading-[76.8px] leading-[66.8px] pl-[100px] w-full",
+    heading2PersonalRecords: "font-poppins font-semibold xs:text-[48px] text-[40px] text-white xs:leading-[76.8px] leading-[66.8px] pl-[100px] w-full",
 
-  flexCenter: "flex justify-center items-center",
-  flexStart: "flex justify-center items-start",
+    paragraph: "font-poppins font-normal text-dimWhite text-[18px] leading-[30.8px]",
 
-  paddingX: "sm:px-16 px-6",
-  paddingY: "sm:py-16 py-6",
-  padding: "sm:px-16 px-6 sm:py-12 py-4",
+    flexCenter: "flex justify-center items-center",
+    flexStart: "flex justify-center items-start",
+    flexEnd: "flex justiy-center items-end",
 
-  marginX: "sm:mx-16 mx-6",
-  marginY: "sm:my-16 my-6",
+    paddingX: "sm:px-16 px-6",
+    paddingY: "sm:py-16 py-6",
+    padding: "sm:px-16 px-6 sm:py-12 py-4",
+    paddingsmX: "ml-[20px]",
+    marginX: "sm:mx-16 mx-6",
+    marginY: "sm:my-16 my-6",
 };
 
 export const layout = {
@@ -26,6 +32,8 @@ export const layout = {
 
   sectionInfo: `flex-1 ${styles.flexStart} flex-col`,
   sectionInfoCentered: `flex-1 ${styles.flexCenter} flex-col`,
+  sectionInfoEnd: `flex-1 ${styles.flexEnd} flex-col`,
+
 };
 
 export default styles;
