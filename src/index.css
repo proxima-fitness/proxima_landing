@@ -109,9 +109,17 @@
   }
 }
 
+.faq-card {
+    background: var(--black-gradient);
+    box-shadow: var(--card-shadow);
+}
 .feature-card:hover {
   background: var(--black-gradient);
   box-shadow: var(--card-shadow);
+}
+
+.colour-flip img {
+    filter: brightness(0) invert(1);
 }
 
 .feedback-container .feedback-card:last-child {

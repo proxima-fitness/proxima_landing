@@ -1,33 +1,36 @@
 
-import { useState } from "react";
+import { useReducer, useState } from "react";
 import { motion } from "framer-motion";
-import styles, { layout } from "../../style";
+import styles from "../../style";
+import { add, minus } from "../../assets";
 
 const FAQItem = ({ question, answer }: any) => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggleAccordion = () => {
-    setIsOpen(!isOpen);
-  };
+  const [isOpen, toggleIsOpen] = useReducer(prev => !prev, false);
 
   return (
     <motion.div
       whileHover={{ scale: 1.05 }}
       onHoverStart={e => {}}
       onHoverEnd={e => {}}
-      className={`flex flex-col p-6 rounded-[20px] mb-0 feature-card justify-center items-center `}
-      onClick={toggleAccordion}
+      className={`flex flex-col p-6 rounded-[20px] mb-0 m-4 faq-card justify-center items-center `}
+      onClick={ toggleIsOpen }
       style={{ cursor: 'pointer', width: "100%" }}
     >
-
-      <div
-        className="flex-1 flex flex-col ml-3"
-      >
-        <h4 className={`font-poppins font-semibold text-white text-[18px] leading-[23.4px] mb-1`}>{question}</h4>
-      </div>
-      {isOpen && (
-          <p className={styles.paragraph} style={ { maxWidth: "90%" } }>{answer}</p>
-      )}
+        <div
+            className="flex-1 flex flex-row ml-3 gap-2 justify-between colour-flip"
+        >
+            <h4 className={`font-poppins font-semibold text-white text-[18px] leading-[23.4px] mb-1`}>{question}</h4>
+            { isOpen ?
+                <img src={ minus } alt="star" className={"text-white w-[25px] h-[25px] object-contain "} />
+                :
+                <img src={ add } alt="star" className="text-white w-[25px] h-[25px] object-contain" />
+            }
+        </div>
+        { isOpen && (
+            <>
+                <p className={styles.paragraph} style={ { maxWidth: "90%" } }>{answer}</p>
+            </>
+        ) }
     </motion.div>
   );
 };

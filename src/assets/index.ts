@@ -29,6 +29,8 @@ import programs_dark_device from "./programs-dark-device.png";
 import programs_classic_device from "./programs-classic-device.png";
 import programs_pastel_device from "./programs-pastel-device.png";
 import reddit from "./reddit.svg";
+import add from "./add.svg";
+import minus from "./minus.svg";
 
 export {
     quotes,
@@ -61,5 +63,7 @@ export {
     programs_dark_device,
     programs_classic_device,
     programs_pastel_device,
-    reddit
+    reddit,
+    add,
+    minus
 };

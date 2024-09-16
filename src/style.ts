@@ -33,7 +33,6 @@ export const layout = {
   sectionInfo: `flex-1 ${styles.flexStart} flex-col`,
   sectionInfoCentered: `flex-1 ${styles.flexCenter} flex-col`,
   sectionInfoEnd: `flex-1 ${styles.flexEnd} flex-col`,
-
 };
 
 export default styles;
