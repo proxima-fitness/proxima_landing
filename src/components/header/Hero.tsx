@@ -34,7 +34,7 @@ const Hero = () => {
           Payment Method.
         </h1> */}
         <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
-        A <span className="text-white">Dashboard</span> for your Personal Records.<br/>Create, share and track Programs on our<span className="text-white"> Platform</span>.
+        A Dashboard for your <span className="text-white">Personal Records</span>.<br/>Create, share and track <span className="text-white">Programs</span> on our Platform.
         </p>
           <GetStarted />
       </div>
