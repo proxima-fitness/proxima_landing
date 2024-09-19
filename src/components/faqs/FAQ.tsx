@@ -12,12 +12,12 @@ const FAQItem = ({ question, answer }: any) => {
       whileHover={{ scale: 1.05 }}
       onHoverStart={e => {}}
       onHoverEnd={e => {}}
-      className={`flex flex-col p-6 rounded-[20px] mb-0 m-4 faq-card justify-center items-center `}
+      className={`flex flex-col rounded-[20px] mb-0 m-4 faq-card justify-between `}
       onClick={ toggleIsOpen }
       style={{ cursor: 'pointer', width: "100%" }}
     >
         <div
-            className="flex-1 flex flex-row ml-3 gap-2 justify-between colour-flip"
+            className="flex flex-row p-6 justify-between colour-flip"
         >
             <h4 className={`font-poppins font-semibold text-white text-[18px] leading-[23.4px] mb-1`}>{question}</h4>
             { isOpen ?
@@ -28,7 +28,7 @@ const FAQItem = ({ question, answer }: any) => {
         </div>
         { isOpen && (
             <>
-                <p className={styles.paragraph} style={ { maxWidth: "90%" } }>{answer}</p>
+                <p className={styles.paragraph} style={ { maxWidth: "90%", marginLeft: "20px", marginRight: "20px", marginBottom: "20px" } }>{answer}</p>
             </>
         ) }
     </motion.div>
