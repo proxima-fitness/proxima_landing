@@ -35,18 +35,18 @@ const Business = () =>  (
       <h2 className={styles.heading2PersonalRecords}>
         Train Popular Free Programs
       </h2>
-      <img src={ programs_mobile_white_device } alt="Program Creator Image" className="relative z-[6] max-w-[300px] pt-20 h-auto"/>
+      <img src={ programs_mobile_white_device } alt="Program Creator Image" className="relative z-[6] ss:max-w-[300px] max-w-[220px] pt-20 h-auto"/>
       {/* Ever wanted to <span className="text-white">flex</span> your <span className="text-white">PR's</span>,
       have a place where you can share <span className="text-white">workouts</span> and track
       your <span className="text-white">gains</span> effortlessly. */}
 
     </div>
 
-    <div className={`${layout.sectionImg} flex-col pt-32 `}>
+    <div className={`${layout.sectionImg} flex-col ss:pt-32 pt-10 `}>
       {features.map((feature, index) => (
         <FeatureCard key={feature.id} {...feature} index={index} />
       ))}
-        <a href="https://app.proximafitness.com/"><Button  text={ "View Programs" } styles={`mt-10`} /></a>
+        <a href="https://app.proximafitness.com/"><Button text={ "View Programs" } styles={`mt-10`} /></a>
     </div>
 
   </section>

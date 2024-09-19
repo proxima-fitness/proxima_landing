@@ -2,11 +2,10 @@ import styles, { layout } from "../../style";
 import ThemeSlider from "./ThemeSlider";
 
 const Themes = () => (
-  <section id="themes" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-once="true" className={layout.section}>
+  <section id="themes" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-once="true" className={layout.sectionReverse}>
     <div className={layout.sectionCarousel}>
         <ThemeSlider />
     </div>
-
     <div className={layout.sectionInfoCentered}>
       <h2 className={styles.heading2Themes}>
         More than just <br className="sm:block hidden" />Light Mode

@@ -59,26 +59,29 @@ const [active, setActive] = React.useState("Home");
       <List>
         {navLinks.map((link, index) => (
           <ListItem key={ link.id } disablePadding>
-            <ListItemButton>
-            <ListItemIcon>
-                { link.id === "home" && <HomeIcon style={ { color: "#5ce1e6" } } /> }
-                { link.id === "programs" && <TerminalIcon style={ { color: "#5ce1e6" } } /> }
-                { link.id === "create-programs" && <FeaturedVideoIcon style={ { color: "#5ce1e6" } } /> }
-                { link.id === "faqs" && <LiveHelpIcon style={ { color: "#5ce1e6" } } /> }
-                { link.id === "sign-in" && <LoginIcon style={ { color: "#5ce1e6" } } /> }
-                { link.id === "cta" && <DownloadIcon style={ { color: "#5ce1e6" } } /> }
-              </ListItemIcon>
                 { link.id === "sign-in" ?
                   <a href="https://app.proximafitness.com/">
+                    <ListItemButton>
+                        <ListItemIcon>
+                            <LoginIcon style={ { color: "#5ce1e6" } } />
+                        </ListItemIcon>
                     <ListItemText primary={ link.title } />
+                    </ListItemButton>
                   </a>
                 :
                   <a href={`#${link.id}`}>
-                  <ListItemText primary={ link.title } />
+                    <ListItemButton>
+                        <ListItemIcon>
+                            { link.id === "home" && <HomeIcon style={ { color: "#5ce1e6" } } /> }
+                            { link.id === "programs" && <TerminalIcon style={ { color: "#5ce1e6" } } /> }
+                            { link.id === "create-programs" && <FeaturedVideoIcon style={ { color: "#5ce1e6" } } /> }
+                            { link.id === "faqs" && <LiveHelpIcon style={ { color: "#5ce1e6" } } /> }
+                            { link.id === "cta" && <DownloadIcon style={ { color: "#5ce1e6" } } /> }
+                        </ListItemIcon>
+                    <ListItemText primary={ link.title } />
+                    </ListItemButton>
                   </a>
                 }
-
-            </ListItemButton>
           </ListItem>
         ))}
       </List>
