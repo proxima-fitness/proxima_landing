@@ -24,17 +24,14 @@ const Hero = () => {
         </a>*/}
 
         <div className="flex flex-row justify-between items-center w-full">
-          <h1 className="flex-1 font-poppins font-semibold ss:text-[55px] text-[52px] text-white ">
+          <h1 className="flex-1 font-poppins font-semibold ss:text-[55px] text-[38px] ss:text-left text-center text-white ">
             Maximize gains,<br className="sm:block hidden" />{" "}
             <span className="text-gradient">Minimize guesswork</span>{" "}
           </h1>
         </div>
 
-        {/* <h1 className="font-poppins font-semibold ss:text-[68px] text-[52px] text-white ss:leading-[100.8px] leading-[75px] w-full">
-          Payment Method.
-        </h1> */}
-        <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
-        A Dashboard for your <span className="text-white">Personal Records</span>.<br/>Create, share and track <span className="text-white">Programs</span> on our Platform.
+        <p className={`${styles.paragraph} max-w-[470px] mt-5 text-center ss:text-left`}>
+        Show off your <span className="text-white">Personal Records</span> in our Dashboard. Create, share and follow <span className="text-white">Programs</span> on our Platform.
         </p>
           <GetStarted />
       </div>
