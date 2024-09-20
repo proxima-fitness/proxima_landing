@@ -12,10 +12,13 @@ import Hero from "./header/Hero";
 import SimpleSlider from "./generic/SimpleSlider";
 import CustomPrograms from "./features/CustomPrograms";
 import PersonalRecords from "./features/PersonalRecords";
+import FirstVisual from "./visuals/FirstVisual";
+import SecondVisual from "./visuals/SecondVisual";
 
 export {
     PersonalRecords,
     CustomPrograms,
+    FirstVisual,
     Navbar,
     Premium,
     Themes,
@@ -26,6 +29,7 @@ export {
     Footer,
     Testimonials,
     Hero,
-    SimpleSlider
+    SimpleSlider,
+    SecondVisual
 };
 

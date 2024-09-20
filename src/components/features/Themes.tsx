@@ -11,7 +11,7 @@ const Themes = () => (
         More than just <br className="sm:block hidden" />Light Mode
       </h2>
       <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
-        In addition to the popular <span style={ { color: "white" } }>Light</span> and <span style={ { color: "grey" } }>Dark</span> modes, we've added two unique themes to fit your style: <span style={ { color: "#5ce1e6" } }>Classic Blue</span> and <span style={ { color: "#E4C7B7" } }>Pastel Pink</span>. Whether you're looking for a bold, timeless look or a soft, calming aesthetic, we've got a theme to match your preferences.
+        In addition to the popular Light and Dark modes, we've added two unique themes to fit your style: Classic Blue and Pastel Pink. Whether you're looking for a bold, timeless look or a soft, calming aesthetic, we've got a theme to match your preferences.
       </p>
     </div>
   </section>

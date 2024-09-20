@@ -30,7 +30,7 @@ const Hero = () => {
           </h1>
         </div>
 
-        <p className={`${styles.paragraph} max-w-[470px] mt-5 text-center ss:text-left`}>
+        <p className={`${styles.paragraph} max-w-[470px] mt-5 pb-4 text-center ss:text-left`}>
         Show off your <span className="text-white">Personal Records</span> in our Dashboard. Create, share and follow <span className="text-white">Programs</span> on our Platform.
         </p>
           <GetStarted />

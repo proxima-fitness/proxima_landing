@@ -1,7 +1,5 @@
 
 import styles from "../../style";
-import { Button } from "../generic/Button";
-import { motion } from "framer-motion";
 import GetStarted from "../header/GetStarted";
 
 
@@ -14,8 +12,8 @@ const CTA = () => (
       It will take less than a minute
       </p>
     </div>
-    <div>
-        <GetStarted />
+    <div className="pt-4">
+        <GetStarted noBorder />
     </div>
 
   </section>

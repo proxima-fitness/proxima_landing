@@ -31,6 +31,10 @@ import programs_pastel_device from "./programs-pastel-device.png";
 import reddit from "./reddit.svg";
 import add from "./add.svg";
 import minus from "./minus.svg";
+import visualOne from "./visualOne.png"
+import visualTwo from "./visualTwo.png"
+import visualThree from "./visualThree.png"
+import visualFour from "./visualFour.png"
 
 export {
     quotes,
@@ -65,5 +69,9 @@ export {
     programs_pastel_device,
     reddit,
     add,
-    minus
+    minus,
+    visualOne,
+    visualTwo,
+    visualThree,
+    visualFour
 };
