@@ -120,17 +120,17 @@ export const stats = [
   {
     id: "stats-1",
     title: "Proxima Pro Members",
-    value: "100+",
+    value: 100,
   },
   {
     id: "stats-2",
     title: "Workouts Tracked",
-    value: "2000+",
+    value: 2000,
   },
   {
     id: "stats-3",
     title: "Programs Created",
-    value: "100+",
+    value: 100,
   },
 ];
 
