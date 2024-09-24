@@ -26,7 +26,7 @@ const Hero = () => {
         <div className="flex flex-row justify-between items-center w-full">
           <h1 className="flex-1 font-poppins font-semibold ss:text-[55px] text-[38px] ss:text-left text-center text-white ">
             Plateau Punishing<br className="sm:block hidden" />{" "}
-            <span className="text-gradient">Effortless Tracking</span>{" "}
+            <span style={ { color: "#00F6FF" } }>Effortless Tracking</span>{" "}
           </h1>
         </div>
 
