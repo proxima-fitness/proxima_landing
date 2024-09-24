@@ -25,13 +25,13 @@ const Hero = () => {
 
         <div className="flex flex-row justify-between items-center w-full">
           <h1 className="flex-1 font-poppins font-semibold ss:text-[55px] text-[38px] ss:text-left text-center text-white ">
-            Maximize gains,<br className="sm:block hidden" />{" "}
-            <span className="text-gradient">Minimize guesswork</span>{" "}
+            Plateau Punishing<br className="sm:block hidden" />{" "}
+            <span className="text-gradient">Effortless Tracking</span>{" "}
           </h1>
         </div>
 
         <p className={`${styles.paragraph} max-w-[470px] mt-5 pb-4 text-center ss:text-left`}>
-        Show off your <span className="text-white">Personal Records</span> in our Dashboard. Create, share and follow <span className="text-white">Programs</span> on our Platform.
+        Create, share and follow <span className="text-white">Programs</span> on our Platform. Flex your <span className="text-white">Personal Records</span> with AI tracking.
         </p>
           <GetStarted />
       </div>

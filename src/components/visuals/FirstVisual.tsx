@@ -15,7 +15,7 @@ const FirstVisual = () => (
         backgroundSize: "cover",
         backgroundPosition: "top",
         backgroundRepeat: "no-repeat",
-        borderRadius: "30px"
+        borderRadius: "30px",
         } }
     >
       <h2 className={ `${styles.heading2End} ss:pr-44 ss:pt-32 italic white-gradient` }>

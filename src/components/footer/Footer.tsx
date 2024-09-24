@@ -7,7 +7,7 @@ const Footer = () => (
       <div className="flex-[1] flex flex-col justify-start mr-10">
       <span className="text-white text-xl font-bold">Proxima Fitness Inc.</span>
         <p className={`${styles.paragraph} mt-4 max-w-[312px]`}>
-          Maximize gains, Minimize guesswork
+          Plateau Punishing <br className="sm:block hidden" />{" "} Effortless Tracking
         </p>
       </div>
 
