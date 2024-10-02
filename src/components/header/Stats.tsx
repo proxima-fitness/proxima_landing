@@ -49,7 +49,7 @@ const Stats: React.FC = () => {
                         {/* <Counter value={stat.value} /> */}
                         { stat.value }+
                     </h4>
-                    <p className="font-poppins font-normal xs:text-[20.45px] text-[15.45px] xs:leading-[26.58px] leading-[21.58px] text-gradient uppercase ml-3">
+                    <p style={ { color: "#00F6FF" } } className="font-poppins font-normal xs:text-[20.45px] text-[15.45px] xs:leading-[26.58px] leading-[21.58px] uppercase ml-3">
                         {stat.title}
                     </p>
                 </div>

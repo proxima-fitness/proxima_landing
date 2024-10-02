@@ -25,8 +25,8 @@ const Hero = () => {
 
         <div className="flex flex-row justify-between items-center w-full">
           <h1 className="flex-1 font-poppins font-semibold ss:text-[55px] text-[38px] ss:text-left text-center text-white ">
-            Plateau Punishing<br className="sm:block hidden" />{" "}
-            <span style={ { color: "#00F6FF" } }>Effortless Tracking</span>{" "}
+            Leave No Gains<br className="sm:block hidden" />{" "}
+            <span style={ { color: "#00F6FF" } }>On The Table</span>{" "}
           </h1>
         </div>
 
@@ -36,7 +36,7 @@ const Hero = () => {
           <GetStarted />
       </div>
 
-      <div className={`flex-1 flex ${styles.flexCenter} md:my-0 my-10 relative`} >
+      <div className={`flex-1 flex ${styles.flexCenter} md:my-0 mt-24 mb-10 relative`} >
         <img src={ program_creator_white } alt="Program Creator Image" className="relative z-[5]"/>
         <div className="hidden md:block">
             <img src={ profile_mobile_device_white } alt="Profile Page Image" className="absolute z-[6] max-w-[160px] h-auto -inset-10 top-16"/>
