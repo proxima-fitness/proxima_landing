@@ -1,6 +1,6 @@
 
 import styles from "./style";
-import { Business, CTA, Footer, Themes, Navbar, Testimonials, Hero, Stats, Premium, CustomPrograms, PersonalRecords, FirstVisual, SecondVisual } from "./components";
+import { Business, CTA, Footer, Themes, Navbar, Testimonials, Hero, Stats, CustomPrograms, PersonalRecords, FirstVisual, SecondVisual } from "./components";
 import FAQAccordion from "./components/faqs/FAQ";
 
 const App = () => (
@@ -17,23 +17,39 @@ const App = () => (
       </div>
     </div>
 
-    <div className={`bg-primary ${styles.paddingX} ${styles.flexCenter}`}>
+    <div className={`bg-primary ${styles.paddingX} ${styles.flexCenter} flex-col`}>
       <div className={`${styles.boxWidth}`}>
         <Stats />
+      </div>
+    </div>
+    <div className={`bg-white ${styles.paddingX} ${styles.flexCenter} flex-col`}>
+    <div className={`${styles.boxWidth}`}>
         <Business />
-        <Testimonials />
-        <FirstVisual />
-        <CustomPrograms />
+    </div>
+    </div>
+    <div className={`bg-primary ${styles.paddingX} ${styles.flexCenter} flex-col`}>
+        <div className={`${styles.boxWidth}`}>
+            <Testimonials />
+            {/* <FirstVisual /> */}
+            <CustomPrograms />
+        </div>
+    </div>
+    <div className={`bg-white ${styles.paddingX} ${styles.flexCenter} flex-col`}>
+      <div className={`${styles.boxWidth}`}>
         <PersonalRecords />
+      </div>
+    </div>
+    <div className={`bg-primary ${styles.paddingX} ${styles.flexCenter} flex-col`}>
+      <div className={`${styles.boxWidth}`}>
         <Themes />
-        <SecondVisual />
+        {/* <SecondVisual /> */}
         {/* <Premium /> */}
         <FAQAccordion/>
         <CTA />
         <Footer />
       </div>
+      </div>
     </div>
-  </div>
 );
 
 export default App;

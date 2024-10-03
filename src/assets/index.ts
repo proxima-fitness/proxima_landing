@@ -35,6 +35,7 @@ import visualOne from "./visualOne.png"
 import visualTwo from "./visualTwo.png"
 import visualThree from "./visualThree.png"
 import visualFour from "./visualFour.png"
+import wave from "./wave.svg";
 
 export {
     quotes,
@@ -73,5 +74,6 @@ export {
     visualOne,
     visualTwo,
     visualThree,
-    visualFour
+    visualFour,
+    wave
 };

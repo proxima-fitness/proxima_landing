@@ -6,9 +6,10 @@ const styles = {
     heading2End: `font-poppins font-semibold xs:text-[48px] text-[24px] flex justify-end items-end text-white xs:leading-[76.8px] leading-[66.8px] w-full`,
     heading2: "font-poppins font-semibold xs:text-[48px] text-[24px] text-white xs:leading-[76.8px] leading-[66.8px] w-full",
     heading2Themes: "font-poppins font-semibold xs:text-[48px] text-[40px] text-white xs:leading-[76.8px] leading-[66.8px] text-center md:text-left md:pl-[100px] w-full",
-    heading2PersonalRecords: "font-poppins font-semibold xs:text-[48px] text-[40px] text-white xs:leading-[76.8px] leading-[66.8px] md:pl-[100px] text-center md:text-left w-full",
+    heading2WhiteSection: "font-poppins font-semibold xs:text-[48px] text-[40px] text-black xs:leading-[76.8px] leading-[66.8px] md:pl-[100px] text-center md:text-left w-full",
 
     paragraph: "font-poppins font-normal text-dimWhite ss:text-[18px] text-[14px] leading-[30.8px]",
+    paragraphWhiteSection: "font-poppins font-normal text-slate-600 ss:text-[18px] text-[14px] leading-[30.8px]",
 
     flexCenter: "flex justify-center items-center",
     flexStart: "flex justify-center items-start",
