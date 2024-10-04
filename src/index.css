@@ -39,6 +39,19 @@
   scroll-behavior: smooth;
 }
 
+@keyframes spin-slow {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .animate-spin-slow {
+    animation: spin-slow 8s linear infinite;
+  }
+
 .text-gradient {
   background: radial-gradient(
     64.18% 64.18% at 71.16% 35.69%,
@@ -131,6 +144,8 @@
 .faq-card {
     background: var(--black-gradient);
     box-shadow: var(--card-shadow);
+    border-width: 2px;
+    border-color: white;
 }
 .feature-card {
     background: var(--black-gradient-2);

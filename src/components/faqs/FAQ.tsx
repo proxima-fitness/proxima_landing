@@ -17,7 +17,7 @@ const FAQItem = ({ question, answer }: any) => {
       style={{ cursor: 'pointer', width: "100%" }}
     >
         <div
-            className="flex flex-row p-6 justify-between colour-flip"
+            className="relative z-10 flex flex-row p-6 justify-between colour-flip"
         >
             <h4 className={`font-poppins font-semibold text-white text-[18px] leading-[23.4px] mb-1`}>{question}</h4>
             { isOpen ?
