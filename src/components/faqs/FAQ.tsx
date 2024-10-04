@@ -19,7 +19,7 @@ const FAQItem = ({ question, answer }: any) => {
         <div
             className="relative z-10 flex flex-row p-6 justify-between colour-flip"
         >
-            <h4 className={`font-poppins font-semibold text-white text-[18px] leading-[23.4px] mb-1`}>{question}</h4>
+            <h4 className={`font-second font-semibold text-white text-[18px] leading-[23.4px] mb-1`}>{question}</h4>
             { isOpen ?
                 <img src={ minus } alt="star" className={"text-white w-[25px] h-[25px] object-contain "} />
                 :

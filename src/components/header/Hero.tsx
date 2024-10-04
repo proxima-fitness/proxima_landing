@@ -24,7 +24,7 @@ const Hero = () => {
         </a>*/}
 
         <div className="flex flex-row justify-between items-center w-full">
-          <h1 className="flex-1 font-poppins font-semibold ss:text-[55px] text-[38px] ss:text-left text-center text-white ">
+          <h1 className="flex-1 font-main font-semibold ss:text-[55px] text-[38px] ss:text-left text-center text-white ">
             Leave No Gains<br className="sm:block hidden" />{" "}
             <span style={ { color: "#00F6FF" } }>On The Table</span>{" "}
           </h1>

@@ -1,6 +1,5 @@
 
 import { useState } from "react";
-import { close, menu } from "../../assets";
 import { navLinks } from "../../assets/constants/index";
 import { Button } from "../generic/Button";
 import NavDrawer from "./NavDrawer";
@@ -10,7 +9,7 @@ const Navbar = () => {
 
   return (
     <nav className="w-full flex py-6 justify-between items-center navbar">
-      <span className="text-white text-xl font-bold">Proxima Fitness</span>
+      <span className="text-white text-xl font-bold font-second">Proxima Fitness</span>
 
       <ul className="list-none sm:flex hidden justify-end items-center flex-1 z-[6]">
         { navLinks.map((nav, index) => {
@@ -23,7 +22,7 @@ const Navbar = () => {
               : nav.id === "sign-in" ?
                 <li
                     key={nav.id}
-                    className={`font-poppins font-normal cursor-pointer text-[16px] ${
+                    className={`font-main font-normal cursor-pointer text-[16px] ${
                     active === nav.title ? "text-white" : "text-dimWhite"
                     } ${index === navLinks.length - 1 ? "mr-0" : "mr-10"}`}
                     onClick={() => setActive(nav.title)}
@@ -34,7 +33,7 @@ const Navbar = () => {
                 :
               <li
                 key={nav.id}
-                className={`font-poppins font-normal cursor-pointer text-[16px] ${
+                className={`font-main font-normal cursor-pointer text-[16px] ${
                   active === nav.title ? "text-white" : "text-dimWhite"
                 } ${index === navLinks.length - 1 ? "mr-0" : "mr-10"}`}
                 onClick={() => setActive(nav.title)}
