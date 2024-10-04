@@ -33,7 +33,7 @@ const Business = () =>  (
 
       <div className={layout.sectionInfoCentered}>
       <h2 className={styles.heading2WhiteSection}>
-      Train Popular <span style={ { color: "#00F6FF" } }>Science Based</span> Programs
+      Train Popular <span style={ { color: "#003366" } }>Science Based</span> Programs
       </h2>
       <img src={ programs_mobile_white_device } alt="Program Creator Image" className="relative z-[6] ss:max-w-[280px] max-w-[220px] pt-20 h-auto"/>
       {/* Ever wanted to <span className="text-white">flex</span> your <span className="text-white">PR's</span>,

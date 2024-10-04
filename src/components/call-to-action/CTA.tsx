@@ -9,7 +9,7 @@ const CTA = () => (
     <div className="flex-1 flex flex-col">
       <h2 className={styles.heading2}>Download the App now</h2>
       <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
-      It will take less than a minute
+      It takes less than a minute
       </p>
     </div>
     <div className="pt-4">

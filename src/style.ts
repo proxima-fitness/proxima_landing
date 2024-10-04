@@ -8,6 +8,7 @@ const styles = {
     heading2Themes: "font-poppins font-semibold xs:text-[48px] text-[40px] text-white xs:leading-[76.8px] leading-[66.8px] text-center md:text-left md:pl-[100px] w-full",
     heading2WhiteSection: "font-poppins font-semibold xs:text-[48px] text-[40px] text-black xs:leading-[76.8px] leading-[66.8px] md:pl-[100px] text-center md:text-left w-full",
 
+    paragraphHero: "font-poppins font-normal text-dimWhite ss:text-[15px] text-[14px] leading-[30.8px]",
     paragraph: "font-poppins font-normal text-dimWhite ss:text-[18px] text-[14px] leading-[30.8px]",
     paragraphWhiteSection: "font-poppins font-normal text-slate-600 ss:text-[18px] text-[14px] leading-[30.8px]",
 
