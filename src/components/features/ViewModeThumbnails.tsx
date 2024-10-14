@@ -12,7 +12,6 @@ export const ViewModeThumbnails: React.FC<IProps> = (props) => {
     } = props;
 
     const [ thumbnail, setThumbnail ] = useState<Blob | null | undefined>();
-    console.log(programID, thumbnail);
 
     useEffect(() => {
         const fetchProgramThumbnail = async (programID: string) => {

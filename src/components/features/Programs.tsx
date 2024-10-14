@@ -10,7 +10,7 @@ import { ViewModeThumbnails } from "./ViewModeThumbnails";
 const FeatureCard = ({id, title, workout_duration, difficulty, equipment, index }: any) => (
   <motion.div
     whileHover={{ scale: 1.05 }}
-    className={`transition group p-[4px] relative p-[4px] rounded-[20px] ${index !== features.length - 1 ? "mb-6" : "mb-0"} `}
+    className={`transition group p-[4px] relative p-[4px] rounded-[20px] `}
   >
     <div className="relative z-10 flex flex-row p-4 rounded-[20px] bg-black h-[280px]">
       <div className="flex-1 flex flex-col">
@@ -31,13 +31,18 @@ const FeatureCard = ({id, title, workout_duration, difficulty, equipment, index 
 
 const Business = () => {
   const [programs, setPrograms] = useState<TProgram[] | undefined>([]);
-  console.log(programs);
   // Fetch programs when the component mounts
   useEffect(() => {
     const fetchPrograms = async () => {
       try {
-        const fetchedPrograms = await getExplorePagePrograms(8);
-        setPrograms(fetchedPrograms); // Update state with fetched programs
+        const width = window.innerWidth;
+        if (width <= 768) {
+            const fetchedPrograms = await getExplorePagePrograms(4);
+            setPrograms(fetchedPrograms); // Update state with fetched programs
+        } else {
+            const fetchedPrograms = await getExplorePagePrograms(8);
+            setPrograms(fetchedPrograms); // Update state with fetched programs
+        }
       } catch (error) {
         console.error("Error fetching programs:", error);
       }
