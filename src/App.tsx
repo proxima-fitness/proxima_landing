@@ -1,6 +1,6 @@
 
 import styles from "./style";
-import { Business, CTA, Footer, Themes, Navbar, Testimonials, Hero, Stats, CustomPrograms, PersonalRecords, FirstVisual, SecondVisual } from "./components";
+import { Business, CTA, Footer, Themes, Navbar, Testimonials, Hero, Stats, CustomPrograms, PersonalRecords, FirstVisual, SecondVisual, Programs } from "./components";
 import FAQAccordion from "./components/faqs/FAQ";
 
 const App = () => (
@@ -24,7 +24,8 @@ const App = () => (
     </div>
     <div className={`bg-white ${styles.paddingX} ${styles.flexCenter} flex-col`}>
     <div className={`${styles.boxWidth}`}>
-        <Business />
+        {/* <Business /> */}
+        <Programs />
     </div>
     </div>
     <div className={`bg-primary ${styles.paddingX} ${styles.flexCenter} flex-col`}>

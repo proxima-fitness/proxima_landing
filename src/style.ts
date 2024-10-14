@@ -7,6 +7,7 @@ const styles = {
     heading2: "font-main font-semibold xs:text-[48px] text-[24px] text-white xs:leading-[76.8px] leading-[66.8px] w-full",
     heading2Themes: "font-main font-semibold xs:text-[48px] text-[40px] text-white xs:leading-[76.8px] leading-[66.8px] text-center md:text-left md:pl-[100px] w-full",
     heading2WhiteSection: "font-main font-semibold xs:text-[48px] text-[40px] text-black xs:leading-[76.8px] leading-[66.8px] md:pl-[100px] text-center md:text-left w-full",
+    heading2Programs: "font-main font-semibold xs:text-[48px] text-[40px] text-black xs:leading-[76.8px] leading-[66.8px]  text-center md:text-center w-full",
 
     paragraphHero: "font-second font-normal text-dimWhite ss:text-[15px] text-[14px] leading-[30.8px]",
     paragraph: "font-second font-normal text-dimWhite ss:text-[18px] text-[14px] leading-[30.8px]",
@@ -27,7 +28,7 @@ const styles = {
 export const layout = {
   section: `flex md:flex-row flex-col ${styles.paddingY}`,
   sectionReverse: `flex md:flex-row flex-col-reverse ${styles.paddingY}`,
-
+  sectionTop: `flex md:flex-col flex-col ${styles.paddingY}`,
   sectionImgReverse: `flex-1 flex ${styles.flexCenter} md:mr-10 mr-0 md:mt-0 mt-10 relative`,
   sectionImg: `flex-1 flex ${styles.flexCenter} md:ml-10 ml-0 md:mt-0 mt-10 relative`,
   sectionCarousel: `flex-1 flex ${styles.flexCenter} md:w-1/2 ss:pr-10 ml-0 md:mt-0 mt-10 relative`,
