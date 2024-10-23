@@ -1,5 +1,6 @@
 import styles from "../../style";
 import { footerLinks, socialMedia } from "../../assets/constants";
+import { proxima_logo } from "../../assets";
 
 const Footer = () => (
   <section className={`${styles.flexCenter} ${styles.paddingY} flex-col`}>
@@ -9,6 +10,9 @@ const Footer = () => (
         <p className={`${styles.paragraph} mt-4 max-w-[312px]`}>
           Leave No Gains <br className="sm:block hidden" />{" "} On The Table
         </p>
+        <div className="h-[100px] w-[200px] flex justify-start items-center">
+            <img src={ proxima_logo } alt="Proxima Logo" className="relative w-auto h-[180px] -ml-8 z-[1]"/>
+        </div>
       </div>
 
       <div className="flex-[1.5] w-full flex flex-row justify-between flex-wrap md:mt-0 mt-10">

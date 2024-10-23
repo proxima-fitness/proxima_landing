@@ -36,6 +36,8 @@ import visualTwo from "./visualTwo.png"
 import visualThree from "./visualThree.png"
 import visualFour from "./visualFour.png"
 import wave from "./wave.svg";
+import proxima_logo from "./proxima_logo_blue-04.svg";
+import proxima_logo_black from "./proxima_logo_black.svg";
 
 export {
     quotes,
@@ -75,5 +77,7 @@ export {
     visualTwo,
     visualThree,
     visualFour,
-    wave
+    wave,
+    proxima_logo,
+    proxima_logo_black
 };
