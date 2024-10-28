@@ -14,7 +14,7 @@ const GetStarted: React.FC<IProps> = ({noBorder}) => (
       onHoverStart={e => {}}
       onHoverEnd={e => {}}
     >
-    <a href="https://app.proximafitness.com/"
+    <a href="https://testflight.apple.com/join/dG4SXTTm"
     >
       <img src={ apple } alt="apple"
         style={ {
