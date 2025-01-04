@@ -16,7 +16,7 @@ const App = () => {
           useBeforeUnload: false
         },
         mobile: {
-            delayInSecondsToTrigger: 3,
+            delayInSecondsToTrigger: 2,
             triggerOnIdle: true,
           }
       })
