@@ -1,9 +1,11 @@
 
 import styles from "./style";
-import { Business, CTA, Footer, Themes, Navbar, Testimonials, Hero, Stats, CustomPrograms, PersonalRecords, FirstVisual, SecondVisual, Programs } from "./components";
+import { CTA, Footer, Themes, Navbar, Testimonials, Hero, Stats, CustomPrograms, PersonalRecords, Programs } from "./components";
 import FAQAccordion from "./components/faqs/FAQ";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 
 const App = () => (
+    <Router>
   <div className="bg-primary w-full overflow-hidden">
     <div className={`${styles.paddingX} ${styles.flexCenter}`}>
       <div className={`${styles.boxWidth}`}>
@@ -51,6 +53,11 @@ const App = () => (
       </div>
       </div>
     </div>
+    <Routes>
+      <Route path="*" element={<Navigate to="/" />} />
+    </Routes>
+
+    </Router>
 );
 
 export default App;
