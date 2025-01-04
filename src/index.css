@@ -108,6 +108,15 @@
   );
 }
 
+ul {
+    list-style-type: disc; /* Options: disc, circle, square, none */
+    padding-left: 20px;      /* Add some padding */
+  }
+  li {
+    margin-bottom: 5px;      /* Add space between points */
+  }
+
+
 .bg-discount-gradient {
   background: linear-gradient(125.17deg, #272727 0%, #11101d 100%);
 }

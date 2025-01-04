@@ -30,7 +30,8 @@
     "slick-carousel": "^1.8.1",
     "tailwind-merge": "^2.6.0",
     "tailwindcss-animate": "^1.0.7",
-    "typescript": "^5.2.2"
+    "typescript": "^5.2.2",
+    "use-exit-intent": "^1.0.7"
   },
   "devDependencies": {
     "@types/aos": "^3.0.7",

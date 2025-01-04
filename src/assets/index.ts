@@ -38,6 +38,7 @@ import visualFour from "./visualFour.png"
 import wave from "./wave.svg";
 import proxima_logo from "./proxima_logo_blue-04.svg";
 import proxima_logo_black from "./proxima_logo_black.svg";
+import qr_code from "./qr-code.svg";
 
 export {
     quotes,
@@ -79,5 +80,6 @@ export {
     visualFour,
     wave,
     proxima_logo,
-    proxima_logo_black
+    proxima_logo_black,
+    qr_code
 };

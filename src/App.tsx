@@ -3,8 +3,41 @@ import styles from "./style";
 import { CTA, Footer, Themes, Navbar, Testimonials, Hero, Stats, CustomPrograms, PersonalRecords, Programs } from "./components";
 import FAQAccordion from "./components/faqs/FAQ";
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import { useExitIntent } from 'use-exit-intent';
+import { DownloadPopup } from "./components/call-to-action/DownloadPopup";
+import { useState } from "react";
 
-const App = () => (
+const App = () => {
+    const { registerHandler } = useExitIntent({
+        desktop: {
+          delayInSecondsToTrigger: 5,
+          triggerOnMouseLeave: true,
+          triggerOnIdle: true,
+          useBeforeUnload: false
+        }
+      })
+
+    // This handler will be triggered on desktop and mobile
+    registerHandler({
+      id: 'desktop',
+      handler: () => {
+        setIsOpen(true);
+      },
+      context: ['onDesktop']
+    })
+
+    // This handler will be triggered only on mobile
+    registerHandler({
+      id: 'mobile',
+      handler: () => {
+        console.log('Hello from Mobile!')
+      },
+      context: ['onMobile']
+    })
+
+    const [isOpen, setIsOpen] = useState(false);
+
+    return (
     <Router>
   <div className="bg-primary w-full overflow-hidden">
     <div className={`${styles.paddingX} ${styles.flexCenter}`}>
@@ -12,6 +45,7 @@ const App = () => (
         <Navbar />
       </div>
     </div>
+    <DownloadPopup isOpen={ isOpen } setIsOpen={ setIsOpen } />
 
     <div className={`bg-primary ${styles.flexStart}`}>
       <div className={`${styles.boxWidth}`}>
@@ -58,7 +92,8 @@ const App = () => (
     </Routes>
 
     </Router>
-);
+    );
+};
 
 export default App;
 

@@ -1,6 +1,6 @@
 
 import styles from "../../style";
-import { profile_mobile_device_white,programs_dark_device, programs_classic_device, program_creator_white } from "../../assets";
+import { programs_classic_device, program_creator_white } from "../../assets";
 import GetStarted from "./GetStarted";
 import { DownloadPopup } from "../call-to-action/DownloadPopup";
 
