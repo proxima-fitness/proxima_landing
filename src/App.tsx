@@ -10,11 +10,15 @@ import { useState } from "react";
 const App = () => {
     const { registerHandler } = useExitIntent({
         desktop: {
-          delayInSecondsToTrigger: 5,
+          delayInSecondsToTrigger: 3,
           triggerOnMouseLeave: true,
           triggerOnIdle: true,
           useBeforeUnload: false
-        }
+        },
+        mobile: {
+            delayInSecondsToTrigger: 3,
+            triggerOnIdle: true,
+          }
       })
 
     // This handler will be triggered on desktop and mobile
@@ -30,11 +34,12 @@ const App = () => {
     registerHandler({
       id: 'mobile',
       handler: () => {
-        console.log('Hello from Mobile!')
+        setIsMobile(true);setIsOpen(true);
       },
       context: ['onMobile']
     })
 
+    const [isMobile, setIsMobile] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
 
     return (
@@ -45,7 +50,7 @@ const App = () => {
         <Navbar />
       </div>
     </div>
-    <DownloadPopup isOpen={ isOpen } setIsOpen={ setIsOpen } />
+    <DownloadPopup isOpen={ isOpen } setIsOpen={ setIsOpen } isMobile={ isMobile } />
 
     <div className={`bg-primary ${styles.flexStart}`}>
       <div className={`${styles.boxWidth}`}>
