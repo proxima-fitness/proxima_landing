@@ -17,6 +17,7 @@
     "@types/jest": "^29.5.8",
     "@types/node": "^20.9.1",
     "@vitejs/plugin-react": "^4.2.0",
+    "aos": "^2.3.4",
     "framer-motion": "^10.18.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -26,6 +27,7 @@
     "typescript": "^5.2.2"
   },
   "devDependencies": {
+    "@types/aos": "^3.0.7",
     "@types/react": "^18.2.37",
     "@types/react-dom": "^18.2.15",
     "@types/react-slick": "^0.23.13",
