@@ -1,5 +1,10 @@
 {
+    "files": [],
   "compilerOptions": {
+    "baseUrl": ".",
+      "paths": {
+        "@/*": ["./src/*"]
+      },
     "target": "ESNext",
     "useDefineForClassFields": true,
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
@@ -20,8 +25,17 @@
   "include": ["src",
   "**/*.ts",
   "**/*.tsx",
-  "src/components", 
+  "**/*.js",
+  "**/*.jsx",
+  "src/components",
   "src/custom.d.ts"
  ],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "references": [
+      {
+        "path": "./tsconfig.app.json"
+      },
+      {
+        "path": "./tsconfig.node.json"
+      }
+    ],
 }
