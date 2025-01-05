@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { getExplorePagePrograms } from "../../api/programs";
 import styles, { layout } from "../../style";
 import { Button } from "../generic/Button";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { ViewModeThumbnails } from "./ViewModeThumbnails";
 
 const FeatureCard = ({id, title, workout_duration, difficulty, equipment, index }: any) => (

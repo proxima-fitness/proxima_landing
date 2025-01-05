@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import quotes from "../../../public/quotes.svg";
 import starGold from "../../../public/StarGold.svg";
 

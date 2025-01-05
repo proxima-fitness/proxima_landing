@@ -7,6 +7,7 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog"
 import { proxima_logo, qr_code, starGold,apple, google } from "public";
+import Image from "next/Image";
 
 interface IProps {
     isOpen: boolean;

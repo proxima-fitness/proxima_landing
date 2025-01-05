@@ -1,4 +1,6 @@
 
+"use client";
+
 import styles from "../../style";
 import GetStarted from "./GetStarted";
 import programs_classic_device from "../../../public/programs-classic-device.png";

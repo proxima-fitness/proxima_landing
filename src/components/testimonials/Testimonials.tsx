@@ -1,7 +1,7 @@
 
 import styles from "../../style";
 import SimpleSlider from "../generic/SimpleSlider";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import starGold from "../../../public/StarGold.svg";
 
 const Testimonials = () => (

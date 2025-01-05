@@ -1,7 +1,7 @@
 
 import styles, { layout } from "../../style";
 import { Button } from "../generic/Button";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { features } from "@/assets/constants";
 import { program_creator_mobile_white_with_device } from "public";
 
