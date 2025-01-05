@@ -3,14 +3,14 @@ import { useState } from "react";
 import { navLinks } from "../../assets/constants/index";
 import { Button } from "../generic/Button";
 import NavDrawer from "./NavDrawer";
-import proxima_logo from "../../../public/proxima_logo_black.svg";
+import { proxima_logo } from "public";
 
 const Navbar = () => {
   const [active, setActive] = useState("Home");
 
   return (
     <nav className="w-full flex py-6 justify-between items-center navbar">
-        <img src={ proxima_logo } alt="Proxima Logo" className="absolute w-auto h-[400px] -m-20 z-[1]"
+        <img src={ (proxima_logo as any).src } alt="Proxima Logo" className="absolute w-auto h-[400px] -m-20 z-[1]"
         />
       {/* <span className="text-white text-xl font-bold font-second">Proxima Fitness</span> */}
 

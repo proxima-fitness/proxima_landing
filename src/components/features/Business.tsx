@@ -2,8 +2,8 @@
 import styles, { layout } from "../../style";
 import { Button } from "../generic/Button";
 import { motion } from "framer-motion";
-import programs_mobile_white_device from "../../../public/programs-mobile-white-device.png";
 import { features } from "@/assets/constants";
+import { program_creator_mobile_white_with_device } from "public";
 
 const FeatureCard = ({ icon, title, content, index }: any) => (
     <motion.div
@@ -39,7 +39,7 @@ const Business = () =>  (
       <h2 className={styles.heading2WhiteSection}>
       Train Popular <span style={ { color: "#33bbcf" } }>Science Based</span> Programs
       </h2>
-      <img src={ programs_mobile_white_device } alt="Program Creator Image" className="relative z-[6] ss:max-w-[280px] max-w-[220px] pt-20 h-auto"/>
+      <img src={ (program_creator_mobile_white_with_device as any).src } alt="Program Creator Image" className="relative z-[6] ss:max-w-[280px] max-w-[220px] pt-20 h-auto"/>
     </div>
 
     <div className={`${layout.sectionImg} flex-col ss:pt-48 pt-10 `}>

@@ -37,9 +37,9 @@ const Hero = () => {
       </div>
 
       <div className={`flex-1 flex ${styles.flexCenter} md:my-0 mt-24 mb-10 relative`} >
-        <img src={ program_creator_white } alt="Program Creator Image" className="relative z-[5]"/>
+        <img src={ (program_creator_white as any).src } alt="Program Creator Image" className="relative z-[5]"/>
         <div className="hidden md:block">
-            <img src={ programs_classic_device } alt="Profile Page Image" className="absolute z-[6] max-w-[160px] h-auto -inset-10 top-16"/>
+            <img src={ (programs_classic_device as any).src } alt="Profile Page Image" className="absolute z-[6] max-w-[160px] h-auto -inset-10 top-16"/>
         </div>
         {/* gradient start */}
         <div className="absolute z-[0] w-[40%] h-[35%] top-0 pink__gradient" />

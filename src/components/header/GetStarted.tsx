@@ -1,6 +1,5 @@
-import apple from "../../../public/apple.svg";
-import google from "../../../public/google.svg";
 import { motion } from "framer-motion";
+import { apple, google } from "public";
 
 interface IProps {
     noBorder?: boolean;
@@ -16,7 +15,7 @@ const GetStarted: React.FC<IProps> = ({noBorder}) => (
     >
     <a href="https://testflight.apple.com/join/dG4SXTTm"
     >
-      <img src={ apple } alt="apple"
+      <img src={ (apple as any).src } alt="apple"
         style={ {
             width: "150px",
             height: "100%",
@@ -36,7 +35,7 @@ const GetStarted: React.FC<IProps> = ({noBorder}) => (
       onHoverEnd={e => {}}
     >
     <a href="https://app.proximafitness.com/">
-        <img src={google} alt="google"
+        <img src={(google as any).src} alt="google"
             style={ {
                 width: "150px",
                 height: "100%",

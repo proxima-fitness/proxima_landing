@@ -9,24 +9,24 @@ const FeedbackCard = ({ content, name, title, img }: any) => (
     onHoverEnd={e => {}}
     className="flex justify-around flex-col px-6 rounded-[20px] max-w-[370px] m-6 feedback-card"
   >
-    <img src={quotes} alt="double_quotes" className="w-[42.6px] h-[27.6px] object-contain" />
+    <img src={(quotes as any).src} alt="double_quotes" className="w-[42.6px] h-[27.6px] object-contain" />
     <div className="font-second font-normal text-[16px] leading-[32.4px] text-white py-4">
       {content}
       <div className="flex flex-row py-4">
         <div>
-            <img src={starGold} alt="star_gold" className="w-[30px] h-[20px] object-contain" />
+            <img src={(starGold as any).src} alt="star_gold" className="w-[30px] h-[20px] object-contain" />
         </div>
         <div>
-            <img src={starGold} alt="star_gold" className="w-[30px] h-[20px] object-contain" />
+            <img src={(starGold as any).src} alt="star_gold" className="w-[30px] h-[20px] object-contain" />
         </div>
         <div>
-            <img src={starGold} alt="star_gold" className="w-[30px] h-[20px] object-contain" />
+            <img src={(starGold as any).src} alt="star_gold" className="w-[30px] h-[20px] object-contain" />
         </div>
         <div>
-            <img src={starGold} alt="star_gold" className="w-[30px] h-[20px] object-contain" />
+            <img src={(starGold as any).src} alt="star_gold" className="w-[30px] h-[20px] object-contain" />
         </div>
         <div>
-            <img src={starGold} alt="star_gold" className="w-[30px] h-[20px] object-contain" />
+            <img src={(starGold as any).src} alt="star_gold" className="w-[30px] h-[20px] object-contain" />
         </div>
       </div>
     </div>

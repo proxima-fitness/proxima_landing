@@ -1,14 +1,4 @@
-import star from "../../../public/Star.svg";
-import people03 from "../../../public/people03.png";
-import people01 from "../../../public/people01.png";
-import people02 from "../../../public/people02.png";
-import people04 from "../../../public/people04.png";
-import people05 from "../../../public/people05.png";
-import people06 from "../../../public/people06.png";
-import twitter from "../../../public/twitter.svg";
-import reddit from "../../../public/reddit.svg";
-import instagram from "../../../public/instagram.svg";
-import linkedin from "../../../public/linkedin.svg";
+import { people03, people02, people01, people04, people05, people06, instagram, linkedin, star, reddit, twitter } from "public";
 
 export const navLinks = [
   {
@@ -40,14 +30,14 @@ export const navLinks = [
 export const features = [
   {
     id: "feature-1",
-    icon: star,
+    icon: star.src,
     title: "Think your program is killing your gains ?",
     content:
       "Your fellow Gym-goers can share their workouts for free, allowing you to follow along. Learn from the expertise of your peers!",
   },
   {
     id: "feature-2",
-    icon: star,
+    icon: star.src,
     title: "Want to run a program to beat your current plateau ?",
     content:
       "Follow proven programs that are open sourced on reddit and other locations.",
@@ -61,7 +51,7 @@ export const features = [
 //   },
 {
     id: "feature-2",
-    icon: star,
+    icon: star.src,
     title: "You're a coach and you want to grow your following ?",
     content:
       "You can post your own programs to Proxima, and help other lifters with your expertise",
@@ -82,14 +72,14 @@ export const feedback = [
             "Lots of cool programs, and super easy to use UI. Would definitely recommend trying out the free version",
         name: "Scott Hanlon",
         title: "Proxima Member · 2024.05.03",
-        img: people03,
+        img: people03.src,
     },
     {
         id: "feedback-2",
         content: "Literally the best fitness app I've used so far. It's simple and the PR cards are sick",
         name: "Marco Zanotto",
         title: "Proxima Member · 2024.04.12",
-        img: people02,
+        img: people02.src,
       },
       {
         id: "feedback-3",
@@ -97,7 +87,7 @@ export const feedback = [
         "Best free gym app I've found. So many programs I can just click and train. Crazy amount of features for a Free app",
         name: "Sina Banki",
         title: "Proxima Member · 2024.05.25",
-        img: people01,
+        img: people01.src,
       },
       {
         id: "feedback-4",
@@ -105,7 +95,7 @@ export const feedback = [
           "I've been lifting for over a decade and I usually avoid gym apps. Proxima is the first that I think is actually pretty good. It has a generous amount of features in the free tier, and suits my needs",
         name: "Jordan Van De Sande",
         title: "Proxima Member · 2024.09.14",
-        img: people04,
+        img: people04.src,
       },
       {
         id: "feedback-5",
@@ -113,7 +103,7 @@ export const feedback = [
         "I train 5-6 days a week for the military, this app has helped me stay in shape for work. 10/10",
         name: "Rob Roy Mackenzie",
         title: "Proxima Member · 2024.09.06",
-        img: people05,
+        img: people05.src,
       },
       {
         id: "feedback-6",
@@ -121,7 +111,7 @@ export const feedback = [
         "Makes it super easy to build programs myself, and is very flexible with custom exercises and different types of units like RPE, %1RM etc",
         name: "Milton Quintana",
         title: "Proxima Member · 2024.01.18",
-        img: people06,
+        img: people06.src,
       },
 ];
 
@@ -196,22 +186,22 @@ export const footerLinks = [
 export const socialMedia = [
   {
     id: "social-media-1",
-    icon: instagram,
+    icon: instagram.src,
     link: "https://www.instagram.com/proximafitnessapp/",
   },
   {
     id: "social-media-2",
-    icon: twitter,
+    icon: twitter.src,
     link: "https://www.twitter.com/jacklhanlon",
   },
   {
     id: "social-media-3",
-    icon: linkedin,
+    icon: linkedin.src,
     link: "https://www.linkedin.com/company/proxima-fitness/",
   },
   {
     id: "social-media-4",
-    icon: reddit,
+    icon: reddit.src,
     link: "https://www.reddit.com/r/ProximaFitness/",
   },
 ];

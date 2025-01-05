@@ -1,11 +1,11 @@
+import { program_creator_white } from "public";
 import styles, { layout } from "../../style";
 import { Button } from "../generic/Button";
-import program_creator_white from "../../../public/program-creator-white.png";
 
 const CustomPrograms = () => (
   <section id="create-programs" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-once="true" className={layout.sectionReverse}>
     <div className={layout.sectionImgReverse}>
-    <img src={ program_creator_white } alt="Program Creator Image" className="relative z-[5] "/>
+    <img src={ (program_creator_white as any).src } alt="Program Creator Image" className="relative z-[5] "/>
     </div>
 
     <div className={layout.sectionInfoCentered}>

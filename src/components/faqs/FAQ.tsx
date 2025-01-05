@@ -2,8 +2,7 @@
 import { useReducer } from "react";
 import { motion } from "framer-motion";
 import styles from "../../style";
-import add from "../../../public/add.svg";
-import minus from "../../../public/minus.svg";
+import { minus, add } from "public";
 
 const FAQItem = ({ question, answer }: any) => {
   const [isOpen, toggleIsOpen] = useReducer(prev => !prev, false);
@@ -22,9 +21,9 @@ const FAQItem = ({ question, answer }: any) => {
         >
             <h4 className={`font-second font-semibold text-white text-[18px] leading-[23.4px] mb-1`}>{question}</h4>
             { isOpen ?
-                <img src={ minus } alt="star" className={"text-white w-[25px] h-[25px] object-contain "} />
+                <img src={ (minus as any).src } alt="star" className={"text-white w-[25px] h-[25px] object-contain "} />
                 :
-                <img src={ add } alt="star" className="text-white w-[25px] h-[25px] object-contain" />
+                <img src={ (add as any).src } alt="star" className="text-white w-[25px] h-[25px] object-contain" />
             }
         </div>
         { isOpen && (

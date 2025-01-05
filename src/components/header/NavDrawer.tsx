@@ -93,7 +93,7 @@ const [active, setActive] = React.useState("Home");
         <React.Fragment key={ "right" }>
           <Button onClick={toggleDrawer("right", true)}>
             <img
-                src={ menu }
+                src={ (menu as any).src }
                 alt="menu"
                 className="w-[28px] h-[28px] object-contain"
                 />

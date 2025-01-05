@@ -1,5 +1,5 @@
-import { visualOne } from "../../assets";
 import styles, { layout } from "../../style";
+import visualOne from "../../../public/visualOne.png";
 
 const FirstVisual = () => (
   <section

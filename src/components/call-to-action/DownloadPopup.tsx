@@ -6,11 +6,7 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog"
-import apple from "../../../public/apple.svg";
-import google from "../../../public/google.svg";
-import proxima_logo from "../../../public/proxima_logo_black.svg";
-import qr_code from "../../../public/qr-code.svg";
- import starGold from "../../../public/StarGold.svg";
+import { proxima_logo, qr_code, starGold,apple, google } from "public";
 
 interface IProps {
     isOpen: boolean;
@@ -29,7 +25,7 @@ export const DownloadPopup: React.FC<IProps> = (props) => {
             { isMobile ?
                 <span className="flex flex-row pt-6 gap-2">
                 <a href="https://testflight.apple.com/join/dG4SXTTm">
-                <img src={ apple } alt="apple"
+                <img src={ (apple as any).src } alt="apple"
                     style={ {
                         width: "150px",
                         height: "100%",
@@ -39,7 +35,7 @@ export const DownloadPopup: React.FC<IProps> = (props) => {
                     />
                 </a>
                 <a href="https://app.proximafitness.com/">
-                    <img src={google} alt="google"
+                    <img src={(google as any).src} alt="google"
                         style={ {
                             width: "150px",
                             height: "100%",
@@ -51,7 +47,7 @@ export const DownloadPopup: React.FC<IProps> = (props) => {
                 </span>
                 :
                 <Button className="sm:w-[90%] h-[70px] my-6 bg-cyan-600">
-                    <img src={ proxima_logo } alt="Proxima Logo" className="w-auto h-[400px]"/>
+                    <img src={ (proxima_logo as any).src } alt="Proxima Logo" className="w-auto h-[400px]"/>
                 </Button>
             }
 
@@ -60,36 +56,36 @@ export const DownloadPopup: React.FC<IProps> = (props) => {
             <span className="w-[100%] flex flex-col items-center">
                 { !isMobile &&
                 <>
-                    <img src={ qr_code } alt="Proxima Logo" className="w-auto h-[200px]"/>
+                    <img src={ (qr_code as any).src } alt="Proxima Logo" className="w-auto h-[200px]"/>
                     <span className="font-bold">Scan QR Code to Download</span>
                 </>
                 }
 
                 <span className="flex flex-row py-4">
                     <span>
-                        <img src={starGold} alt="star_gold" className="w-[30px] h-[20px] object-contain" />
+                        <img src={(starGold as any).src} alt="star_gold" className="w-[30px] h-[20px] object-contain" />
                     </span>
                     <span>
-                        <img src={starGold} alt="star_gold" className="w-[30px] h-[20px] object-contain" />
+                        <img src={(starGold as any).src} alt="star_gold" className="w-[30px] h-[20px] object-contain" />
                     </span>
                     <span>
-                        <img src={starGold} alt="star_gold" className="w-[30px] h-[20px] object-contain" />
+                        <img src={(starGold as any).src} alt="star_gold" className="w-[30px] h-[20px] object-contain" />
                     </span>
                     <span>
-                        <img src={starGold} alt="star_gold" className="w-[30px] h-[20px] object-contain" />
+                        <img src={(starGold as any).src} alt="star_gold" className="w-[30px] h-[20px] object-contain" />
                     </span>
                     <span>
-                        <img src={starGold} alt="star_gold" className="w-[30px] h-[20px] object-contain" />
+                        <img src={(starGold as any).src} alt="star_gold" className="w-[30px] h-[20px] object-contain" />
                     </span>
                     4.5 Stars on Apple App Store
                 </span>
             </span>
             <span className="w-[100%]">
-                <span className="font-normal text-lg pb-2 text-start">Follow <span className="font-bold">100+</span> Proven Workout Programs</span>
-                <span className="font-normal text-lg pb-2 text-start">Use the <span className="font-bold">AI Workout Builder</span> to easily upload your notes / spreadsheets</span>
-                <span className="font-normal text-lg pb-2 text-start"><span className="font-bold">Generate</span> Workout Programs with AI</span>
-                <span className="font-normal text-lg pb-2 text-start">Track your progress</span>
-                <span className="font-normal text-lg pb-2 text-start"><span className="font-bold">Share</span> Personal Records with your friends</span>
+                <span className="block font-normal text-lg pb-2 text-start"><span className="font-black pr-2">&middot;</span> Follow <span className="font-bold">100+</span> Proven Workout Programs</span>
+                <span className="block font-normal text-lg pb-2 text-start"><span className="font-black pr-2">&middot;</span> Use the <span className="font-bold">AI Workout Builder</span> to easily upload your notes / spreadsheets</span>
+                <span className="block font-normal text-lg pb-2 text-start"><span className="font-black pr-2">&middot;</span> <span className="font-bold">Generate</span> Workout Programs with AI</span>
+                <span className="block font-normal text-lg pb-2 text-start"><span className="font-black pr-2">&middot;</span> Track your progress</span>
+                <span className="block font-normal text-lg pb-2 text-start"><span className="font-black pr-2">&middot;</span> <span className="font-bold">Share</span> Personal Records with your friends</span>
             </span>
           </DialogDescription>
         </DialogHeader>

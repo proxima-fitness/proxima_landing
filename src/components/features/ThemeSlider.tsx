@@ -2,10 +2,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import Slider from "react-slick"
-import programs_pastel_device from "../../../public/programs-pastel-device.png";
-import programs_classic_device from "../../../public/programs-classic-device.png";
-import programs_dark_device from "../../../public/programs-dark-device.png";
-import programs_mobile_white_device from "../../../public/programs-mobile-white-device.png";
+import { programs_classic_device, programs_dark_device, programs_mobile_white_device, programs_pastel_device } from "public";
 
 export default function ThemeSlider() {
   let settings = {
@@ -47,10 +44,10 @@ export default function ThemeSlider() {
   return (
 	<div className="w-full px-6 h-full text-white">
 	<Slider {...settings}>
-        <img src={ programs_classic_device } alt="Program Creator Image" className="relative max-w-[180px] h-auto z-[6]"/>
-        <img src={ programs_dark_device } alt="Program Creator Image" className="relative max-w-[180px] h-auto z-[6]"/>
-        <img src={ programs_mobile_white_device } alt="Program Creator Image" className="relative max-w-[180px] h-auto z-[6]"/>
-        <img src={ programs_pastel_device } alt="Program Creator Image" className="relative max-w-[180px] h-auto z-[6]"/>
+        <img src={ (programs_classic_device as any).src } alt="Program Creator Image" className="relative max-w-[180px] h-auto z-[6]"/>
+        <img src={ (programs_dark_device as any).src } alt="Program Creator Image" className="relative max-w-[180px] h-auto z-[6]"/>
+        <img src={ (programs_mobile_white_device as any).src } alt="Program Creator Image" className="relative max-w-[180px] h-auto z-[6]"/>
+        <img src={ (programs_pastel_device as any).src } alt="Program Creator Image" className="relative max-w-[180px] h-auto z-[6]"/>
     </Slider>
 	</div>
   );
