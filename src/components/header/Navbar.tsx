@@ -4,6 +4,8 @@ import { navLinks } from "../../assets/constants/index";
 import { Button } from "../generic/Button";
 import NavDrawer from "./NavDrawer";
 import { proxima_logo } from "public";
+import Link from 'next/link'
+
 
 const Navbar = () => {
   const [active, setActive] = useState("Home");
@@ -19,10 +21,10 @@ const Navbar = () => {
           return (
             <div key={ index }>
             { nav.id === "cta" ?
-                <a href={`#${nav.id}`}>
+                <Link href="/download">
                     <Button text={ "Download App" } styles={ `py-2` }/>
-                </a>
-              : nav.id === "sign-in" ?
+                </Link>
+              : nav.id === "log-in" ?
                 <li
                     key={nav.id}
                     className={`font-main font-normal cursor-pointer text-[16px] ${
@@ -41,7 +43,7 @@ const Navbar = () => {
                 } ${index === navLinks.length - 1 ? "mr-0" : "mr-10"}`}
                 onClick={() => setActive(nav.title)}
               >
-              <a href={`#${nav.id}`}>{nav.title}</a>
+              <Link href={`/${nav.id}`}>{nav.title}</Link>
               </li>
             }
           </div>

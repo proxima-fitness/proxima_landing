@@ -13,7 +13,7 @@ const App = () => {
     AOS.init();
     const { registerHandler } = useExitIntent({
         desktop: {
-          delayInSecondsToTrigger: 3,
+          delayInSecondsToTrigger: 4,
           triggerOnMouseLeave: true,
           triggerOnIdle: true,
           useBeforeUnload: false

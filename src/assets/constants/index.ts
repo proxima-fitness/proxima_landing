@@ -10,16 +10,12 @@ export const navLinks = [
     title: "Programs",
   },
   {
-    id: "create-programs",
-    title: "Features"
+    id: "about",
+    title: "About Us",
   },
   {
-    id: "faqs",
-    title: "FAQs",
-  },
-  {
-    id: "sign-in",
-    title: "Sign in",
+    id: "log-in",
+    title: "Log in",
   },
   {
     id: "cta",
@@ -137,22 +133,6 @@ export const footerLinks = [
   {
     title: "Useful Links",
     links: [
-      // {
-      //   name: "Content",
-      //   link: "",
-      // },
-      // {
-      //   name: "How it Works",
-      //   link: "",
-      // },
-      // {
-      //   name: "Create",
-      //   link: "",
-      // },
-      // {
-      //   name: "Explore",
-      //   link: "",
-      // },
       {
         name: "Terms of Use",
         link: "https://app.proximafitness.com/terms-of-use",
@@ -160,6 +140,10 @@ export const footerLinks = [
       {
         name: "Privacy Policy",
         link: "https://app.proximafitness.com/privacy",
+      },
+      {
+        name: "Blog",
+        link: "/blog",
       },
     ],
   },

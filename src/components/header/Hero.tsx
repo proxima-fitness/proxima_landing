@@ -32,8 +32,8 @@ const Hero = () => {
             <span style={ { color: "#00F6FF" } }>On The Table</span>{" "}
           </h1>
         </div>
-        <p className={`${styles.paragraphHero} max-w-[470px] mt-5 pb-4 text-center ss:text-left`}>
-        Create, share and follow <span className="text-white">Expert Programs</span> on our Platform. Flex your <span className="text-white">Personal Records</span> and track with <span className="text-white">AI Enhanced Features</span>.
+        <p className={`${styles.paragraphHero} max-w-[600px] mt-5 pb-4 text-center ss:text-left`}>
+        Create, share and follow <span className="text-white">Expert Programs</span> on our Platform. Flex your <span className="text-white">Personal Records</span> and track with <span className="text-white">AI Enhanced Features. Free! No Payment Required.</span>
         </p>
           <GetStarted />
       </div>
@@ -41,7 +41,7 @@ const Hero = () => {
       <div className={`flex-1 flex ${styles.flexCenter} md:my-0 mt-24 mb-10 relative`} >
         <img src={ (program_creator_white as any).src } alt="Program Creator Image" className="relative z-[5]"/>
         <div className="hidden md:block">
-            <img src={ (programs_classic_device as any).src } alt="Profile Page Image" className="absolute z-[6] max-w-[160px] h-auto -inset-10 top-16"/>
+            <img src={ (programs_classic_device as any).src } alt="Profile Page Image" className="absolute z-[6] max-w-[160px] h-auto -inset-10 top-24"/>
         </div>
         {/* gradient start */}
         <div className="absolute z-[0] w-[40%] h-[35%] top-0 pink__gradient" />
