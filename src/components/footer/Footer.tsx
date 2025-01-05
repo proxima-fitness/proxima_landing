@@ -1,6 +1,6 @@
 import styles from "../../style";
 import { footerLinks, socialMedia } from "../../assets/constants";
-import { proxima_logo } from "../../assets";
+import proxima_logo from "../../../public/proxima_logo_black.svg";
 
 const Footer = () => (
   <section className={`${styles.flexCenter} ${styles.paddingY} flex-col`}>

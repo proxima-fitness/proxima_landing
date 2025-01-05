@@ -1,5 +1,6 @@
-import { profile_mobile_device_white } from "../../assets";
+
 import styles, { layout } from "../../style";
+import profile_mobile_device_white from "../../../public/profile-mobile-device-white.png";
 
 const PersonalRecords = () => (
   <section id="personalRecords" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-once="true" className={ `${layout.section} pt-10` }>

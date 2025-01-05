@@ -1,5 +1,5 @@
-
-import { apple, google } from "../../assets";
+import apple from "../../../public/apple.svg";
+import google from "../../../public/google.svg";
 import { motion } from "framer-motion";
 
 interface IProps {

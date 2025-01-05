@@ -2,9 +2,10 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import Slider from "react-slick"
-import { feedback } from "../../assets/constants";
-import FeedbackCard from "../testimonials/FeedbackCard";
-import { programs_classic_device, programs_dark_device, programs_mobile_white_device, programs_pastel_device } from "../../assets";
+import programs_pastel_device from "../../../public/programs-pastel-device.png";
+import programs_classic_device from "../../../public/programs-classic-device.png";
+import programs_dark_device from "../../../public/programs-dark-device.png";
+import programs_mobile_white_device from "../../../public/programs-mobile-white-device.png";
 
 export default function ThemeSlider() {
   let settings = {

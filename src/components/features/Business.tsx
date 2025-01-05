@@ -1,10 +1,9 @@
 
-import { getExplorePagePrograms } from "../../api/programs";
-import { programs_mobile_white_device, wave } from "../../assets";
-import { features } from "../../assets/constants/index";
 import styles, { layout } from "../../style";
 import { Button } from "../generic/Button";
 import { motion } from "framer-motion";
+import programs_mobile_white_device from "../../../public/programs-mobile-white-device.png";
+import { features } from "@/assets/constants";
 
 const FeatureCard = ({ icon, title, content, index }: any) => (
     <motion.div

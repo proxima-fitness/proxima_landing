@@ -1,6 +1,6 @@
-import { program_creator_white } from "../../assets";
 import styles, { layout } from "../../style";
 import { Button } from "../generic/Button";
+import program_creator_white from "../../../public/program-creator-white.png";
 
 const CustomPrograms = () => (
   <section id="create-programs" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-once="true" className={layout.sectionReverse}>

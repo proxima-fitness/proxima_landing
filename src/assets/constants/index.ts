@@ -1,5 +1,14 @@
-
-import { people01, people02, people03, people04, people05, people06, instagram, linkedin, twitter, send, shield, star, reddit  } from "..";
+import star from "../../../public/Star.svg";
+import people03 from "../../../public/people03.png";
+import people01 from "../../../public/people01.png";
+import people02 from "../../../public/people02.png";
+import people04 from "../../../public/people04.png";
+import people05 from "../../../public/people05.png";
+import people06 from "../../../public/people06.png";
+import twitter from "../../../public/twitter.svg";
+import reddit from "../../../public/reddit.svg";
+import instagram from "../../../public/instagram.svg";
+import linkedin from "../../../public/linkedin.svg";
 
 export const navLinks = [
   {

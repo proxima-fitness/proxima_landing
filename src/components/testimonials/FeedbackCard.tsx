@@ -1,7 +1,6 @@
-
-import { quotes } from "../../assets";
 import { motion } from "framer-motion";
-import { starGold } from "../../assets";
+import quotes from "../../../public/quotes.svg";
+import starGold from "../../../public/StarGold.svg";
 
 const FeedbackCard = ({ content, name, title, img }: any) => (
   <motion.div
@@ -11,7 +10,7 @@ const FeedbackCard = ({ content, name, title, img }: any) => (
     className="flex justify-around flex-col px-6 rounded-[20px] max-w-[370px] m-6 feedback-card"
   >
     <img src={quotes} alt="double_quotes" className="w-[42.6px] h-[27.6px] object-contain" />
-    <p className="font-second font-normal text-[16px] leading-[32.4px] text-white py-4">
+    <div className="font-second font-normal text-[16px] leading-[32.4px] text-white py-4">
       {content}
       <div className="flex flex-row py-4">
         <div>
@@ -30,7 +29,7 @@ const FeedbackCard = ({ content, name, title, img }: any) => (
             <img src={starGold} alt="star_gold" className="w-[30px] h-[20px] object-contain" />
         </div>
       </div>
-    </p>
+    </div>
 
     <div className="flex flex-row">
       <img src={img} alt={name} className="w-[48px] h-[48px] rounded-full" />

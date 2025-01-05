@@ -3,7 +3,7 @@ import { useState } from "react";
 import { navLinks } from "../../assets/constants/index";
 import { Button } from "../generic/Button";
 import NavDrawer from "./NavDrawer";
-import { proxima_logo } from "../../assets";
+import proxima_logo from "../../../public/proxima_logo_black.svg";
 
 const Navbar = () => {
   const [active, setActive] = useState("Home");

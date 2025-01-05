@@ -1,8 +1,8 @@
 
 import styles from "../../style";
-import { programs_classic_device, program_creator_white } from "../../assets";
 import GetStarted from "./GetStarted";
-import { DownloadPopup } from "../call-to-action/DownloadPopup";
+import programs_classic_device from "../../../public/programs-classic-device.png";
+import program_creator_white from "../../../public/program-creator-white.png";
 
 const Hero = () => {
   return (
@@ -30,7 +30,6 @@ const Hero = () => {
             <span style={ { color: "#00F6FF" } }>On The Table</span>{" "}
           </h1>
         </div>
-        <DownloadPopup />
         <p className={`${styles.paragraphHero} max-w-[470px] mt-5 pb-4 text-center ss:text-left`}>
         Create, share and follow <span className="text-white">Expert Programs</span> on our Platform. Flex your <span className="text-white">Personal Records</span> and track with <span className="text-white">AI Enhanced Features</span>.
         </p>

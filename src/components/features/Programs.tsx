@@ -1,7 +1,5 @@
 import { useEffect, useState } from "react";
 import { getExplorePagePrograms } from "../../api/programs";
-import { programs_mobile_white_device } from "../../assets";
-import { features } from "../../assets/constants/index";
 import styles, { layout } from "../../style";
 import { Button } from "../generic/Button";
 import { motion } from "framer-motion";

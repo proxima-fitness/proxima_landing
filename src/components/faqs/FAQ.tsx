@@ -1,8 +1,9 @@
 
-import { useReducer, useState } from "react";
+import { useReducer } from "react";
 import { motion } from "framer-motion";
 import styles from "../../style";
-import { add, minus } from "../../assets";
+import add from "../../../public/add.svg";
+import minus from "../../../public/minus.svg";
 
 const FAQItem = ({ question, answer }: any) => {
   const [isOpen, toggleIsOpen] = useReducer(prev => !prev, false);

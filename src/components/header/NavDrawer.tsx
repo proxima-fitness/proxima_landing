@@ -14,7 +14,7 @@ import FeaturedVideoIcon from '@mui/icons-material/FeaturedVideo';
 import LiveHelpIcon from '@mui/icons-material/LiveHelp';
 import LoginIcon from '@mui/icons-material/Login';
 import DownloadIcon from '@mui/icons-material/Download';
-import { menu } from "../../assets";
+import menu from "../../../public/menu.svg";
 
 type Anchor = 'top' | 'left' | 'bottom' | 'right';
 
