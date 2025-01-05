@@ -17,7 +17,6 @@
     "@radix-ui/react-slot": "^1.1.1",
     "@supabase/supabase-js": "^2.45.4",
     "@types/jest": "^29.5.8",
-    "@vitejs/plugin-react": "^4.2.0",
     "aos": "^2.3.4",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
@@ -40,15 +39,12 @@
     "@types/react": "^18.2.37",
     "@types/react-dom": "^18.2.15",
     "@types/react-slick": "^0.23.13",
-    "@vitejs/plugin-react": "^4.2.0",
-    "@vitejs/plugin-react-swc": "^3.0.0",
     "autoprefixer": "^10.4.20",
     "eslint": "^8.38.0",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.3.4",
     "postcss": "^8.4.49",
-    "tailwindcss": "^3.4.17",
-    "vite": "^5.0.0"
+    "tailwindcss": "^3.4.17"
   }
 }
