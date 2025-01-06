@@ -1,8 +1,9 @@
 
 import styles from "../../style";
 import SimpleSlider from "../generic/SimpleSlider";
-import { motion } from "framer-motion";
-import { starGold } from "../../assets";
+import { motion } from "motion/react";
+import starGold from "../../../public/StarGold.svg";
+
 const Testimonials = () => (
     <section
         id="clients"
@@ -21,12 +22,11 @@ const Testimonials = () => (
                     <div className="flex md:flex-row flex-col justify-center items-center">
                         <div className="flex flex-row justify-center items-center">
                             4.5
-                            <img src={starGold} alt="star_gold" className="ml-2 mr-4 w-[50px] h-[40px] object-contain" />
+                            <img src={(starGold as any).src} alt="star_gold" className="ml-2 mr-4 w-[50px] h-[40px] object-contain" />
                         </div>
                         <div>
                             on the App Store
                         </div>
-
                     </div>
                 </h2>
             </motion.div>

@@ -1,3 +1,5 @@
+"use client";
+
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import SwipeableDrawer from '@mui/material/SwipeableDrawer';
@@ -14,7 +16,7 @@ import FeaturedVideoIcon from '@mui/icons-material/FeaturedVideo';
 import LiveHelpIcon from '@mui/icons-material/LiveHelp';
 import LoginIcon from '@mui/icons-material/Login';
 import DownloadIcon from '@mui/icons-material/Download';
-import { menu } from "../../assets";
+import menu from "../../../public/menu.svg";
 
 type Anchor = 'top' | 'left' | 'bottom' | 'right';
 
@@ -93,7 +95,7 @@ const [active, setActive] = React.useState("Home");
         <React.Fragment key={ "right" }>
           <Button onClick={toggleDrawer("right", true)}>
             <img
-                src={ menu }
+                src={ (menu as any).src }
                 alt="menu"
                 className="w-[28px] h-[28px] object-contain"
                 />

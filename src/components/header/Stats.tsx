@@ -2,8 +2,6 @@
 import { stats } from "../../assets/constants";
 import styles from "../../style";
 
-import React from "react";
-
 interface CounterProps {
     value: number;
 }

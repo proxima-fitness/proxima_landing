@@ -1,6 +1,7 @@
 {
     "files": [],
   "compilerOptions": {
+    "plugins": [{ "name": "next" }],
     "baseUrl": ".",
       "paths": {
         "@/*": ["./src/*"]
@@ -8,9 +9,9 @@
     "target": "ESNext",
     "useDefineForClassFields": true,
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
-    "allowJs": false,
+    "allowJs": true,
     "skipLibCheck": true,
-    "esModuleInterop": false,
+    "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
@@ -19,7 +20,8 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx",
+    "jsx": "preserve",
+    "incremental": true,
     "typeRoots": ["./@types"]
   },
   "include": ["src",
@@ -28,14 +30,19 @@
   "**/*.js",
   "**/*.jsx",
   "src/components",
-  "src/custom.d.ts"
+  "src/custom.d.ts",
+  "./dist/types/**/*.ts",
+  "./next-env.d.ts",
+ ],
+ "exclude": [
+    "./node_modules",
  ],
   "references": [
       {
         "path": "./tsconfig.app.json"
       },
-      {
-        "path": "./tsconfig.node.json"
-      }
+    //   {
+    //     "path": "./tsconfig.node.json"
+    //   }
     ],
 }

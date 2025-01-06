@@ -1,5 +1,5 @@
-import { visualTwo } from "../../assets";
 import styles, { layout } from "../../style";
+import visualTwo from "../../../public/visualTwo.png";
 
 const SecondVisual = () => (
   <section

@@ -1,6 +1,7 @@
 import styles from "../../style";
 import { footerLinks, socialMedia } from "../../assets/constants";
-import { proxima_logo } from "../../assets";
+import { proxima_logo } from "public";
+import Link from "next/link";
 
 const Footer = () => (
   <section className={`${styles.flexCenter} ${styles.paddingY} flex-col`}>
@@ -11,7 +12,7 @@ const Footer = () => (
           Leave No Gains <br className="sm:block hidden" />{" "} On The Table
         </p>
         <div className="h-[100px] w-[200px] flex justify-start items-center">
-            <img src={ proxima_logo } alt="Proxima Logo" className="relative w-auto h-[180px] -ml-8 z-[1]"/>
+            <img src={ (proxima_logo as any).src } alt="Proxima Logo" className="relative w-auto h-[180px] -ml-8 z-[1]"/>
         </div>
       </div>
 
@@ -23,15 +24,18 @@ const Footer = () => (
             </h4>
             <ul className="list-none mt-4">
               {footerlink.links.map((link, index) => (
-                <li
-                  key={link.name}
-                  className={`font-main font-normal text-[16px] leading-[24px] text-dimWhite hover:text-secondary cursor-pointer ${
-                    index !== footerlink.links.length - 1 ? "mb-4" : "mb-0"
-                  }`}
-                  onClick={() => window.open(link.link)}
+                <Link
+                    href={ link.link }
+                    key={link.name}
                 >
-                  {link.name}
-                </li>
+                    <li
+                    className={`font-main font-normal text-[16px] leading-[24px] text-dimWhite hover:text-secondary cursor-pointer ${
+                        index !== footerlink.links.length - 1 ? "mb-4" : "mb-0"
+                    }`}
+                    >
+                    {link.name}
+                    </li>
+                </Link>
               ))}
             </ul>
           </div>
@@ -41,20 +45,23 @@ const Footer = () => (
 
     <div className="w-full flex justify-between items-center md:flex-row flex-col pt-6 border-t-[1px] border-t-[#3F3E45]">
       <p className="font-main font-normal text-center text-[18px] leading-[27px] text-white">
-        Copyright Ⓒ 2024 Proxima Fitness Inc. All Rights Reserved.
+        Copyright Ⓒ 2025 Proxima Fitness Inc. All Rights Reserved.
       </p>
 
       <div className="flex flex-row md:mt-0 mt-6">
         {socialMedia.map((social, index) => (
-          <img
+        <Link
+            href={ social.link }
             key={social.id}
+        >
+          <img
             src={social.icon}
             alt={social.id}
             className={`w-[21px] h-[21px] object-contain cursor-pointer ${
               index !== socialMedia.length - 1 ? "mr-6" : "mr-0"
             }`}
-            onClick={() => window.open(social.link)}
           />
+          </Link>
         ))}
       </div>
     </div>
