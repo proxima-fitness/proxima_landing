@@ -1,4 +1,5 @@
 import { Footer, Navbar } from '@/components'
+import styles from '@/style'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -19,9 +20,19 @@ export default function RootLayout({
                 <meta name="theme-color" content="#000000" />
             </head>
             <body>
-                <Navbar />
-                <main id="root">{children}</main>
-                <Footer />
+                <div className="bg-primary w-full overflow-hidden">
+                    <div className={`${styles.paddingX} ${styles.flexCenter}`}>
+                        <div className={`${styles.boxWidth}`}>
+                            <Navbar />
+                        </div>
+                    </div>
+                    <main id="root">{children}</main>
+                    <div className={`bg-primary ${styles.paddingX} ${styles.flexCenter} flex-col`}>
+                        <div className={`${styles.boxWidth}`}>
+                        <Footer />
+                    </div>
+                    </div>
+                </div>
             </body>
         </html>
     )

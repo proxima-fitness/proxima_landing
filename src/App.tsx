@@ -46,54 +46,47 @@ const App = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <div className="bg-primary w-full overflow-hidden">
-        <div className={`${styles.paddingX} ${styles.flexCenter}`}>
-        <div className={`${styles.boxWidth}`}>
-            <Navbar />
-        </div>
-        </div>
-        <DownloadPopup isOpen={ isOpen } setIsOpen={ setIsOpen } isMobile={ isMobile } />
-
-        <div className={`bg-primary ${styles.flexStart}`}>
-        <div className={`${styles.boxWidth}`}>
-            <Hero />
-        </div>
-        </div>
-
-        <div className={`bg-primary ${styles.paddingX} ${styles.flexCenter} flex-col`}>
-        <div className={`${styles.boxWidth}`}>
-            <Stats />
-        </div>
-        </div>
-        <div className={`bg-white ${styles.paddingX} ${styles.flexCenter} flex-col`}>
-        <div className={`${styles.boxWidth}`}>
-            {/* <Business /> */}
-            <Programs />
-        </div>
-        </div>
-        <div className={`bg-primary ${styles.paddingX} ${styles.flexCenter} flex-col`}>
+        <>
+            <DownloadPopup isOpen={ isOpen } setIsOpen={ setIsOpen } isMobile={ isMobile } />
+            <div className={`bg-primary ${styles.flexStart}`}>
             <div className={`${styles.boxWidth}`}>
-                <Testimonials />
-                {/* <FirstVisual /> */}
-                <CustomPrograms />
+                <Hero />
             </div>
-        </div>
-        <div className={`bg-white ${styles.paddingX} ${styles.flexCenter} flex-col`}>
-        <div className={`${styles.boxWidth}`}>
-            <PersonalRecords />
-        </div>
-        </div>
-        <div className={`bg-primary ${styles.paddingX} ${styles.flexCenter} flex-col`}>
-        <div className={`${styles.boxWidth}`}>
-            <Themes />
-            {/* <SecondVisual /> */}
-            {/* <Premium /> */}
-            <FAQAccordion/>
-            <CTA />
-            <Footer />
-        </div>
-        </div>
-        </div>
+            </div>
+
+            <div className={`bg-primary ${styles.paddingX} ${styles.flexCenter} flex-col`}>
+            <div className={`${styles.boxWidth}`}>
+                <Stats />
+            </div>
+            </div>
+            <div className={`bg-white ${styles.paddingX} ${styles.flexCenter} flex-col`}>
+            <div className={`${styles.boxWidth}`}>
+                {/* <Business /> */}
+                <Programs />
+            </div>
+            </div>
+            <div className={`bg-primary ${styles.paddingX} ${styles.flexCenter} flex-col`}>
+                <div className={`${styles.boxWidth}`}>
+                    <Testimonials />
+                    {/* <FirstVisual /> */}
+                    <CustomPrograms />
+                </div>
+            </div>
+            <div className={`bg-white ${styles.paddingX} ${styles.flexCenter} flex-col`}>
+            <div className={`${styles.boxWidth}`}>
+                <PersonalRecords />
+            </div>
+            </div>
+            <div className={`bg-primary ${styles.paddingX} ${styles.flexCenter} flex-col`}>
+            <div className={`${styles.boxWidth}`}>
+                <Themes />
+                {/* <SecondVisual /> */}
+                {/* <Premium /> */}
+                <FAQAccordion/>
+                <CTA />
+            </div>
+            </div>
+        </>
     );
 };
 
