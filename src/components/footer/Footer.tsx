@@ -1,6 +1,7 @@
 import styles from "../../style";
 import { footerLinks, socialMedia } from "../../assets/constants";
 import { proxima_logo } from "public";
+import Link from "next/link";
 
 const Footer = () => (
   <section className={`${styles.flexCenter} ${styles.paddingY} flex-col`}>
@@ -23,15 +24,18 @@ const Footer = () => (
             </h4>
             <ul className="list-none mt-4">
               {footerlink.links.map((link, index) => (
-                <li
-                  key={link.name}
-                  className={`font-main font-normal text-[16px] leading-[24px] text-dimWhite hover:text-secondary cursor-pointer ${
-                    index !== footerlink.links.length - 1 ? "mb-4" : "mb-0"
-                  }`}
-                  onClick={() => window.open(link.link)}
+                <Link
+                    href={ link.link }
+                    key={link.name}
                 >
-                  {link.name}
-                </li>
+                    <li
+                    className={`font-main font-normal text-[16px] leading-[24px] text-dimWhite hover:text-secondary cursor-pointer ${
+                        index !== footerlink.links.length - 1 ? "mb-4" : "mb-0"
+                    }`}
+                    >
+                    {link.name}
+                    </li>
+                </Link>
               ))}
             </ul>
           </div>

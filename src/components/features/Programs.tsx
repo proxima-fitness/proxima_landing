@@ -1,3 +1,5 @@
+"use client";
+
 import { useEffect, useState } from "react";
 import { getExplorePagePrograms } from "../../api/programs";
 import styles, { layout } from "../../style";

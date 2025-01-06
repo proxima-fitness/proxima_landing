@@ -11,7 +11,7 @@ const GetStarted: React.FC<IProps> = ({noBorder}) => (
     <div>
     <div className="flex flex-row gap-4">
         <div>
-            <img src={ (qr_code as any).src } alt="Proxima Logo" className="w-auto h-[120px]"/>
+            <img src={ (qr_code as any).src } alt="Proxima Logo" className="rounded w-auto h-[120px]"/>
         </div>
         <div style={ { display: "flex", flexDirection: "column", justifyContent: "flex-start", gap: "10px", zIndex: "5" } }>
             <motion.div
