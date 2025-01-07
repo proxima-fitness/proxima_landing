@@ -1,7 +1,8 @@
 "use client";
 
 import styles from "./style";
-import { CTA, Footer, Themes, Navbar, Testimonials, Hero, Stats, CustomPrograms, PersonalRecords, Programs } from "./components";
+import { Programs, CTA, Footer, Themes, Navbar, Testimonials, Hero, Stats, CustomPrograms, PersonalRecords } from "@/components";
+
 import FAQAccordion from "./components/faqs/FAQ";
 import { useExitIntent } from 'use-exit-intent';
 import { DownloadPopup } from "./components/call-to-action/DownloadPopup";
@@ -61,7 +62,6 @@ const App = () => {
             </div>
             <div className={`bg-white ${styles.paddingX} ${styles.flexCenter} flex-col`}>
             <div className={`${styles.boxWidth}`}>
-                {/* <Business /> */}
                 <Programs />
             </div>
             </div>

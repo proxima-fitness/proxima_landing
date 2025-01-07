@@ -3,7 +3,6 @@ import Navbar from "./header/Navbar";
 import Premium from "./premium/Premium";
 import Themes from "./features/Themes";
 import CardDeal from "./about-us/CardDeal";
-import Business from "./features/Business";
 import CTA from "./call-to-action/CTA";
 import Stats from "./header/Stats";
 import Footer from "./footer/Footer";
@@ -24,7 +23,6 @@ export {
     Premium,
     Themes,
     CardDeal,
-    Business,
     CTA,
     Stats,
     Footer,

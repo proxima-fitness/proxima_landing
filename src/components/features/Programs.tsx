@@ -6,6 +6,7 @@ import styles, { layout } from "../../style";
 import { Button } from "../generic/Button";
 import { motion } from "motion/react";
 import { ViewModeThumbnails } from "./ViewModeThumbnails";
+import { Link } from "next/link";
 
 const FeatureCard = ({id, title, workout_duration, difficulty, equipment, index }: any) => (
   <motion.div
@@ -29,7 +30,7 @@ const FeatureCard = ({id, title, workout_duration, difficulty, equipment, index 
   </motion.div>
 );
 
-const Business = () => {
+export const Programs: React.FC = () => {
   const [programs, setPrograms] = useState<TProgram[] | undefined>([]);
   // Fetch programs when the component mounts
   useEffect(() => {
@@ -73,10 +74,8 @@ const Business = () => {
         )}
       </div>
       <div className="flex items-center justify-center">
-          <a href="https://app.proximafitness.com/"><Button text={"View loads more Programs"} styles={`mt-10`} /></a>
+          <Link href="/programs"><Button text={"View loads more Programs"} styles={`mt-10`} /></Link>
       </div>
     </section>
   );
 };
-
-export default Business;

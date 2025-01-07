@@ -2,7 +2,7 @@ import { people03, people02, people01, people04, people05, people06, instagram, 
 
 export const navLinks = [
   {
-    id: "home",
+    id: "/",
     title: "Home",
   },
   {

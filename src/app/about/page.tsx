@@ -2,7 +2,7 @@ import { CTA } from "@/components";
 import { jack, jack_jacked } from "public";
 
 export const metadata = {
-    title: "About Us | Proxima Fitness Story",
+    title: "About Us | Proxima Fitness",
     description: "Learn more about Proxima Fitness and our mission to empower fitness enthusiasts with AI-driven workout solutions.",
   };
 
