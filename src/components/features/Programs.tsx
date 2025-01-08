@@ -6,7 +6,7 @@ import styles, { layout } from "../../style";
 import { Button } from "../generic/Button";
 import { motion } from "motion/react";
 import { ViewModeThumbnails } from "./ViewModeThumbnails";
-import { Link } from "next/link";
+import Link from "next/link";
 
 const FeatureCard = ({id, title, workout_duration, difficulty, equipment, index }: any) => (
   <motion.div
@@ -30,19 +30,18 @@ const FeatureCard = ({id, title, workout_duration, difficulty, equipment, index 
   </motion.div>
 );
 
-export const Programs: React.FC = () => {
+const Programs = () => {
   const [programs, setPrograms] = useState<TProgram[] | undefined>([]);
-  // Fetch programs when the component mounts
   useEffect(() => {
     const fetchPrograms = async () => {
       try {
         const width = window.innerWidth;
         if (width <= 768) {
             const fetchedPrograms = await getExplorePagePrograms(4);
-            setPrograms(fetchedPrograms); // Update state with fetched programs
+            setPrograms(fetchedPrograms);
         } else {
             const fetchedPrograms = await getExplorePagePrograms(8);
-            setPrograms(fetchedPrograms); // Update state with fetched programs
+            setPrograms(fetchedPrograms);
         }
       } catch (error) {
         console.error("Error fetching programs:", error);
@@ -62,9 +61,7 @@ export const Programs: React.FC = () => {
         </h2>
       </div>
 
-      {/* <div className={`${layout.sectionImg} ss:pt-48 pt-10`}> */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 pt-14">
-        {/* Map over the fetched programs */}
         {programs && programs.length > 0 ? (
           programs.map((program, index) => (
             <FeatureCard key={ program.id } {...program } index={index} />
@@ -79,3 +76,5 @@ export const Programs: React.FC = () => {
     </section>
   );
 };
+
+export default Programs;

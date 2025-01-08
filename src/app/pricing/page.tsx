@@ -1,5 +1,5 @@
 import { Card, CardHeader, CardTitle, CardContent, CardFooter } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
+import { Button } from "@/components/ui/button";
 
 export const metadata = {
     title: "Pricing | Proxima Fitness",
@@ -23,12 +23,20 @@ export default function PricingPage() {
               <h3 className="text-2xl font-bold">FREE</h3>
             </CardHeader>
             <CardContent>
-              <ul className="list-disc list-inside space-y-2">
-                <li>5 users included</li>
-                <li>2 GB of storage</li>
-                <li>Email support</li>
-                <li>Help center access</li>
-              </ul>
+            <ul className="list-disc list-inside space-y-2">
+                <li>Library of 500+ Exercises with animations</li>
+                <li>Directory of 100+ free workout programs and growing community</li>
+                <li>AI Coach</li>
+                <li>Workout Program History Tracking</li>
+                <li>Program Creator</li>
+                <li>Workout Builder</li>
+                <li>AI Workout History Uploader</li>
+                <li>AI Workout Builder</li>
+                <li>Stats graphs</li>
+                <li>Consistency tracker</li>
+                <li>Social Gym Profile</li>
+                <li>Personal Records Tracking</li>
+            </ul>
             </CardContent>
             <CardFooter>
               <Button className="text-white">Sign Up</Button>
@@ -40,12 +48,20 @@ export default function PricingPage() {
               <h3 className="text-2xl font-bold">$29/month</h3>
             </CardHeader>
             <CardContent>
-              <ul className="list-disc list-inside space-y-2">
-                <li>15 users included</li>
-                <li>10 GB of storage</li>
-                <li>Priority email support</li>
-                <li>Help center access</li>
-              </ul>
+            <ul className="list-disc list-inside space-y-2">
+                <li>Library of 500+ Exercises with animations</li>
+                <li>Directory of 100+ free workout programs and growing community</li>
+                <li>AI Coach</li>
+                <li>Workout Program History Tracking</li>
+                <li>Program Creator</li>
+                <li>Workout Builder</li>
+                <li>AI Workout History Uploader</li>
+                <li>AI Workout Builder</li>
+                <li>Stats graphs</li>
+                <li>Consistency tracker</li>
+                <li>Social Gym Profile</li>
+                <li>Personal Records Tracking</li>
+            </ul>
             </CardContent>
             <CardFooter>
               <Button className="text-white">Sign Up</Button>
@@ -57,12 +73,20 @@ export default function PricingPage() {
               <h3 className="text-2xl font-bold">$99/month</h3>
             </CardHeader>
             <CardContent>
-              <ul className="list-disc list-inside space-y-2">
-                <li>Unlimited users</li>
-                <li>Unlimited storage</li>
-                <li>24/7 support</li>
-                <li>Help center access</li>
-              </ul>
+            <ul className="list-disc list-inside space-y-2">
+                <li>Library of 500+ Exercises with animations</li>
+                <li>Directory of 100+ free workout programs and growing community</li>
+                <li>AI Coach</li>
+                <li>Workout Program History Tracking</li>
+                <li>Program Creator</li>
+                <li>Workout Builder</li>
+                <li>AI Workout History Uploader</li>
+                <li>AI Workout Builder</li>
+                <li>Stats graphs</li>
+                <li>Consistency tracker</li>
+                <li>Social Gym Profile</li>
+                <li>Personal Records Tracking</li>
+            </ul>
             </CardContent>
             <CardFooter>
               <Button className="text-white">Sign Up</Button>

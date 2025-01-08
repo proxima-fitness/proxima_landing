@@ -17,6 +17,7 @@ import LiveHelpIcon from '@mui/icons-material/LiveHelp';
 import LoginIcon from '@mui/icons-material/Login';
 import DownloadIcon from '@mui/icons-material/Download';
 import menu from "../../../public/menu.svg";
+import Link from "next/link";
 
 type Anchor = 'top' | 'left' | 'bottom' | 'right';
 
@@ -70,8 +71,17 @@ const [active, setActive] = React.useState("Home");
                     <ListItemText primary={ link.title } />
                     </ListItemButton>
                   </a>
-                :
-                  <a href={`#${link.id}`}>
+                : link.id === "cta" ?
+                <Link href="/download">
+                  <ListItemButton>
+                      <ListItemIcon>
+                          <LoginIcon style={ { color: "#5ce1e6" } } />
+                      </ListItemIcon>
+                  <ListItemText primary={ link.title } />
+                  </ListItemButton>
+                </Link>
+              :
+                  <Link href={`/${link.id}`}>
                     <ListItemButton>
                         <ListItemIcon>
                             { link.id === "home" && <HomeIcon style={ { color: "#5ce1e6" } } /> }
@@ -82,7 +92,7 @@ const [active, setActive] = React.useState("Home");
                         </ListItemIcon>
                     <ListItemText primary={ link.title } />
                     </ListItemButton>
-                  </a>
+                  </Link>
                 }
           </ListItem>
         ))}
@@ -101,11 +111,11 @@ const [active, setActive] = React.useState("Home");
                 />
           </Button>
           <SwipeableDrawer
-            anchor={"right"}
-            open={state["right"]}
-            onClose={toggleDrawer("right", false)}
-            onOpen={toggleDrawer("right", true)}
-          >
+                anchor={"right"}
+                open={state["right"]}
+                onClose={toggleDrawer("right", false)}
+                onOpen={toggleDrawer("right", true)}
+            >
             {list("right")}
           </SwipeableDrawer>
         </React.Fragment>
