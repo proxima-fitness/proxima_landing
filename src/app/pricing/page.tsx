@@ -16,8 +16,8 @@ export default function PricingPage() {
             Select the best plan that fits your needs.
           </p>
         </div>
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-8">
-          <Card>
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 mt-8">
+        <Card>
             <CardHeader>
               <CardTitle>Basic</CardTitle>
               <h3 className="text-2xl font-bold">FREE</h3>
@@ -45,7 +45,7 @@ export default function PricingPage() {
           <Card>
             <CardHeader>
               <CardTitle>Pro</CardTitle>
-              <h3 className="text-2xl font-bold">$29/month</h3>
+              <h3 className="text-2xl font-bold">$19.99/month</h3>
             </CardHeader>
             <CardContent>
             <ul className="list-disc list-inside space-y-2">
@@ -67,7 +67,7 @@ export default function PricingPage() {
               <Button className="text-white">Sign Up</Button>
             </CardFooter>
           </Card>
-          <Card>
+          {/* <Card>
             <CardHeader>
               <CardTitle>Lifetime</CardTitle>
               <h3 className="text-2xl font-bold">$99/month</h3>
@@ -91,7 +91,7 @@ export default function PricingPage() {
             <CardFooter>
               <Button className="text-white">Sign Up</Button>
             </CardFooter>
-          </Card>
+          </Card> */}
         </div>
       </div>
     </section>
