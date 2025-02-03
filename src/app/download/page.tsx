@@ -1,9 +1,6 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React from "react";
-import { CTA } from "@/components";
-import GetStarted from "@/components";
-import styles from "../../style";
 import { qr_code,apple,google, starGold } from "public";
-import { motion } from "motion/react";
 
 
 export const metadata = {
@@ -14,22 +11,22 @@ export const metadata = {
   export default function DownloadPage() {
     return (
         <>
-        <div className={`bg-white flex items-center justify-center flex-col p-24`}>
-                    <div className="flex-1 flex flex-col text-center items-center justify-center">
-                        <h2 className="text-black font-bold text-6xl">Download the App now</h2>
-                        <p className={`text-black text-center max-w-[470px] mt-5 text-3xl`}>
-                            It takes less than a minute
-                        </p>
-                    </div>
-                    <div className="pt-4">
-                        <div>
-                            <div className="flex flex-row gap-4">
-                                <div>
-                                    <img src={ (qr_code as any).src } alt="Proxima Logo" className="rounded w-auto h-[120px]"/>
-                                </div>
-                                <div style={ { display: "flex", flexDirection: "column", justifyContent: "flex-start", gap: "10px", zIndex: "5" } }>
+            <div className={ `bg-white flex items-center justify-center flex-col p-24` }>
+                <div className="flex-1 flex flex-col text-center items-center justify-center">
+                    <h2 className="text-black font-bold text-6xl">Download the App now</h2>
+                    <p className={ `text-black text-center max-w-[470px] mt-5 text-3xl` }>
+                        It takes less than a minute
+                    </p>
+                </div>
+                <div className="pt-4">
+                    <div>
+                        <div className="flex flex-row gap-4">
+                            <div>
+                                <img src={ (qr_code as any).src } alt="Proxima Logo" className="rounded w-auto h-[120px]" />
+                            </div>
+                            <div style={ { display: "flex", flexDirection: "column", justifyContent: "flex-start", gap: "10px", zIndex: "5" } }>
 
-                                    <a href="https://testflight.apple.com/join/dG4SXTTm"
+                                <a href="https://testflight.apple.com/join/dG4SXTTm"
                                     >
                                     <img src={ (apple as any).src } alt="apple"
                                         style={ {
@@ -40,9 +37,9 @@ export const metadata = {
                                             cursor: "pointer",
                                         } }
                                         />
-                                    </a>
-                                    <a href="https://app.proximafitness.com/">
-                                        <img src={(google as any).src} alt="google"
+                                </a>
+                                <a href="https://app.proximafitness.com/">
+                                    <img src={ (google as any).src } alt="google"
                                             style={ {
                                                 width: "150px",
                                                 height: "100%",
@@ -51,30 +48,30 @@ export const metadata = {
                                                 cursor: "pointer",
                                             } }
                                         />
-                                    </a>
-                                </div>
+                                </a>
                             </div>
-                            <span className="flex flex-row py-4 text-black">
-                                <span>
-                                    <img src={(starGold as any).src} alt="star_gold" className="w-[30px] h-[20px] object-contain" />
-                                </span>
-                                <span>
-                                    <img src={(starGold as any).src} alt="star_gold" className="w-[30px] h-[20px] object-contain" />
-                                </span>
-                                <span>
-                                    <img src={(starGold as any).src} alt="star_gold" className="w-[30px] h-[20px] object-contain" />
-                                </span>
-                                <span>
-                                    <img src={(starGold as any).src} alt="star_gold" className="w-[30px] h-[20px] object-contain" />
-                                </span>
-                                <span>
-                                    <img src={(starGold as any).src} alt="star_gold" className="w-[30px] h-[20px] object-contain" />
-                                </span>
-                                4.5 Stars on Apple App Store
-                            </span>
                         </div>
+                        <span className="flex flex-row py-4 text-black">
+                            <span>
+                                <img src={ (starGold as any).src } alt="star_gold" className="w-[30px] h-[20px] object-contain" />
+                            </span>
+                            <span>
+                                <img src={ (starGold as any).src } alt="star_gold" className="w-[30px] h-[20px] object-contain" />
+                            </span>
+                            <span>
+                                <img src={ (starGold as any).src } alt="star_gold" className="w-[30px] h-[20px] object-contain" />
+                            </span>
+                            <span>
+                                <img src={ (starGold as any).src } alt="star_gold" className="w-[30px] h-[20px] object-contain" />
+                            </span>
+                            <span>
+                                <img src={ (starGold as any).src } alt="star_gold" className="w-[30px] h-[20px] object-contain" />
+                            </span>
+                            4.5 Stars on Apple App Store
+                        </span>
                     </div>
-        </div>
+                </div>
+            </div>
         </>
     );
 }

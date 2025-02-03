@@ -1,10 +1,10 @@
-import App from '@/App'
-import '../index.css'
+import App from '@/App';
+import '../index.css';
 
 export function generateStaticParams() {
-  return [{ slug: [''] }]
+  return [{ slug: [''] }];
 }
 
 export default function Page() {
-  return  <App />
+  return  <App />;
 }

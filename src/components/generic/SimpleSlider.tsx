@@ -3,12 +3,12 @@
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import Slider from "react-slick"
+import Slider from "react-slick";
 import { feedback } from "../../assets/constants";
 import FeedbackCard from "../testimonials/FeedbackCard";
 
 export default function SimpleSlider() {
-  let settings = {
+  const settings = {
 	speed: 500,
     draggable: true,
     easing: "linear",
@@ -24,31 +24,31 @@ export default function SimpleSlider() {
         settings: {
           slidesToShow: 3,
           slidesToScroll: 6,
-          dots: true
-        }
+          dots: true,
+        },
       },
       {
         breakpoint: 600,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
-          initialSlide: 2
-        }
+          initialSlide: 2,
+        },
       },
       {
         breakpoint: 480,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      }
-    ]
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
   return (
-	<div className="max-w-full px-6 h-full text-white">
-	<Slider {...settings}>
-		{feedback.map((card) => <FeedbackCard key={card.id} {...card} />)}
-	</Slider>
-	</div>
+      <div className="max-w-full px-6 h-full text-white">
+          <Slider { ...settings }>
+              {feedback.map((card) => <FeedbackCard key={ card.id } { ...card } />)}
+          </Slider>
+      </div>
   );
 }

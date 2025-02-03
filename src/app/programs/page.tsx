@@ -7,13 +7,12 @@ export const metadata = {
     description: "Search from a list of Free Workout Programs on Proxima",
   };
 
-  export default function ProgramsPage() {
+export default function ProgramsPage() {
     return (
-        <div className={`bg-white ${styles.paddingX} ${styles.flexCenter} flex-col`}>
-        <div className={`${styles.boxWidth}`}>
-
-            <Programs />
-        </div>
+        <div className={ `bg-white ${styles.paddingX} ${styles.flexCenter} flex-col` }>
+            <div className={ `${styles.boxWidth}` }>
+                <Programs />
+            </div>
         </div>
     );
   }

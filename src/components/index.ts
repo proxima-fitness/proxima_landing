@@ -30,6 +30,6 @@ export {
     Hero,
     SimpleSlider,
     SecondVisual,
-    Programs
+    Programs,
 };
 

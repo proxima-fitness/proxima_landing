@@ -1,7 +1,7 @@
 "use client";
 
 import styles from "./style";
-import { Programs, CTA, Footer, Themes, Navbar, Testimonials, Hero, Stats, CustomPrograms, PersonalRecords } from "@/components";
+import { Programs, CallToAction, Themes, Testimonials, Hero, Stats, CustomPrograms, PersonalRecords } from "@/components";
 
 import FAQAccordion from "./components/faqs/FAQ";
 import { useExitIntent } from 'use-exit-intent';
@@ -17,13 +17,13 @@ const App = () => {
           delayInSecondsToTrigger: 4,
           triggerOnMouseLeave: true,
           triggerOnIdle: true,
-          useBeforeUnload: false
+          useBeforeUnload: false,
         },
         mobile: {
             delayInSecondsToTrigger: 2,
             triggerOnIdle: true,
-          }
-      })
+          },
+      });
 
     // This handler will be triggered on desktop and mobile
     registerHandler({
@@ -31,8 +31,8 @@ const App = () => {
       handler: () => {
         setIsOpen(true);
       },
-      context: ['onDesktop']
-    })
+      context: ['onDesktop'],
+    });
 
     // This handler will be triggered only on mobile
     registerHandler({
@@ -40,8 +40,8 @@ const App = () => {
       handler: () => {
         setIsMobile(true);setIsOpen(true);
       },
-      context: ['onMobile']
-    })
+      context: ['onMobile'],
+    });
 
     const [isMobile, setIsMobile] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
@@ -49,42 +49,42 @@ const App = () => {
     return (
         <>
             <DownloadPopup isOpen={ isOpen } setIsOpen={ setIsOpen } isMobile={ isMobile } />
-            <div className={`bg-primary ${styles.flexStart}`}>
-            <div className={`${styles.boxWidth}`}>
-                <Hero />
-            </div>
+            <div className={ `bg-primary ${styles.flexStart}` }>
+                <div className={ `${styles.boxWidth}` }>
+                    <Hero />
+                </div>
             </div>
 
-            <div className={`bg-primary ${styles.paddingX} ${styles.flexCenter} flex-col`}>
-            <div className={`${styles.boxWidth}`}>
-                <Stats />
+            <div className={ `bg-primary ${styles.paddingX} ${styles.flexCenter} flex-col` }>
+                <div className={ `${styles.boxWidth}` }>
+                    <Stats />
+                </div>
             </div>
+            <div className={ `bg-white ${styles.paddingX} ${styles.flexCenter} flex-col` }>
+                <div className={ `${styles.boxWidth}` }>
+                    <Programs />
+                </div>
             </div>
-            <div className={`bg-white ${styles.paddingX} ${styles.flexCenter} flex-col`}>
-            <div className={`${styles.boxWidth}`}>
-                <Programs />
-            </div>
-            </div>
-            <div className={`bg-primary ${styles.paddingX} ${styles.flexCenter} flex-col`}>
-                <div className={`${styles.boxWidth}`}>
+            <div className={ `bg-primary ${styles.paddingX} ${styles.flexCenter} flex-col` }>
+                <div className={ `${styles.boxWidth}` }>
                     <Testimonials />
                     {/* <FirstVisual /> */}
                     <CustomPrograms />
                 </div>
             </div>
-            <div className={`bg-white ${styles.paddingX} ${styles.flexCenter} flex-col`}>
-            <div className={`${styles.boxWidth}`}>
-                <PersonalRecords />
+            <div className={ `bg-white ${styles.paddingX} ${styles.flexCenter} flex-col` }>
+                <div className={ `${styles.boxWidth}` }>
+                    <PersonalRecords />
+                </div>
             </div>
-            </div>
-            <div className={`bg-primary ${styles.paddingX} ${styles.flexCenter} flex-col`}>
-            <div className={`${styles.boxWidth}`}>
-                <Themes />
-                {/* <SecondVisual /> */}
-                {/* <Premium /> */}
-                <FAQAccordion/>
-                <CTA />
-            </div>
+            <div className={ `bg-primary ${styles.paddingX} ${styles.flexCenter} flex-col` }>
+                <div className={ `${styles.boxWidth}` }>
+                    <Themes />
+                    {/* <SecondVisual /> */}
+                    {/* <Premium /> */}
+                    <FAQAccordion />
+                    <CallToAction />
+                </div>
             </div>
         </>
     );

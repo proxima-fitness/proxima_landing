@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
 import * as React from 'react';
@@ -21,104 +22,99 @@ import Link from "next/link";
 
 type Anchor = 'top' | 'left' | 'bottom' | 'right';
 
-interface IProps {
-    setActive: (active: boolean) => void;
- }
-
 export default function SwipeableTemporaryDrawer() {
-const [active, setActive] = React.useState("Home");
 
-  const [state, setState] = React.useState({
-    right: false,
-  });
+    const [state, setState] = React.useState({
+        right: false,
+    } );
 
-  const toggleDrawer =
-    (anchor: Anchor, open: boolean) =>
-    (event: React.KeyboardEvent | React.MouseEvent) => {
-      if (
-        event &&
-        event.type === 'keydown' &&
-        ((event as React.KeyboardEvent).key === 'Tab' ||
-          (event as React.KeyboardEvent).key === 'Shift')
-      ) {
-        return;
-      }
+    const toggleDrawer =
+        (anchor: Anchor, open: boolean) =>
+        (event: React.KeyboardEvent | React.MouseEvent) => {
+        if (
+            event &&
+            event.type === 'keydown' &&
+            ((event as React.KeyboardEvent).key === 'Tab' ||
+            (event as React.KeyboardEvent).key === 'Shift')
+        ) {
+            return;
+        }
 
-      setState({ ...state, [anchor]: open });
+        setState({ ...state, [anchor]: open });
     };
 
-  const list = (anchor: Anchor) => (
-    <Box
-      sx={ {height: "100%", color: "white", background: `linear-gradient(
-        144.39deg,
-        #ffffff -278.56%,
-        #6d6d6d -78.47%,
-        #11101d 91.61%
-      );` , width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 250 } }
-      role="presentation"
-      onClick={toggleDrawer(anchor, false)}
-      onKeyDown={toggleDrawer(anchor, false)}
-    >
-      <List>
-        {navLinks.map((link, index) => (
-          <ListItem key={ link.id } disablePadding>
-                { link.id === "sign-in" ?
-                  <a href="https://app.proximafitness.com/">
-                    <ListItemButton>
-                        <ListItemIcon>
-                            <LoginIcon style={ { color: "#5ce1e6" } } />
-                        </ListItemIcon>
-                    <ListItemText primary={ link.title } />
-                    </ListItemButton>
-                  </a>
+    const list = (anchor: Anchor) => (
+        <Box
+            sx={ {height: "100%", color: "white", background: `linear-gradient(
+                144.39deg,
+                #ffffff -278.56%,
+                #6d6d6d -78.47%,
+                #11101d 91.61%
+            );` , width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 250 } }
+            role="presentation"
+            onClick={ toggleDrawer(anchor, false) }
+            onKeyDown={ toggleDrawer(anchor, false) }
+        >
+            <List>
+                {navLinks.map((link) => (
+                    <ListItem key={ link.id } disablePadding>
+                        { link.id === "sign-in" ?
+                            <a href="https://app.proximafitness.com/">
+                                <ListItemButton>
+                                    <ListItemIcon>
+                                        <LoginIcon style={ { color: "#5ce1e6" } } />
+                                    </ListItemIcon>
+                                    <ListItemText primary={ link.title } />
+                                </ListItemButton>
+                            </a>
                 : link.id === "cta" ?
-                <Link href="/download">
-                  <ListItemButton>
-                      <ListItemIcon>
-                          <LoginIcon style={ { color: "#5ce1e6" } } />
-                      </ListItemIcon>
-                  <ListItemText primary={ link.title } />
-                  </ListItemButton>
-                </Link>
+                    <Link href="/download">
+                        <ListItemButton>
+                            <ListItemIcon>
+                                <LoginIcon style={ { color: "#5ce1e6" } } />
+                            </ListItemIcon>
+                            <ListItemText primary={ link.title } />
+                        </ListItemButton>
+                    </Link>
               :
-                  <Link href={`/${link.id}`}>
-                    <ListItemButton>
-                        <ListItemIcon>
-                            { link.id === "home" && <HomeIcon style={ { color: "#5ce1e6" } } /> }
-                            { link.id === "programs" && <TerminalIcon style={ { color: "#5ce1e6" } } /> }
-                            { link.id === "create-programs" && <FeaturedVideoIcon style={ { color: "#5ce1e6" } } /> }
-                            { link.id === "faqs" && <LiveHelpIcon style={ { color: "#5ce1e6" } } /> }
-                            { link.id === "cta" && <DownloadIcon style={ { color: "#5ce1e6" } } /> }
-                        </ListItemIcon>
-                    <ListItemText primary={ link.title } />
-                    </ListItemButton>
-                  </Link>
+                    <Link href={ `/${link.id}` }>
+                        <ListItemButton>
+                            <ListItemIcon>
+                                { link.id === "home" && <HomeIcon style={ { color: "#5ce1e6" } } /> }
+                                { link.id === "programs" && <TerminalIcon style={ { color: "#5ce1e6" } } /> }
+                                { link.id === "create-programs" && <FeaturedVideoIcon style={ { color: "#5ce1e6" } } /> }
+                                { link.id === "faqs" && <LiveHelpIcon style={ { color: "#5ce1e6" } } /> }
+                                { link.id === "cta" && <DownloadIcon style={ { color: "#5ce1e6" } } /> }
+                            </ListItemIcon>
+                            <ListItemText primary={ link.title } />
+                        </ListItemButton>
+                    </Link>
                 }
-          </ListItem>
+                    </ListItem>
         ))}
-      </List>
-    </Box>
+            </List>
+        </Box>
   );
 
-  return (
-    <div>
-        <React.Fragment key={ "right" }>
-          <Button onClick={toggleDrawer("right", true)}>
-            <img
+    return (
+        <div>
+            <React.Fragment key={ "right" }>
+                <Button onClick={ toggleDrawer("right", true) }>
+                    <img
                 src={ (menu as any).src }
                 alt="menu"
                 className="w-[28px] h-[28px] object-contain"
                 />
-          </Button>
-          <SwipeableDrawer
-                anchor={"right"}
-                open={state["right"]}
-                onClose={toggleDrawer("right", false)}
-                onOpen={toggleDrawer("right", true)}
+                </Button>
+                <SwipeableDrawer
+                anchor={ "right" }
+                open={ state["right"] }
+                onClose={ toggleDrawer("right", false) }
+                onOpen={ toggleDrawer("right", true) }
             >
-            {list("right")}
-          </SwipeableDrawer>
-        </React.Fragment>
-    </div>
-  );
+                    {list("right")}
+                </SwipeableDrawer>
+            </React.Fragment>
+        </div>
+    );
 }

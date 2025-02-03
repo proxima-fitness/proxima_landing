@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "lint": "eslint . --ext js,jsx,ts,tsx --report-unused-disable-directives --max-warnings 0",
     "start": "next start"
   },
   "dependencies": {
@@ -42,8 +43,9 @@
     "@types/react": "^18.2.37",
     "@types/react-dom": "^18.2.15",
     "@types/react-slick": "^0.23.13",
+    "@typescript-eslint/eslint-plugin": "^8.22.0",
     "autoprefixer": "^10.4.20",
-    "eslint": "^8.38.0",
+    "eslint": "^8.57.1",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.3.4",

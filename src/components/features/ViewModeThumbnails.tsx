@@ -19,7 +19,7 @@ export const ViewModeThumbnails: React.FC<IProps> = (props) => {
             setThumbnail(fetchedThumbnail);
         };
         fetchProgramThumbnail(programID);
-    }, []);
+    }, [programID]);
 
     return (
         <>

@@ -1,13 +1,14 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import Slider from "react-slick"
+import Slider from "react-slick";
 import { programs_classic_device, programs_dark_device, programs_mobile_white_device, programs_pastel_device } from "public";
 
 export default function ThemeSlider() {
-  let settings = {
+  const settings = {
 	speed: 500,
     draggable: true,
     easing: "linear",
@@ -44,13 +45,13 @@ export default function ThemeSlider() {
     // ]
   };
   return (
-	<div className="w-full px-6 h-full text-white">
-	<Slider {...settings}>
-        <img src={ (programs_classic_device as any).src } alt="Program Creator Image" className="relative max-w-[180px] h-auto z-[6]"/>
-        <img src={ (programs_dark_device as any).src } alt="Program Creator Image" className="relative max-w-[180px] h-auto z-[6]"/>
-        <img src={ (programs_mobile_white_device as any).src } alt="Program Creator Image" className="relative max-w-[180px] h-auto z-[6]"/>
-        <img src={ (programs_pastel_device as any).src } alt="Program Creator Image" className="relative max-w-[180px] h-auto z-[6]"/>
-    </Slider>
-	</div>
+      <div className="w-full px-6 h-full text-white">
+          <Slider { ...settings }>
+              <img src={ (programs_classic_device as any).src } alt="Program Creator Image" className="relative max-w-[180px] h-auto z-[6]" />
+              <img src={ (programs_dark_device as any).src } alt="Program Creator Image" className="relative max-w-[180px] h-auto z-[6]" />
+              <img src={ (programs_mobile_white_device as any).src } alt="Program Creator Image" className="relative max-w-[180px] h-auto z-[6]" />
+              <img src={ (programs_pastel_device as any).src } alt="Program Creator Image" className="relative max-w-[180px] h-auto z-[6]" />
+          </Slider>
+      </div>
   );
 }
