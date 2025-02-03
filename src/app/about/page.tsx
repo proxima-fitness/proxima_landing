@@ -12,25 +12,32 @@ export const metadata = {
             <h1 className="text-5xl pl-28 font-bold text-gray-900 mb-6 text-left">
                 About Us
             </h1>
-            <section className="mt-10 flex flex-row items-center justify-center">
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2">
-                    <div className="p-4 text-center">
-                        <div className="h-[full] w-[full]">
-                            <img src={ (jack as any).src } alt="Program Creator Image" className="rounded-lg relative w-full h-full " />
-                        </div>
-                        <h3 className="text-lg font-bold mt-4">Jack Hanlon</h3>
-                        <p className="text-sm text-gray-600">Founder & Developer</p>
+            <section className="mt-10 flex flex-col items-center justify-center">
+                <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1">
+                    <div className="relative h-[384px] w-[384px] group">
+                        <img
+                            src={(jack as any).src}
+                            alt="Program Creator Image"
+                            className="rounded-xl w-full h-full object-cover transition-opacity duration-300"
+                        />
+                        <img
+                            src={(jack_jacked as any).src}
+                            alt="Jack Hanlon Jacked"
+                            className="rounded-xl w-full h-full object-cover object-[center_20%] absolute top-0 left-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                        />
                     </div>
-                    <div className="p-4 flex justify-start items-center flex-col">
-                        <div className="h-[350px] w-[300px] mx-auto relative overflow-hidden">
-                            <img src={ (jack_jacked as any).src } alt="Program Creator Image" className="rounded-lg absolute inset-0 w-full h-full object-cover object-top" />
-                        </div>
-                        <h3 className="text-lg font-bold mt-4">My 3 year transformation</h3>
-                        <p className="text-sm text-gray-600 max-w-[250px] text-center">How I went from 170lbs, skinny fat and unhealthy to 200lbs, in shape, feeling amazing. Read my story below!</p>
+                    <div className="font-bold text-xl py-1 mt-2">
+                        JACK HANLON
+                    </div>
+                    <div className="font-medium text-gray-500 text-md py-2">
+                        FOUNDER
+                    </div>
+                    <div className="w-[400px]">
+                        Jack was a Software Engineer before creating Proxima, and an avid lifter with a Bench Press PR of 240lbs. Jack enjoys weightlifting and playing with his two rescue puppies.
                     </div>
                 </div>
             </section>
-            <section className="p-8">
+            <section className="py-8 px-32">
                 <p className="text-lg font-bold text-gray-700 leading-8">
                     Our Story: From Setbacks to Strength
                 </p>
@@ -38,12 +45,6 @@ export const metadata = {
                 <p className="text-lg text-gray-700 leading-8 mt-4">
                     In 2020, <span className="font-bold italic">my journey to fitness</span> started under less-than-ideal circumstances. I was in a tough spot - <span className="font-bold italic">recovering from a breakup, feeling skinny fat, and unhappy</span> with how I looked and felt. My energy was low, my confidence was lower, and I knew <span className="font-bold italic">something had to change</span>.
                 </p>
-
-                {/* <ul className="list-disc list-inside mt-4 space-y-2">
-            <li>Custom workout plans tailored to your needs.</li>
-            <li>Easy-to-follow exercise directories and GIF guides.</li>
-            <li>Detailed tracking to monitor your fitness journey.</li>
-          </ul> */}
 
                 <p className="text-lg text-gray-700 leading-8 mt-4">
                     I took my first step toward transformation by <span className="font-bold italic">hiring a personal trainer</span>. It was an investment, and while I learned a lot, I found myself <span className="font-bold italic">yearning for more</span> advanced exercises and methods. I dove into the vast library of YouTube fitness channels, soaking up the expertise of bodybuilders and fitness influencers. Slowly but surely, I started building muscle, learning to control my nutrition, and shedding fat.
