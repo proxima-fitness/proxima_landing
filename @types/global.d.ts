@@ -9,3 +9,13 @@ type TProgram = {
     difficulty: string[];
     user_id: string;
 }
+
+type TExercise = {
+    id: string;
+    gif_id?: string;
+    instructions?: string[];
+    name_english: string;
+    name_espanol: string;
+    name_portugues: string;
+    name_francais: string;
+}

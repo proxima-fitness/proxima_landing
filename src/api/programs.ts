@@ -1,4 +1,3 @@
-import { User } from "@supabase/supabase-js";
 import { supabase } from ".";
 
 // GET THE PROGRAMS DISPLAYED ON THE EXPLORE PAGE

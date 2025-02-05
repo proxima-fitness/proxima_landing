@@ -1,5 +1,4 @@
 import { supabase } from ".";
-import { User } from '@supabase/supabase-js';
 
 // GET THE TRENDING PROGRAMS DISPLAYED ON THE EXPLORE PAGE
 export const getTrendingPrograms = async () => {
