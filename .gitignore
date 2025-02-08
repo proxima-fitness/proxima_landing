@@ -31,3 +31,6 @@ dist-ssr
 .next
 next-env.d.ts
 dist
+
+.env.local
+.env.production
