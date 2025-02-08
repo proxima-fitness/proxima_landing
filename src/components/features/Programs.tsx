@@ -12,7 +12,7 @@ import Link from "next/link";
 const FeatureCard = ({id, title, workout_duration, difficulty, equipment }: any) => (
     <motion.div
         whileHover={ { scale: 1.05 } }
-        className={ `transition group p-[4px] relative p-[4px] rounded-[20px] ` }
+        className={ `transition group p-[4px] relative rounded-[20px] ` }
     >
         <div className="relative z-10 flex flex-row p-4 rounded-[20px] bg-black h-[280px]">
             <div className="flex-1 flex flex-col">

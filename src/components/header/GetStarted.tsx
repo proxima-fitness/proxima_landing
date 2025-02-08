@@ -13,10 +13,10 @@ const GetStarted = ({noBorder}) => (
             </div>
             <div style={ { display: "flex", flexDirection: "column", justifyContent: "flex-start", gap: "10px", zIndex: "5" } }>
                 <motion.div
-                whileHover={ { scale: 1.2 } }
-                whileTap={ { scale: 0.9 } }
-                onHoverStart={ e => {} }
-                onHoverEnd={ e => {} }
+                    whileHover={ { scale: 1.2 } }
+                    whileTap={ { scale: 0.9 } }
+                    onHoverStart={ e => {} }
+                    onHoverEnd={ e => {} }
                 >
                     <a href="https://testflight.apple.com/join/dG4SXTTm"
                 >

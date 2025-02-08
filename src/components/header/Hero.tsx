@@ -1,13 +1,21 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-
 "use client";
 
 import styles from "../../style";
 import GetStarted from "./GetStarted";
 import programs_classic_device from "../../../public/programs-classic-device.png";
 import program_creator_white from "../../../public/program-creator-white.png";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from "react";
 
 const Hero = () => {
+
+    // Initialize on the client
+    useEffect(() => {
+        AOS.init();
+    }, []);
+
     return (
         <section id="home" className={ `flex md:flex-row flex-col` }>
             <div className={ `flex-1 ${styles.flexStart} flex-col xl:px-0 sm:px-16 px-6` } data-aos="fade-up"

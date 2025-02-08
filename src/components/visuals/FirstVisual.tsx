@@ -9,15 +9,16 @@ const FirstVisual = () => (
         data-aos-once="true"
         className={ ` ${layout.section}` }
     >
-        <div className={ layout.sectionInfoReverse } style={ {
-        // height: "500px",
-        backgroundImage: `url(${visualOne})`,
-        backgroundSize: "cover",
-        backgroundPosition: "top",
-        backgroundRepeat: "no-repeat",
-        borderRadius: "30px",
-        } }
-    >
+        <div
+            className={ layout.sectionInfoReverse }
+            style={ {
+                backgroundImage: `url(${visualOne})`,
+                backgroundSize: "cover",
+                backgroundPosition: "top",
+                backgroundRepeat: "no-repeat",
+                borderRadius: "30px",
+                } }
+        >
             <h2 className={ `${styles.heading2End} ss:pr-44 ss:pt-32 italic white-gradient` }>
                 &quot;We take on the strength
                 <br className="sm:block hidden" /> of that which we overcome.&quot;

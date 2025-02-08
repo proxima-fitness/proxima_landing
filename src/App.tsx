@@ -7,11 +7,9 @@ import FAQAccordion from "./components/faqs/FAQ";
 import { useExitIntent } from 'use-exit-intent';
 import { DownloadPopup } from "./components/call-to-action/DownloadPopup";
 import { useState } from "react";
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+
 const App = () => {
 
-    AOS.init();
     const { registerHandler } = useExitIntent({
         desktop: {
           delayInSecondsToTrigger: 4,

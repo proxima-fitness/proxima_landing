@@ -18,5 +18,7 @@ import createMDX from '@next/mdx'
   
   })
 
+  console.log('NODE_ENV:', process.env.NODE_ENV);
+
   
   export default withMDX(nextConfig)

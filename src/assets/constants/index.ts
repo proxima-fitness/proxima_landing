@@ -42,13 +42,6 @@ export const features = [
     content:
       "Follow proven programs that are open sourced on reddit and other locations.",
   },
-//   {
-//     id: "feature-2",
-//     icon: shield,
-//     title: "Sick of tracking workouts on your Notes App?",
-//     content:
-//       "We use our own fine-tuned LLM like ChatGPT, to generate, modify and upload your workouts so you don't have to.",
-//   },
 {
     id: "feature-2",
     icon: star.src,
@@ -56,13 +49,6 @@ export const features = [
     content:
       "You can post your own programs to Proxima, and help other lifters with your expertise",
   },
-//   {
-//     id: "feature-3",
-//     icon: send,
-//     title: "Store and analyse all your personal records",
-//     content:
-//       "We have a different spin on our profile page. You can see all of your personal records, and go into deep analysis on how to make progress.",
-//   },
 ];
 
 export const feedback = [
@@ -193,23 +179,4 @@ export const socialMedia = [
     link: "https://www.reddit.com/r/ProximaFitness/",
   },
 ];
-
-// export const clients = [
-//   {
-//     id: "client-1",
-//     logo: airbnb,
-//   },
-//   {
-//     id: "client-2",
-//     logo: binance,
-//   },
-//   {
-//     id: "client-3",
-//     logo: coinbase,
-//   },
-//   {
-//     id: "client-4",
-//     logo: dropbox,
-//   },
-// ];
 
