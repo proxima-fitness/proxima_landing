@@ -2,7 +2,7 @@
 "use client";
 
 import styles from "../../style";
-import GetStarted from "./GetStarted";
+import { GetStarted } from "./GetStarted";
 import programs_classic_device from "../../../public/programs-classic-device.png";
 import program_creator_white from "../../../public/program-creator-white.png";
 import AOS from 'aos';

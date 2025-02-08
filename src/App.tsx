@@ -36,7 +36,8 @@ const App = () => {
     registerHandler({
       id: 'mobile',
       handler: () => {
-        setIsMobile(true);setIsOpen(true);
+        setIsMobile(true);
+        setIsOpen(true);
       },
       context: ['onMobile'],
     });

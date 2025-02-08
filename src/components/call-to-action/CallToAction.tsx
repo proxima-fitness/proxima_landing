@@ -1,6 +1,6 @@
 
 import styles from "../../style";
-import GetStarted from "../header/GetStarted";
+import { GetStarted } from "../header/GetStarted";
 
 
 const CallToAction = () => (
@@ -13,7 +13,7 @@ const CallToAction = () => (
             </p>
         </div>
         <div className="pt-4">
-            <GetStarted noBorder />
+            <GetStarted noBorder={ true } />
         </div>
     </section>
 );
