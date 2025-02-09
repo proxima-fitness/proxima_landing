@@ -34,3 +34,5 @@ dist
 
 .env.local
 .env.production
+/.dir-locals.el
+/.env
