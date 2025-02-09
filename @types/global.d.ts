@@ -1,3 +1,12 @@
+type TProgramFilters = {
+    specialization?: string[];
+    difficulty?: string[];
+    program_length?: string;
+    workout_duration?: string;
+    equipment?: string;
+    title?: string;
+};
+
 type TProgram = {
     id: string;
     title: string;

@@ -7,6 +7,7 @@ import { Button } from "../generic/Button";
 import { motion } from "motion/react";
 import { ViewModeThumbnails } from "./ViewModeThumbnails";
 import Link from "next/link";
+import { useQuery } from "@tanstack/react-query";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const FeatureCard = ({id, title, workout_duration, difficulty, equipment }: any) => (
@@ -31,26 +32,36 @@ const FeatureCard = ({id, title, workout_duration, difficulty, equipment }: any)
     </motion.div>
 );
 
+// FETCHES THE PROGRAM NAMES DISPLAYED ON THE EXPLORE PAGE
+export const useExplorePagePrograms = (
+  limit: number,
+  filters?: TProgramFilters,
+) => {
+  return useQuery({
+    queryKey: ["explore-page-programs", filters],
+    queryFn: () => getExplorePagePrograms(limit, filters),
+  });
+};
 const Programs = () => {
-  const [programs, setPrograms] = useState<TProgram[] | undefined>([]);
-  useEffect(() => {
-    const fetchPrograms = async () => {
-      try {
-        const width = window.innerWidth;
-        if (width <= 768) {
-            const fetchedPrograms = await getExplorePagePrograms(4);
-            setPrograms(fetchedPrograms);
-        } else {
-            const fetchedPrograms = await getExplorePagePrograms(8);
-            setPrograms(fetchedPrograms);
-        }
-      } catch (error) {
-        console.error("Error fetching programs:", error);
-      }
-    };
-
-    fetchPrograms();
-  }, []);
+  // const [programs, setPrograms] = useState<TProgram[] | undefined>([]);
+  // useEffect(() => {
+  //   const fetchPrograms = async () => {
+  //     try {
+  //       const width = window.innerWidth;
+  //       if (width <= 768) {
+  //           const fetchedPrograms = await getExplorePagePrograms(4);
+  //           setPrograms(fetchedPrograms);
+  //       } else {
+  //           const fetchedPrograms = await getExplorePagePrograms(8);
+  //           setPrograms(fetchedPrograms);
+  //       }
+  //     } catch (error) {
+  //       console.error("Error fetching programs:", error);
+  //     }
+  //   };
+  //   fetchPrograms();
+  // }, []);
+  const { data: programs, isLoading: loadingPrograms } = useExplorePagePrograms(4)
 
   return (
       <section id="programs" className={ layout.sectionTop } data-aos="fade-up"

@@ -1,5 +1,6 @@
 import { Footer, Navbar } from '@/components';
 import styles from '@/style';
+import { QueryClientProviderWrapper } from "@/lib/queryclientprovider";
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -26,7 +27,9 @@ export default function RootLayout({
                             <Navbar />
                         </div>
                     </div>
+                  <QueryClientProviderWrapper>
                     <main id="root">{children}</main>
+                  </QueryClientProviderWrapper>
                     <div className={ `bg-primary ${styles.paddingX} ${styles.flexCenter} flex-col` }>
                         <div className={ `${styles.boxWidth}` }>
                             <Footer />

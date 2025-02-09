@@ -1,11 +1,17 @@
 import { supabase } from ".";
 
 // GET THE PROGRAMS DISPLAYED ON THE EXPLORE PAGE
-export const getExplorePagePrograms = async (limit: number) => {
+export const getExplorePagePrograms = async (limit: number, filters?: TProgramFilters) => {
     try {
-        const { data, error } = await supabase
-        .from('programs')
-        .select('id,title,details,program_length,workout_duration,equipment,specialization,difficulty,user_id').eq('explore', true).limit(limit);
+        const baseQuery = supabase
+            .from('programs')
+            .select('id,title,details,program_length,workout_duration,equipment,specialization,difficulty,user_id').eq('explore', true).limit(limit);
+        const query = filters ?
+            Object.entries(filters).reduce(
+                (q, [key, value]) => (value ? q.contains(key, value) : q),
+                baseQuery
+            ) : baseQuery
+        const { data, error } = await query
         if (error) {
             console.error('Error fetching explore page programs:', error);
         } else if (data && data.length > 0 ) {
@@ -18,7 +24,6 @@ export const getExplorePagePrograms = async (limit: number) => {
 
 // CHECK IF A PROGRAM THUMBNAIL EXISTS IN USERS S3 STORAGE FOLDER (PROGRAM Exists ?)
 export const getProgramThumbnailStatus = async (id?: string) => {
-
     try {
         const { data, error } = await supabase.storage.from('programs').list(id , {
             limit: 100,
