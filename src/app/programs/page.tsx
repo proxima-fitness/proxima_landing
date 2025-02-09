@@ -1,4 +1,3 @@
-import React from "react";
 import { Programs } from "@/components";
 import styles from "../../style";
 

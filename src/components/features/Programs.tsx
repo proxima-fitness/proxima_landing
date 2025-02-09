@@ -1,13 +1,11 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { getExplorePagePrograms } from "../../api/programs";
 import styles, { layout } from "../../style";
 import { Button } from "../generic/Button";
 import { motion } from "motion/react";
 import { ViewModeThumbnails } from "./ViewModeThumbnails";
 import Link from "next/link";
-import { useQuery } from "@tanstack/react-query";
+import { useExplorePagePrograms } from "@/api/hooks";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const FeatureCard = ({id, title, workout_duration, difficulty, equipment }: any) => (
@@ -33,15 +31,6 @@ const FeatureCard = ({id, title, workout_duration, difficulty, equipment }: any)
 );
 
 // FETCHES THE PROGRAM NAMES DISPLAYED ON THE EXPLORE PAGE
-export const useExplorePagePrograms = (
-  limit: number,
-  filters?: TProgramFilters,
-) => {
-  return useQuery({
-    queryKey: ["explore-page-programs", filters],
-    queryFn: () => getExplorePagePrograms(limit, filters),
-  });
-};
 const Programs = () => {
   // const [programs, setPrograms] = useState<TProgram[] | undefined>([]);
   // useEffect(() => {
