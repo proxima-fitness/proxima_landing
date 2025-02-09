@@ -1,5 +1,4 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import React from "react";
 
 export const metadata = {
     title: "Contact Us | Proxima Fitness",

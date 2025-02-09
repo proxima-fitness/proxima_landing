@@ -1,3 +1,4 @@
+import { withPayload } from "@payloadcms/next/withPayload";
 import createMDX from '@next/mdx'
 import dotenv from 'dotenv';
 
@@ -10,7 +11,7 @@ if (process.env.NODE_ENV === 'production') {
 
 /** @type {import('next').NextConfig} */
   const nextConfig = {
-    output: 'export', // Outputs a Single-Page Application (SPA).
+    // output: 'export', // Outputs a Single-Page Application (SPA).
     distDir: './dist', // Changes the build output directory to `./dist/`.
     images: { unoptimized: true },
     pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
@@ -27,8 +28,5 @@ if (process.env.NODE_ENV === 'production') {
     },
   
   })
-
-  console.log('NODE_ENV:', process.env.NODE_ENV);
-  console.log('Supabase Key:', process.env.NEXT_PUBLIC_REACT_APP_SUPABASE_KEY || 'NOT FOUND');  
   
-export default withMDX(nextConfig)
+export default withPayload(withMDX(nextConfig))

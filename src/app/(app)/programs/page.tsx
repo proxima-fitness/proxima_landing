@@ -1,11 +1,10 @@
-import React from "react";
 import { Programs } from "@/components";
-import styles from "../../style";
+import styles from "../../../style";
 
 export const metadata = {
     title: "Search Programs | Proxima Fitness",
     description: "Search from a list of Free Workout Programs on Proxima",
-  };
+};
 
 export default function ProgramsPage() {
     return (
@@ -15,4 +14,4 @@ export default function ProgramsPage() {
             </div>
         </div>
     );
-  }
+}
