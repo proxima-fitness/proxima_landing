@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
 import styles from "../../style";
-import SimpleSlider from "../generic/SimpleSlider";
+import { SimpleSlider } from "../generic/SimpleSlider";
 import { motion } from "motion/react";
 import starGold from "../../../public/StarGold.svg";
 

@@ -22,7 +22,7 @@ import Link from "next/link";
 
 type Anchor = 'top' | 'left' | 'bottom' | 'right';
 
-export const SwipeableTemporaryDrawer: React.FC = () => {
+export const NavDrawer: React.FC = () => {
 
     const [state, setState] = React.useState({
         right: false,

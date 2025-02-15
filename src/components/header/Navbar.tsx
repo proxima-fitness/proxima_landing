@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { navLinks } from "../../assets/constants/index";
 import { Button } from "../generic/Button";
-import NavDrawer from "./NavDrawer";
+import { NavDrawer } from "./NavDrawer";
 import { proxima_logo } from "public";
 import Link from 'next/link';
 

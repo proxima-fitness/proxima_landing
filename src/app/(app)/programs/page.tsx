@@ -1,4 +1,4 @@
-import { Programs } from "@/components";
+import { Programs } from "@/components/features/Programs";
 import styles from "../../../style";
 
 export const metadata = {

@@ -1,5 +1,5 @@
 import styles, { layout } from "../../style";
-import ThemeSlider from "./ThemeSlider";
+import { ThemeSlider } from "./ThemeSlider";
 
 export const Themes: React.FC = () => {
 
