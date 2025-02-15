@@ -22,7 +22,7 @@ import Link from "next/link";
 
 type Anchor = 'top' | 'left' | 'bottom' | 'right';
 
-export default function SwipeableTemporaryDrawer() {
+export const SwipeableTemporaryDrawer: React.FC = () => {
 
     const [state, setState] = React.useState({
         right: false,
@@ -101,20 +101,20 @@ export default function SwipeableTemporaryDrawer() {
             <React.Fragment key={ "right" }>
                 <Button onClick={ toggleDrawer("right", true) }>
                     <img
-                src={ (menu as any).src }
-                alt="menu"
-                className="w-[28px] h-[28px] object-contain"
-                />
-                </Button>
-                <SwipeableDrawer
-                anchor={ "right" }
-                open={ state["right"] }
-                onClose={ toggleDrawer("right", false) }
-                onOpen={ toggleDrawer("right", true) }
-            >
+                        src={ (menu as any).src }
+                        alt="menu"
+                        className="w-[28px] h-[28px] object-contain"
+                    />
+                    </Button>
+                    <SwipeableDrawer
+                        anchor={ "right" }
+                        open={ state["right"] }
+                        onClose={ toggleDrawer("right", false) }
+                        onOpen={ toggleDrawer("right", true) }
+                    >
                     {list("right")}
                 </SwipeableDrawer>
             </React.Fragment>
         </div>
     );
-}
+};

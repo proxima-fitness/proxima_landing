@@ -92,5 +92,5 @@ export const DownloadPopup: React.FC<IProps> = (props) => {
                 </DialogHeader>
             </DialogContent>
         </Dialog>
-  );
+    );
 };

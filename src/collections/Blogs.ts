@@ -17,7 +17,7 @@ export const Blogs: CollectionConfig = {
         type: 'text',
         label: "Content",
         required: true,
-      }
+      },
     ],
     timestamps: true,
   };

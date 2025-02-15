@@ -12,6 +12,7 @@ interface IProps {
 export const GetStarted: React.FC<IProps> = (props) => {
 
     const { noBorder } = props;
+
     return (
         <div>
             <div className="flex flex-row gap-4 justify-center md:justify-start lg:justify-start">

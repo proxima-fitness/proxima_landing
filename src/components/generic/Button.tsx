@@ -9,10 +9,10 @@ interface IProps {
 
 export const Button: React.FC<IProps> = (props) => {
 
-  const {
-    text,
-    styles,
-  } = props;
+    const {
+        text,
+        styles,
+    } = props;
 
     return (
         <motion.button
@@ -22,10 +22,9 @@ export const Button: React.FC<IProps> = (props) => {
             onHoverEnd={ e => {} }
             type="button"
             className={ `py-4 px-6 font-main font-medium text-[18px] text-primary bg-[#00F6FF] rounded-[10px] outline-none ${ styles } ` }
-            >
+        >
             { text }
         </motion.button>
   );
-
 };
 

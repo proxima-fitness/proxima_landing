@@ -9,7 +9,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from "react";
 
-const Hero = () => {
+export const Hero: React.FC = () => {
 
     // Initialize on the client
     useEffect(() => {
@@ -44,8 +44,7 @@ const Hero = () => {
                 {/* gradient end */}
             </div>
         </section>
-  );
+    );
 };
 
-export default Hero;
 

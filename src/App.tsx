@@ -1,9 +1,7 @@
 "use client";
 
 import styles from "./style";
-import { Programs, CallToAction, Themes, Testimonials, Hero, Stats, CustomPrograms, PersonalRecords } from "@/components";
-
-import FAQAccordion from "./components/faqs/FAQ";
+import { FAQ } from "./components/faqs/FAQ";
 import { useExitIntent } from 'use-exit-intent';
 import { DownloadPopup } from "./components/call-to-action/DownloadPopup";
 import { useState } from "react";
