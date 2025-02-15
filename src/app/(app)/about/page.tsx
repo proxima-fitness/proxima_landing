@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { CallToAction } from "@/components";
+import { CallToAction } from "@/components/call-to-action/CallToAction";
 import { jack, jack_jacked } from "public";
 
 export const metadata = {

@@ -1,12 +1,18 @@
 "use client";
 
 import styles from "./style";
-import { Programs, CallToAction, Themes, Testimonials, Hero, Stats, CustomPrograms, PersonalRecords } from "@/components";
-
-import FAQAccordion from "./components/faqs/FAQ";
+import { FAQ } from "./components/faqs/FAQ";
 import { useExitIntent } from 'use-exit-intent';
 import { DownloadPopup } from "./components/call-to-action/DownloadPopup";
 import { useState } from "react";
+import { Hero } from "./components/header/Hero";
+import { Stats } from "./components/header/Stats";
+import { Testimonials } from "./components/testimonials/Testimonials";
+import { Programs } from "./components/features/Programs";
+import { CustomPrograms } from "./components/features/CustomPrograms";
+import { PersonalRecords } from "./components/features/PersonalRecords";
+import { Themes } from "./components/features/Themes";
+import { CallToAction } from "./components/call-to-action/CallToAction";
 
 const App = () => {
 
@@ -81,7 +87,7 @@ const App = () => {
                     <Themes />
                     {/* <SecondVisual /> */}
                     {/* <Premium /> */}
-                    <FAQAccordion />
+                    <FAQ />
                     <CallToAction />
                 </div>
             </div>

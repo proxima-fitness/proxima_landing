@@ -31,51 +31,51 @@ const FeatureCard = ({id, title, workout_duration, difficulty, equipment }: any)
     </motion.div>
 );
 
-const Programs = () => {
-  const [programs, setPrograms] = useState<TProgram[] | undefined>([]);
-  useEffect(() => {
-    const fetchPrograms = async () => {
-      try {
-        const width = window.innerWidth;
-        if (width <= 768) {
-            const fetchedPrograms = await getExplorePagePrograms(4);
-            setPrograms(fetchedPrograms);
-        } else {
-            const fetchedPrograms = await getExplorePagePrograms(8);
-            setPrograms(fetchedPrograms);
+export const Programs: React.FC = () => {
+
+    const [programs, setPrograms] = useState<TProgram[] | undefined>([]);
+
+    useEffect(() => {
+        const fetchPrograms = async () => {
+        try {
+            const width = window.innerWidth;
+            if (width <= 768) {
+                const fetchedPrograms = await getExplorePagePrograms(4);
+                setPrograms(fetchedPrograms);
+            } else {
+                const fetchedPrograms = await getExplorePagePrograms(8);
+                setPrograms(fetchedPrograms);
+            }
+        } catch (error) {
+            console.error("Error fetching programs:", error);
         }
-      } catch (error) {
-        console.error("Error fetching programs:", error);
-      }
-    };
+        };
 
-    fetchPrograms();
-  }, []);
+        fetchPrograms();
+    }, []);
 
-  return (
-      <section id="programs" className={ layout.sectionTop } data-aos="fade-up"
-      data-aos-anchor-placement="top-bottom" data-aos-once="true"
-    >
-          <div className={ layout.sectionInfoCentered } style={ { display:"flex", justifyContent: "center", alignItems: "center" }    }>
-              <h2 className={ styles.heading2Programs }>
-                  Train Popular <span style={ { color: "#33bbcf" } }>Science Based</span> Programs
-              </h2>
-          </div>
+    return (
+        <section id="programs" className={ layout.sectionTop } data-aos="fade-up"
+        data-aos-anchor-placement="top-bottom" data-aos-once="true"
+        >
+            <div className={ layout.sectionInfoCentered } style={ { display:"flex", justifyContent: "center", alignItems: "center" }    }>
+                <h2 className={ styles.heading2Programs }>
+                    Train Popular <span style={ { color: "#33bbcf" } }>Science Based</span> Programs
+                </h2>
+            </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 pt-14">
-              {programs && programs.length > 0 ? (
-          programs.map((program, index) => (
-              <FeatureCard key={ program.id } { ...program } index={ index } />
-          ))
-        ) : (
-            <p className="text-white">Loading programs...</p> // Loading state
-        )}
-          </div>
-          <div className="flex items-center justify-center">
-              <Link href="/programs"><Button text={ "View loads more Programs" } styles={ `mt-10` } /></Link>
-          </div>
-      </section>
-  );
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 pt-14">
+                {programs && programs.length > 0 ? (
+            programs.map((program, index) => (
+                <FeatureCard key={ program.id } { ...program } index={ index } />
+            ))
+            ) : (
+                <p className="text-white">Loading programs...</p> // Loading state
+            )}
+            </div>
+            <div className="flex items-center justify-center">
+                <Link href="/programs"><Button text={ "View loads more Programs" } styles={ `mt-10` } /></Link>
+            </div>
+        </section>
+    );
 };
-
-export default Programs;
