@@ -1,7 +1,6 @@
 "use client";
 
 import styles from "./style";
-import { FAQ } from "./components/faqs/FAQ";
 import { useExitIntent } from 'use-exit-intent';
 import { DownloadPopup } from "./components/call-to-action/DownloadPopup";
 import { useState } from "react";
@@ -13,6 +12,7 @@ import { CustomPrograms } from "./components/features/CustomPrograms";
 import { PersonalRecords } from "./components/features/PersonalRecords";
 import { Themes } from "./components/features/Themes";
 import { CallToAction } from "./components/call-to-action/CallToAction";
+import { Faq } from "./components/faqs/Faq";
 
 const App = () => {
 
@@ -87,7 +87,7 @@ const App = () => {
                     <Themes />
                     {/* <SecondVisual /> */}
                     {/* <Premium /> */}
-                    <FAQ />
+                    <Faq />
                     <CallToAction />
                 </div>
             </div>
