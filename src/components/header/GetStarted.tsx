@@ -7,11 +7,12 @@ import { apple, google, qr_code, starGold } from "public";
 
 interface IProps {
     noBorder?: boolean;
+    blog?: boolean;
 }
 
 export const GetStarted: React.FC<IProps> = (props) => {
 
-    const { noBorder } = props;
+    const { noBorder, blog } = props;
 
     return (
         <div>
@@ -19,7 +20,7 @@ export const GetStarted: React.FC<IProps> = (props) => {
                 <div>
                     <img src={ (qr_code as any).src } alt="Proxima Logo" className="rounded w-auto h-[120px]" />
                 </div>
-                <div style={ { display: "flex", flexDirection: "column", justifyContent: "flex-start", gap: "10px", zIndex: "5" } }>
+                <div style={ { display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "flex-start", gap: "10px", zIndex: "5" } }>
                     <motion.div
                         whileHover={ { scale: 1.2 } }
                         whileTap={ { scale: 0.9 } }

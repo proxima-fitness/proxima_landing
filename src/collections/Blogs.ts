@@ -1,3 +1,4 @@
+import { BoldFeature, FixedToolbarFeature, HeadingFeature, HorizontalRuleFeature, InlineToolbarFeature, ItalicFeature, lexicalEditor, LinkFeature, ParagraphFeature, UnderlineFeature, UploadFeature } from '@payloadcms/richtext-lexical';
 import type { CollectionConfig } from 'payload';
 
 export const Blogs: CollectionConfig = {
@@ -21,7 +22,36 @@ export const Blogs: CollectionConfig = {
         },
         {
             name: 'content',
-            type: 'text',
+            type: 'richText',
+            editor: lexicalEditor({
+                features: ({rootFeatures}) => {
+                    return [
+                        ...rootFeatures,
+                        HeadingFeature({ enabledHeadingSizes: ['h1','h2','h3','h4','h5','h6']}),
+                        BoldFeature(),
+                        ItalicFeature(),
+                        UnderlineFeature(),
+                        LinkFeature(),
+                        ParagraphFeature(),
+                        FixedToolbarFeature(),
+                        InlineToolbarFeature(),
+                        HorizontalRuleFeature(),
+                        UploadFeature({
+                            collections: {
+                                media: {
+                                    fields: [
+                                        {
+                                            name: 'media_url',
+                                            type: 'text',
+                                            label: 'Media URL'
+                                        }
+                                    ]
+                                }
+                            }
+                        })
+                    ]
+                }
+            }),
             label: "Content",
             required: true,
         },

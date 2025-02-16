@@ -2,6 +2,10 @@ import styles from "@/style";
 import { GetStarted } from "../header/GetStarted";
 import { useBlogById } from "@/api/hooks";
 import { convertSupabaseDateToReadable } from "@/utils/helpers";
+import React = require("react");
+// import { RichText } from '@payloadcms/richtext-lexical/react'
+import type { SerializedEditorState } from '@payloadcms/richtext-lexical/lexical'
+import { RichText } from "../rich-text/RichText";
 
 interface IProps {
     id: string;
@@ -11,6 +15,7 @@ export const BlogSlugLayout: React.FC<IProps> = async (props) => {
 
     const { id } = props;
     const blog = await useBlogById(id);
+    console.log(blog.content);
 
     return (
         <>
@@ -24,21 +29,20 @@ export const BlogSlugLayout: React.FC<IProps> = async (props) => {
                 </div>
                 <div className="italic text-sm">
                     { convertSupabaseDateToReadable(blog.created_at) } | {blog.time} Mins | 205 Views
-
                 </div>
                 <div className="py-8">
-                    {blog.content}
+                    <RichText data={ blog.content as SerializedEditorState  } />
                 </div>
             </div>
-            <div className="rounded-xl bg-gray-900 border-l border-gray-300 flex flex-col text-center justify-center items-center px-8">
-                <div className="flex-1 flex flex-col">
+            <div className="rounded-xl bg-gray-900 h-[500px] border-l border-gray-300 flex flex-col text-center justify-center items-center px-8">
+                <div className="flex flex-col">
                     <h2 className={ styles.heading2 }>Download the App For Free</h2>
                     <p className={ `${styles.paragraph}` }>
                         It takes less than a minute
                     </p>
                 </div>
                 <div className="pt-4">
-                    <GetStarted noBorder={ true } />
+                    <GetStarted noBorder={ true } blog={ true } />
                 </div>
             </div>
         </div>

@@ -23,7 +23,7 @@ export const BlogLayout: React.FC<IProps> = (props) => {
 
     return (
         <>
-        <div className="grid grid-cols-3 gap-12">
+        <div className="grid grid-cols-3 gap-12 max-sm:grid-cols-1">
             <div className="col-span-2">
                 <div>
                     { blogs.map((blog) => {
@@ -50,7 +50,7 @@ export const BlogLayout: React.FC<IProps> = (props) => {
                     </PaginationContent>
                 </Pagination>
             </div>
-            <div className="border-l border-gray-300 flex flex-col justify-start items-start px-4">
+            <div className="sm:border-l sm:border-gray-300 flex flex-col justify-start items-start px-4">
                 <span className="font-bold text-2xl pb-8">Popular Blogs</span>
                 { blogs.map((blog) => {
                     return (

@@ -26,7 +26,7 @@ type TBlog = {
     updated_at: string;
     title: string;
     subtitle: string;
-    content: string;
+    content: Object;
     time: number;
     media_url: string; // just the filename (icon.png)
     image_url?: string; // the public url e.g. (https://api.blog.co/icon.png)
