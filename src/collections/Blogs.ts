@@ -6,18 +6,37 @@ export const Blogs: CollectionConfig = {
         read: () => true,
     },
     fields: [
-      {
-        name: 'name',
-        type: 'text',
-        label: 'Name',
-        required: true,
-      },
-      {
-        name: 'content',
-        type: 'text',
-        label: "Content",
-        required: true,
-      },
+        {
+            name: 'title',
+            type: 'text',
+            label: 'Title',
+            required: true,
+        },
+        {
+            name: 'subtitle',
+            type: 'text',
+            label: 'SubTitle',
+            required: true,
+
+        },
+        {
+            name: 'content',
+            type: 'text',
+            label: "Content",
+            required: true,
+        },
+        {
+            name: 'time',
+            type: 'number',
+            label: "Time",
+            required: true,
+        },
+        {
+            name: 'media_url',
+            type: 'text',
+            label: "Media URL",
+            required: true,
+        }
     ],
     timestamps: true,
   };

@@ -5,7 +5,7 @@ export const metadata = {
     description: "Get in touch with us",
   };
 
-  export default function Contact() {
+  export default function ContactPage() {
     return (
         <>
             This will be the contact page

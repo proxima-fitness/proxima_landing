@@ -47,7 +47,7 @@ export const DownloadPopup: React.FC<IProps> = (props) => {
                             </a>
                         </span>
                 :
-                        <Button className="sm:w-[90%] h-[70px] my-6 bg-cyan-600">
+                        <Button className="sm:w-[90%] h-[110px] my-6 bg-cyan-600">
                             <img src={ (proxima_logo as any).src } alt="Proxima Logo" className="w-auto h-[400px]" />
                         </Button>
             }

@@ -155,8 +155,11 @@ export interface Media {
  */
 export interface Blog {
   id: number;
-  name: string;
+  title: string;
+  subtitle: string;
   content: string;
+  time: number;
+  media_url: string;
   updatedAt: string;
   createdAt: string;
 }
@@ -259,8 +262,11 @@ export interface MediaSelect<T extends boolean = true> {
  * via the `definition` "blogs_select".
  */
 export interface BlogsSelect<T extends boolean = true> {
-  name?: T;
+  title?: T;
+  subtitle?: T;
   content?: T;
+  time?: T;
+  media_url?: T;
   updatedAt?: T;
   createdAt?: T;
 }

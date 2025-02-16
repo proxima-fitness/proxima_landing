@@ -19,3 +19,15 @@ type TExercise = {
     name_portugues: string;
     name_francais: string;
 }
+
+type TBlog = {
+    id: number;
+    created_at: string;
+    updated_at: string;
+    title: string;
+    subtitle: string;
+    content: string;
+    time: number;
+    media_url: string; // just the filename (icon.png)
+    image_url?: string; // the public url e.g. (https://api.blog.co/icon.png)
+}
