@@ -1,5 +1,6 @@
 import { Footer } from '@/components/footer/Footer';
 import { Navbar } from '@/components/header/Navbar';
+import QueryProvider from '@/utils/QueryProvider';
 import styles from '@/style';
 import type { Metadata } from 'next';
 
@@ -27,7 +28,11 @@ export default function RootLayout({
                             <Navbar />
                         </div>
                     </div>
-                    <main id="root">{children}</main>
+                    <main id="root">
+                        <QueryProvider>
+                            {children}
+                        </QueryProvider>
+                    </main>
                     <div className={ `bg-primary ${styles.paddingX} ${styles.flexCenter} flex-col` }>
                         <div className={ `${styles.boxWidth}` }>
                             <Footer />
