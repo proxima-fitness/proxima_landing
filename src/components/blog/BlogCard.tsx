@@ -1,20 +1,22 @@
+"use client";
+
 import { convertSupabaseDateToReadable } from "@/utils/helpers";
 
 interface IProps {
     blog: TBlog;
-    // media: Blob;
 }
 
 export const BlogCard: React.FC<IProps> = (props) => {
 
     const {
         blog,
-        // media,
     } = props;
+
+    console.log("blogcard:",blog);
 
     return (
         <div key={ blog.id } className="py-8 border-b border-gray-300 flex flex-row items-center justify-between">
-            <div className="flex-[3]">
+            <div className="flex-[3] pr-4">
                 <div className="font-bold pb-2 text-3xl">
                     { blog.title }
                 </div>

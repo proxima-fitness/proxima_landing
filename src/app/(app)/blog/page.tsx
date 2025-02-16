@@ -1,17 +1,17 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useBlogsSSR } from "@/api/hooks";
-import { BlogLayout } from "@/components/blog/BlogLayout";
+import BlogLayout  from "@/components/blog/BlogLayout";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { Suspense } from "react";
 
 export const metadata = {
     title: "Blog | Proxima Fitness",
     description: "Interested in taking your gains to the next level ? Read our blog for new insights!",
 };
 
-  export default async function BlogPage() {
+export default async function BlogPage() {
 
-    const blogs = await useBlogsSSR();
+    const initialBlogs = useBlogsSSR(); // don't await the fetching fct
 
     return (
         <>
@@ -24,7 +24,9 @@ export const metadata = {
                 </Link>
             </div>
             <div className={ `bg-white flex items-center justify-center flex-col px-12 py-6` }>
-                <BlogLayout blogs={ blogs } />
+                {/* <Suspense fallback={<div className="h-[3000px]"></div>}> */}
+                <BlogLayout initialBlogs={ initialBlogs } />
+                {/* </Suspense> */}
             </div>
         </>
     );

@@ -1,18 +1,33 @@
 import { supablog } from ".";
 
 // GET BLOGS WITH CERTAIN LIMIT AND OFFSET
-export const getBlogs = async (limit?: number) => {
+export const getBlogs = async (limit: number = 10, offset: number = 0) => {
     try {
         const { data: blogs, error: blogError } = await supablog
         .from('blogs')
-        .select('*').order("created_at", {ascending: false}).limit(limit ?? 10);
+        .select('*').order("created_at", {ascending: false})
+        .range(offset, offset + limit - 1);
 
         if (blogError) {
             console.error('Error fetching blogs:', blogError);
         }
 
-        return blogs as TBlog[];
+        if (blogs){
+            const imageUrls = await Promise.all(blogs.map(async (blog) => {
+                if (blog.media_url) {
+                    return getMediaPublicUrl(blog.media_url);
+                }
+                return undefined;
+            }))
 
+            const blogsWithImage = blogs.map((blog, index) => ({
+                ...blog,
+                image_url: imageUrls[index]
+            }));
+
+            return blogsWithImage as TBlog[];
+
+        }
     } catch (error: unknown) {
         console.error('Error fetching blogs:', error);
     }
