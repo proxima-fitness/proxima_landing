@@ -1,30 +1,30 @@
 import { people03, people02, people01, people04, people05, people06, instagram, linkedin, star, reddit, twitter } from "public";
 
 export const navLinks = [
-  {
-    id: "/",
-    title: "Home",
-  },
-  {
-    id: "programs",
-    title: "Programs",
-  },
-  {
-    id: "about",
-    title: "About Us",
-  },
-  {
-    id: "pricing",
-    title: "Pricing",
-  },
-  {
-    id: "log-in",
-    title: "Log in",
-  },
-  {
-    id: "cta",
-    title: "Download App",
-  },
+    {
+        id: "programs",
+        title: "Programs",
+    },
+    {
+        id: "about",
+        title: "About Us",
+    },
+    //   {
+    //     id: "pricing",
+    //     title: "Pricing",
+    //   },
+    {
+        id: "program-builder",
+        title: "AI Program Builder",
+    },
+    {
+        id: "log-in",
+        title: "Log in",
+    },
+    {
+        id: "cta",
+        title: "Download App",
+    },
 ];
 
 export const features = [

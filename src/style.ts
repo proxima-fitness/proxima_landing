@@ -18,6 +18,7 @@ const styles = {
     flexEnd: "flex justiy-center items-end",
 
     paddingX: "sm:px-16 px-6",
+    paddingXNav: "sm:px-4 px-6",
     paddingY: "sm:py-16 py-6",
     padding: "sm:px-16 px-6 sm:py-12 py-4",
     paddingsmX: "ml-[20px]",
