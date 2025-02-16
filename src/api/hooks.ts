@@ -1,6 +1,6 @@
 // USE OF REACT QUERY IS STRICTLY CLIENT-SIDE, USE SUPABASE SSR FOR SERVER SIDE
 import { useQuery } from "@tanstack/react-query";
-import { getBlogs, getMediaPublicUrl } from "./blog";
+import { getBlogById, getBlogs, getMediaPublicUrl } from "./blog";
 
 // GET ALL BLOGS
 export const useBlogs = () => {
@@ -27,3 +27,9 @@ export const useBlogsSSR = async () => {
 
     return blogs as TBlog[];
 };
+
+
+export const useBlogById = async (id: string) => {
+    const blog = await getBlogById(Number(id));
+    return blog;
+}

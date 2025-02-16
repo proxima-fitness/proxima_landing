@@ -18,6 +18,25 @@ export const getBlogs = async (limit?: number) => {
     }
 };
 
+
+// GET BLOG BY ID
+export const getBlogById = async (id: number) => {
+    try {
+        const { data: blogs, error: blogError } = await supablog
+        .from('blogs')
+        .select('*').eq("id", id);
+
+        if (blogError) {
+            console.error('Error fetching blogs by id', blogError);
+        }
+
+        return blogs[0] as TBlog;
+
+    } catch (error: unknown) {
+        console.error('Error fetching blog by id', error);
+    }
+};
+
 // GET AN INDIVIDUAL MEDIA IMAGE BY FILENAME
 export const getMediaByFileName = async (filename: string) => {
     try {
@@ -29,7 +48,6 @@ export const getMediaByFileName = async (filename: string) => {
             console.error('Error fetching Media Image:', mediaImageError);
         }
 
-        console.log("media image:",mediaImage);
         return mediaImage as unknown as Blob;
 
     } catch (error: unknown) {
