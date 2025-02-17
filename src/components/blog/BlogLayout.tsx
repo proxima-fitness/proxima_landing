@@ -19,7 +19,6 @@ const LIMIT = 10;
 export default function BlogLayout({ initialBlogs }: { initialBlogs: Promise<TBlog[]> }) {
 
     const firstPageBlogs = use(initialBlogs);
-    console.log("firstPageBlogs",firstPageBlogs);
 
     const [offset, setOffset] = useState(0);
     const { data: blogs = firstPageBlogs, isFetching } = useBlogs(LIMIT, offset);

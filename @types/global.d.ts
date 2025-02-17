@@ -10,6 +10,15 @@ type TProgram = {
     user_id: string;
 }
 
+type TProgramFilters = {
+    specialization?: string[];
+    difficulty?: string[];
+    program_length?: string;
+    workout_duration?: string;
+    equipment?: string;
+    title?: string;
+};
+
 type TExercise = {
     id: string;
     gif_id?: string;

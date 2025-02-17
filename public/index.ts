@@ -38,6 +38,7 @@ import twitter from "./twitter.svg";
 import reddit from "./reddit.svg";
 import qr_code from "./qr-code.svg";
 import quotes from "./quotes.svg";
+import proxima_logo_black from "./proxima_logo_black.svg";
 
 export {
     qr_code,
@@ -48,6 +49,7 @@ export {
     add,
     apple,
     proxima_logo,
+    proxima_logo_black,
     arnold,
     programs_mobile_white_device,
     programs_pastel_device,

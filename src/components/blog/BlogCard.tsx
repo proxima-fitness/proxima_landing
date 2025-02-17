@@ -12,8 +12,6 @@ export const BlogCard: React.FC<IProps> = (props) => {
         blog,
     } = props;
 
-    console.log("blogcard:",blog);
-
     return (
         <div key={ blog.id } className="py-8 border-b border-gray-300 flex flex-row items-center justify-between">
             <div className="flex-[3] pr-4">

@@ -31,7 +31,7 @@ const FeatureCard = ({id, title, workout_duration, difficulty, equipment }: any)
     </motion.div>
 );
 
-export const Programs: React.FC = () => {
+export const ProgramsSection: React.FC = () => {
 
     const [programs, setPrograms] = useState<TProgram[] | undefined>([]);
 

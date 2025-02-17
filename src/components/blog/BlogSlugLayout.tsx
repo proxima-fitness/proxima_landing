@@ -15,7 +15,6 @@ export const BlogSlugLayout: React.FC<IProps> = async (props) => {
 
     const { id } = props;
     const blog = await useBlogById(id);
-    console.log(blog.content);
 
     return (
         <>

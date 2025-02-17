@@ -20,8 +20,6 @@ export const RichText: React.FC<IProps> = (props) => {
 
     if (!data || !data.root.children) return null;
 
-    console.log("data in richtext:",data);
-
     const renderNode = (node, index) => {
         switch (node.type) {
             case "list": {

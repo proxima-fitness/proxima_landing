@@ -7,7 +7,7 @@ import { useState } from "react";
 import { Hero } from "./components/header/Hero";
 import { Stats } from "./components/header/Stats";
 import { Testimonials } from "./components/testimonials/Testimonials";
-import { Programs } from "./components/features/Programs";
+import { ProgramsSection } from "./components/features/ProgramsSection";
 import { CustomPrograms } from "./components/features/CustomPrograms";
 import { PersonalRecords } from "./components/features/PersonalRecords";
 import { Themes } from "./components/features/Themes";
@@ -67,7 +67,7 @@ const App = () => {
             </div>
             <div className={ `bg-white ${styles.paddingX} ${styles.flexCenter} flex-col` }>
                 <div className={ `${styles.boxWidth}` }>
-                    <Programs />
+                    <ProgramsSection />
                 </div>
             </div>
             <div className={ `bg-primary ${styles.paddingX} ${styles.flexCenter} flex-col` }>
