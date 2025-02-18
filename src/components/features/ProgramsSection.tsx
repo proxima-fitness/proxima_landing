@@ -45,14 +45,21 @@ export const ProgramsSection: React.FC = () => {
                 </h2>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-2 pt-14">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-2 pt-14 px-24">
                 {programs && programs.length > 0 ? (
                     programs.map((program, index) => (
                     // <FeatureCard key={ program.id } { ...program } index={ index } />
-                        <ProgramCard
+                        <Link
                             key={program.id}
-                            program={ program }
-                        />
+                            target="_self"
+                            rel="noopener noreferrer"
+                            href={`programs/${program.id}/${program.title.trim().replace(/\s+/g, '-').toLowerCase()}`}
+                        >
+                            <ProgramCard
+                                key={program.id}
+                                program={ program }
+                            />
+                        </Link>
                     ))
                     ) : (
                         <p className="text-white">Loading programs...</p> // Loading state

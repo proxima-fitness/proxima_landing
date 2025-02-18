@@ -15,7 +15,7 @@ export default function ProgramsLayout({ initialPrograms }: { initialPrograms: P
     const { data: programs = firstBatchPrograms } = usePrograms(42);
 
     return (
-        <>
+        <div className="px-24 max-sm:px-0">
             <div className="pt-10">
                 <Card className="p-4 bg-gray-100">
                     <h1 className="text-center pb-4 font-bold">Workout Programs</h1>
@@ -36,6 +36,6 @@ export default function ProgramsLayout({ initialPrograms }: { initialPrograms: P
                     </Link>
                 ))}
             </div>
-        </>
+        </div>
     );
 };
