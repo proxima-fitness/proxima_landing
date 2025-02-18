@@ -5,6 +5,7 @@ import { ProgramCard } from "./ProgramCard";
 import { usePrograms } from "@/api/hooks";
 import { ProgramSearchBar } from "./ProgramSearchBar";
 import { Card } from "../ui/card";
+import Link from "next/link";
 
 
 export default function ProgramsLayout({ initialPrograms }: { initialPrograms: Promise<TProgram[]> }) {
@@ -23,10 +24,16 @@ export default function ProgramsLayout({ initialPrograms }: { initialPrograms: P
             </div>
             <div className="grid grid-cols-3 gap-4 max-sm:grid-cols-1 py-8">
                 { programs.map((program) => (
-                    <ProgramCard
+                    <Link
                         key={program.id}
-                        program={ program }
-                    />
+                        target="_self"
+                        rel="noopener noreferrer"
+                        href={`programs/${program.id}/${program.title.trim().replace(/\s+/g, '-').toLowerCase()}`}
+                    >
+                        <ProgramCard
+                            program={ program }
+                        />
+                    </Link>
                 ))}
             </div>
         </>

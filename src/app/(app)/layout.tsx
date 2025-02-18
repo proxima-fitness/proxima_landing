@@ -1,3 +1,4 @@
+
 import { Footer } from '@/components/footer/Footer';
 import { Navbar } from '@/components/header/Navbar';
 import QueryProvider from '@/utils/QueryProvider';
@@ -14,6 +15,7 @@ export default function RootLayout({
     }: {
     children: React.ReactNode
     } ) {
+
     return (
         <html lang="en">
             <head>

@@ -21,7 +21,7 @@ export default function BlogLayout({ initialBlogs }: { initialBlogs: Promise<TBl
     const firstPageBlogs = use(initialBlogs);
 
     const [offset, setOffset] = useState(0);
-    const { data: blogs = firstPageBlogs, isFetching } = useBlogs(LIMIT, offset);
+    const { data: blogs = firstPageBlogs } = useBlogs(LIMIT, offset);
 
     const handlePageChange = (newOffset: number) => {
         setOffset(newOffset);

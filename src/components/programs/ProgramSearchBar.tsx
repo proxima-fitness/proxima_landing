@@ -42,9 +42,9 @@ export const ProgramSearchBar: React.FC = () => {
 
     return (
         <div className="max-sm:w-full flex flex-col items-center justify-center">
-            <div className="w-full flex flex-row items-center justify-center">
+            <div className="w-full flex flex-row max-sm:flex-col items-center justify-center">
                 <div className="flex-1"></div>
-                <div className="w-[60%]">
+                <div className="w-[60%] max-sm:w-full">
                     <Command>
                         <CommandInput ref={ commandRef } placeholder="Search for a program or coach... [Ctrl + k]" />
                         <CommandList>
@@ -61,7 +61,7 @@ export const ProgramSearchBar: React.FC = () => {
                     <Button onClick={ () => setClearFilters(true) } className={ "text-[#37BCCF]" } variant="ghost">Reset Filters [Ctrl + c]</Button>
                 </div>
             </div>
-            <div className="grid grid-cols-3">
+            <div className="grid grid-cols-3 max-sm:grid-cols-1">
                 { Object.keys(filterGroups).map((group) => (
                     <ProgramFilterGroup key={ group } filter={ filterGroups[group] } clearFilters={ clearFilters } handleClearFilters={ handleClearFilters } />
                 ) ) }

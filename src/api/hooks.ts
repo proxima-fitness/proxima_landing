@@ -1,7 +1,7 @@
 // USE OF REACT QUERY IS STRICTLY CLIENT-SIDE, USE SUPABASE SSR FOR SERVER SIDE
 import { useQuery } from "@tanstack/react-query";
 import { getBlogById, getBlogs } from "./blog";
-import { getExplorePagePrograms, getPrograms, getProgramThumbnailByID } from "./programs";
+import { getExplorePageProgramDetails, getExplorePagePrograms, getProgramByID, getPrograms, getProgramThumbnailByID } from "./programs";
 import { getUserFullName } from "./users";
 
 /*********************************/
@@ -15,12 +15,6 @@ export const useBlogs = (limit: number, offset: number) => {
         queryFn: () => getBlogs(limit, offset),
     });
 };
-
-// GET BLOG BY ID
-export const useBlogById = async (id: string) => {
-    const blog = await getBlogById(Number(id));
-    return blog;
-}
 
 // FETCHES THE FULL NAME OF A USER BY ID
 export const useUserFullName = (id: string, id_type: "program" | "user") => {
@@ -47,6 +41,14 @@ export const usePrograms = (limit?: number) => {
     });
 };
 
+// FETCHES A PROGRAM BY PROGRAM ID
+export const useProgramById = (program_id: string) => {
+    return useQuery({
+        queryKey: ['program', program_id],
+        queryFn: () => getProgramByID(program_id),
+    });
+};
+
 // FETCHES A PROGRAM THUMBNAIL BY ID
 export const useProgramThumbnail = (id: string) => {
     return useQuery({
@@ -59,6 +61,31 @@ export const useProgramThumbnail = (id: string) => {
 /*********************************/
 /** SERVER SIDE RENDERED HOOKS **/
 /*********************************/
+
+// FETCHES A PROGRAM BY PROGRAM ID USING SSR
+export const useProgramByIdSSR = async (program_id: string) => {
+
+    const programOverview = {
+        program: await getProgramByID(program_id),
+        thumbnail: await getProgramThumbnailByID(program_id),
+        schedule: await getExplorePageProgramDetails(program_id),
+    }
+
+    return programOverview;
+};
+
+// FETCHES THE FULL NAME OF A USER BY ID USING SSR
+export const useUserFullNameSSR = (id: string, id_type: "program" | "user") => {
+    const fullName = getUserFullName(id, id_type);
+    return fullName;
+};
+
+
+// GET BLOG BY ID
+export const useBlogByIdSSR = async (id: string) => {
+    const blog = await getBlogById(Number(id));
+    return blog;
+}
 
 // GET ALL BLOGS USING SSR
 export const useBlogsSSR = async () => {

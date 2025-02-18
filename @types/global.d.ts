@@ -12,6 +12,41 @@ type TProgram = {
     thumbnail?: Blob;
 }
 
+type TProgramDetails = {
+    id?: string;
+    title?: string;
+    schedule_workouts: {
+        nthDay: number;
+        nthWeek: number;
+        day_title?: string;
+        program_workout_exercises: TSavedWorkoutExercise[];
+    }[];
+}
+
+type TSavedWorkoutExercise = {
+    reps?: number[];
+    reps_max?: number[];
+    reps_range?: number[][];
+    time_taken?: number[];
+    time_range?: number[][];
+    amrap?: string[];
+    rpe?: number[];
+    rpe_range?: number[][];
+    percent_rm?: number[];
+    weights?: number[];
+    exercises?: TExercise;
+}
+
+type TExercise = {
+    id: string;
+    gif_id?: string;
+    instructions?: string[];
+    name_english: string;
+    name_espanol: string;
+    name_portugues: string;
+    name_francais: string;
+}
+
 type TProgramFilters = {
     specialization?: string[];
     difficulty?: string[];
@@ -30,16 +65,6 @@ type TFilterGroupOption = {
     type: "badge" | "slider" | "combobox";
     group: "program_length" | "workout_duration" | "equipment" | "specialization" | "difficulty";
     value: string[];
-}
-
-type TExercise = {
-    id: string;
-    gif_id?: string;
-    instructions?: string[];
-    name_english: string;
-    name_espanol: string;
-    name_portugues: string;
-    name_francais: string;
 }
 
 type TBlog = {

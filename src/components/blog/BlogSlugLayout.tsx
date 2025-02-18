@@ -1,6 +1,6 @@
 import styles from "@/style";
 import { GetStarted } from "../header/GetStarted";
-import { useBlogById } from "@/api/hooks";
+import { useBlogByIdSSR } from "@/api/hooks";
 import { convertSupabaseDateToReadable } from "@/utils/helpers";
 import React = require("react");
 // import { RichText } from '@payloadcms/richtext-lexical/react'
@@ -14,7 +14,7 @@ interface IProps {
 export const BlogSlugLayout: React.FC<IProps> = async (props) => {
 
     const { id } = props;
-    const blog = await useBlogById(id);
+    const blog = await useBlogByIdSSR(id);
 
     return (
         <>
