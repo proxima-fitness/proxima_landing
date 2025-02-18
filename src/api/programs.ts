@@ -16,6 +16,30 @@ export const getExplorePagePrograms = async (limit: number) => {
     }
 };
 
+// GET THE PROGRAMS DISPLAYED ON THE PROGRAMS PAGE INCLUDING THUMBNAILS
+export const getPrograms = async (limit: number) => {
+    try {
+        const { data: programs, error } = await supabase
+        .from('programs')
+        .select('id,title,details,program_length,workout_duration,equipment,specialization,difficulty,user_id').eq('explore', true).limit(limit);
+        if (error) {
+            console.error('Error fetching explore page programs:', error);
+        } else if (programs && programs.length > 0 ) {
+
+            const programsWithThumbnails = await Promise.all(
+                programs.map( async (program) => {
+                    const thumbnail = await getProgramThumbnailByID(program.id);
+                    return {...program, thumbnail};
+                })
+            );
+
+            return programsWithThumbnails as unknown as TProgram[];
+        }
+    } catch (error: unknown) {
+        console.error('Error fetching explore page programs:', error);
+    }
+};
+
 // CHECK IF A PROGRAM THUMBNAIL EXISTS IN USERS S3 STORAGE FOLDER (PROGRAM Exists ?)
 export const getProgramThumbnailStatus = async (id?: string) => {
 

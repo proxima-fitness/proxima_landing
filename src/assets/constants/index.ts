@@ -1,5 +1,48 @@
 import { people03, people02, people01, people04, people05, people06, instagram, linkedin, star, reddit, twitter } from "public";
 
+const filterGroups: TFilterGroup[] = [{ title: "Program Length", value: "program_length"}, { title: "Workout Duration", value: "workout_duration"}, { title: "Equipment", value: "equipment"}, { title: "Specialization", value: "specialization"}, { title: "Difficulty", value: "difficulty"}];
+
+const filteGroupOptions: TFilterGroupOption[] = [
+    {
+        type: "combobox",
+        group: "program_length",
+        value: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"],
+    },
+    {
+        type: "combobox",
+        group: "workout_duration",
+        value: Array.from({ length: 18 }, (_, i) => (i * 10 + 10).toString()),
+    },
+    {
+        type: "badge",
+        group: "equipment",
+        value: ["Full Gym", "Garage Gym", "Dumbbells Only", "Bodyweight"],
+    },
+    {
+        type: "badge",
+        group: "specialization",
+        value: ["Bodybuilding", "Powerbuilding", "Powerlifting", "Athletics", "Bodyweight Training", "Olympic Weightlifting", "Calisthenics"],
+    },
+    {
+        type: "badge",
+        group: "difficulty",
+        value: ["Beginner", "Novice", "Intermediate", "Advanced"],
+    },
+];
+
+export const filterGroupMap = filterGroups.reduce((acc, group) => {
+    const matchedOption = filteGroupOptions.find(option => option.group === group.value);
+    if (matchedOption) {
+        acc[group.value] = {
+            title: group.title,
+            type: matchedOption.type,
+            values: matchedOption.value
+        };
+    }
+    return acc;
+}, {} as Record<string, { title: "Program Length" | "Workout Duration" | "Equipment" | "Specialization" | "Difficulty"; type: "badge" | "combobox" | "slider"; values: string[] }>);
+
+
 export const navLinks = [
     {
         id: "programs",

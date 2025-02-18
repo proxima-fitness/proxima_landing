@@ -1,3 +1,4 @@
+
 type TProgram = {
     id: string;
     title: string;
@@ -8,6 +9,7 @@ type TProgram = {
     specialization: string[];
     difficulty: string[];
     user_id: string;
+    thumbnail?: Blob;
 }
 
 type TProgramFilters = {
@@ -18,6 +20,17 @@ type TProgramFilters = {
     equipment?: string;
     title?: string;
 };
+
+type TFilterGroup = {
+    title: "Program Length" | "Workout Duration" | "Equipment" | "Specialization" | "Difficulty";
+    value: "program_length" | "workout_duration" | "equipment" | "specialization" | "difficulty";
+}
+
+type TFilterGroupOption = {
+    type: "badge" | "slider" | "combobox";
+    group: "program_length" | "workout_duration" | "equipment" | "specialization" | "difficulty";
+    value: string[];
+}
 
 type TExercise = {
     id: string;

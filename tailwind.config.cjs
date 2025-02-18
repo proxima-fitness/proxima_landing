@@ -8,7 +8,8 @@ module.exports = {
 	extend: {
 		colors: {
 			primary: "#00040f",
-			secondary: "#00f6ff",	
+			secondary: "#00f6ff",
+			lightSecondary: "#33bbcf",
 			// primary: {
 			// 	DEFAULT: 'hsl(var(--primary))',
 			// 	foreground: 'hsl(var(--primary-foreground))'

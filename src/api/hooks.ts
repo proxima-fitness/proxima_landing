@@ -1,7 +1,7 @@
 // USE OF REACT QUERY IS STRICTLY CLIENT-SIDE, USE SUPABASE SSR FOR SERVER SIDE
 import { useQuery } from "@tanstack/react-query";
 import { getBlogById, getBlogs } from "./blog";
-import { getExplorePagePrograms, getProgramThumbnailByID } from "./programs";
+import { getExplorePagePrograms, getPrograms, getProgramThumbnailByID } from "./programs";
 import { getUserFullName } from "./users";
 
 /*********************************/
@@ -34,8 +34,16 @@ export const useUserFullName = (id: string, id_type: "program" | "user") => {
 // FETCHES THE PROGRAM NAMES DISPLAYED ON THE EXPLORE PAGE
 export const useExplorePagePrograms = (limit?: number) => {
     return useQuery({
-        queryKey: ['programs'],
+        queryKey: ['explore-page-programs'],
         queryFn: () => getExplorePagePrograms(limit),
+    });
+};
+
+// FETCHES THE PROGRAM NAMES DISPLAYED ON THE PROGRAMS PAGE WITH THUMBNAILS
+export const usePrograms = (limit?: number) => {
+    return useQuery({
+        queryKey: ['programs'],
+        queryFn: () => getPrograms(limit),
     });
 };
 
@@ -60,5 +68,13 @@ export const useBlogsSSR = async () => {
 
 export const useProgramsSSR = async () => {
     const programs = await getExplorePagePrograms(42);
-    return programs as TProgram[];
+
+    const programsWithThumbnails = await Promise.all(
+        programs.map( async (program) => {
+            const thumbnail = await getProgramThumbnailByID(program.id);
+            return {...program, thumbnail};
+        })
+    );
+
+    return programsWithThumbnails as TProgram[];
 }

@@ -1,12 +1,12 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { getExplorePagePrograms } from "../../api/programs";
 import styles, { layout } from "../../style";
 import { Button } from "../generic/Button";
 import { motion } from "motion/react";
 import { ViewModeThumbnails } from "./ViewModeThumbnails";
 import Link from "next/link";
+import { ProgramCard } from "../programs/ProgramCard";
+import { usePrograms } from "@/api/hooks";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const FeatureCard = ({id, title, workout_duration, difficulty, equipment }: any) => (
@@ -33,26 +33,7 @@ const FeatureCard = ({id, title, workout_duration, difficulty, equipment }: any)
 
 export const ProgramsSection: React.FC = () => {
 
-    const [programs, setPrograms] = useState<TProgram[] | undefined>([]);
-
-    useEffect(() => {
-        const fetchPrograms = async () => {
-        try {
-            const width = window.innerWidth;
-            if (width <= 768) {
-                const fetchedPrograms = await getExplorePagePrograms(4);
-                setPrograms(fetchedPrograms);
-            } else {
-                const fetchedPrograms = await getExplorePagePrograms(8);
-                setPrograms(fetchedPrograms);
-            }
-        } catch (error) {
-            console.error("Error fetching programs:", error);
-        }
-        };
-
-        fetchPrograms();
-    }, []);
+    const { data: programs } = usePrograms(6);
 
     return (
         <section id="programs" className={ layout.sectionTop } data-aos="fade-up"
@@ -64,17 +45,21 @@ export const ProgramsSection: React.FC = () => {
                 </h2>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 pt-14">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-2 pt-14">
                 {programs && programs.length > 0 ? (
-            programs.map((program, index) => (
-                <FeatureCard key={ program.id } { ...program } index={ index } />
-            ))
-            ) : (
-                <p className="text-white">Loading programs...</p> // Loading state
-            )}
+                    programs.map((program, index) => (
+                    // <FeatureCard key={ program.id } { ...program } index={ index } />
+                        <ProgramCard
+                            key={program.id}
+                            program={ program }
+                        />
+                    ))
+                    ) : (
+                        <p className="text-white">Loading programs...</p> // Loading state
+                    )}
             </div>
             <div className="flex items-center justify-center">
-                <Link href="/programs"><Button text={ "View loads more Programs" } styles={ `mt-10` } /></Link>
+                <Link href="/programs"><Button text={ "Search Programs" } styles={ `mt-10` } /></Link>
             </div>
         </section>
     );
