@@ -45,7 +45,7 @@ export const ProgramsSection: React.FC = () => {
                 </h2>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-2 pt-14 px-24">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-2 pt-14 px-24 max-sm:px-0">
                 {programs && programs.length > 0 ? (
                     programs.map((program, index) => (
                     // <FeatureCard key={ program.id } { ...program } index={ index } />
