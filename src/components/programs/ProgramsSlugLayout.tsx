@@ -41,7 +41,7 @@ export const ProgramsSlugLayout: React.FC<IProps> = async (props) => {
                             <div className="w-[25%] ">
                                 Program Length
                             </div>
-                            <div className="font-bold">
+                            <div className="">
                                 { program?.program?.[0]?.program_length ? program.program[0].program_length + " weeks" : "# Weeks"}
                             </div>
                         </div>
